@@ -1,0 +1,23 @@
+{
+  "name": "venplore",
+  "version": "1.0.0",
+  "description": "The killer of boredom.",
+  "main": "Venplore.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewchen44/Venplore.git"
+  },
+  "author": "Andrew Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewchen44/Venplore/issues"
+  },
+  "homepage": "https://github.com/andrewchen44/Venplore#readme",
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}

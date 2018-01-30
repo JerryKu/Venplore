@@ -7,8 +7,8 @@ const autoprefixer      = require('autoprefixer');
 
 const PATHS = {
   app: path.join(__dirname, 'app/client/src'),
-  images:path.join(__dirname,'client/src/assets/'),
-  build: path.join(__dirname, 'client/dist')
+  images:path.join(__dirname,'app/client/src/assets/'),
+  build: path.join(__dirname, 'app/client/dist')
 };
 
 const options = {
@@ -18,12 +18,12 @@ const options = {
 
 module.exports = {
   entry: {
-    app: './app/client/src/index.jsx'
+    app: `${PATHS.app}/index.jsx`
   }
 ,
   output: {
     path: PATHS.build,
-    filename: 'bundle.[hash].js'
+    filename: 'bundle.js'
   },
   devServer: {
       historyApiFallback: true,
@@ -37,11 +37,10 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel',
+        include: PATHS.build,
+        loader: 'babel-loader',
         query: {
-          cacheDirectory: true,
-          presets: ['es2015']
+          presets: ['es2015', 'react', 'stage-2']
         }
       },
       {

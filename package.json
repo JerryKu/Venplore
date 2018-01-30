@@ -7,7 +7,8 @@
     "start": "webpack-dashboard -- webpack-dev-server",
     "dev": "webpack -d --watch",
     "prebuild": "rimraf dist",
-    "build": "webpack -p"
+    "build": "webpack -p",
+    "server": "nodemon server/index.js"
   },
   "dependencies": {
     "babel-preset-react": "^6.24.1",
@@ -15,9 +16,9 @@
     "babel-runtime": "^6.26.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.0",
+    "nodemon": "^1.14.11",
     "react": "^15.6.2",
     "react-dom": "^15.6.2",
-    "react-facebook-login-component": "^0.9.1",
     "react-modal": "^3.1.4",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",

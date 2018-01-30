@@ -6,20 +6,21 @@ const dashboardPlugin   = require('webpack-dashboard/plugin');
 const autoprefixer      = require('autoprefixer'); 
 
 const PATHS = {
-  app: path.join(__dirname, 'src'),
-  images:path.join(__dirname,'src/assets/'),
-  build: path.join(__dirname, 'dist')
+  app: path.join(__dirname, 'app/client/src'),
+  images:path.join(__dirname,'client/src/assets/'),
+  build: path.join(__dirname, 'client/dist')
 };
 
 const options = {
   host:'localhost',
-  port:'1234'
+  port:'8000'
 };
 
 module.exports = {
   entry: {
-    app: PATHS.app
-  },
+    app: './app/client/src/index.jsx'
+  }
+,
   output: {
     path: PATHS.build,
     filename: 'bundle.[hash].js'

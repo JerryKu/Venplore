@@ -1,4 +1,6 @@
-import React from 'react';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
+import currentActivity from "./components/currentActivity.jsx";
 
 class App extends React.Component {
   constructor() {
@@ -14,6 +16,8 @@ class App extends React.Component {
       <div>
         <h1>Venplore</h1>
       </div>
+      
+      <currentActivity/>
     )
   }
 }

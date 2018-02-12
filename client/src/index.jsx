@@ -5,6 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import {createStore, applyMiddleware, compose} from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
+import CurrentActivity from './components/CurrentActivity.jsx'
 
 
 class App extends React.Component {
@@ -12,8 +13,12 @@ class App extends React.Component {
     super();
   }
   render () {
-    return (<div> test
-    </div>)
+    return (
+    <div>
+      tests
+      <CurrentActivity />
+    </div>
+    )
   }
 }
 

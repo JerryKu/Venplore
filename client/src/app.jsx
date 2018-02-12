@@ -1,5 +1,5 @@
 import React from 'react';
-import currentActivity from './components/currentActivity.jsx'
+// import currentActivity from './components/currentActivity.jsx'
 
 class App extends React.Component {
   constructor() {
@@ -14,7 +14,7 @@ class App extends React.Component {
     return (
       <div>
         <h1>Venplore</h1>
-        <currentActivity/>
+        {/* <currentActivity/> */}
       </div>
       
     )

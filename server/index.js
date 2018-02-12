@@ -6,7 +6,6 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 app.use(express.static(path.join(__dirname, '/../client/dist')));
-app.use(express.static(path.join(__dirname, '/node_modules')));
 
 app.use(bodyParser.json());
 

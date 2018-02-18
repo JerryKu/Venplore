@@ -10,7 +10,7 @@ class CurrentActivity extends React.Component {
   render() {
     return (
       <div>
-        Fishing
+        Current Activity
       </div>
     );
   }

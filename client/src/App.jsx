@@ -8,9 +8,9 @@ class App extends React.Component {
     }
     render () {
       return (
-      <div>
-        <CurrentActivity/>
+      <div className='activity-section'>
         <FilterBar/>
+        <CurrentActivity/>
       </div>
       )
     }

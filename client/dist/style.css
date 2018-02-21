@@ -1,19 +1,32 @@
-body {
-    background-color: #a0de62;
+html, body {
+    background-color: orange;
+    height: 100%;
 }
 
-h1 {
-    color: #E6DEDC;
+.header-bar {
+    bordeR: solid 1px black;
 }
 
-h2 {
-    color: #E6DEDC;
+.app-container {
+    height: 75%;
+    border: solid 1px black;
 }
 
-div {
-    border: solid;
+.current-activity-section {
+    border: solid 1px blue;
+    height: 100%;
+    width: 70%;
+    float: right;
 }
 
-span {
-    border: solid;
+.activity-section {
+    border: solid 1px purple;
+    height: 100%;
+}
+
+.filter-section {
+    border: solid 1px orange;
+    display: inline-block;
+    width: 29.5%;
+    height: 100%;
 }

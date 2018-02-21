@@ -8,7 +8,7 @@ class CurrentActivity extends React.Component {
 
   render() {
     return (
-      <span>
+      <span className='current-activity-section'>
         Current Activity
       </span>
     );

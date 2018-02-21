@@ -8,7 +8,7 @@ class FilterBar extends React.Component {
 
   render() {
     return (
-      <span>
+      <span className='filter-section'>
         filter bar
       </span>
     );

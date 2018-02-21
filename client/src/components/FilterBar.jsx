@@ -1,6 +1,6 @@
 import React from "react";
 
-class CurrentActivity extends React.Component {
+class FilterBar extends React.Component {
   constructor() {
     super();
     this.state = {};
@@ -9,10 +9,10 @@ class CurrentActivity extends React.Component {
   render() {
     return (
       <span>
-        Current Activity
+        filter bar
       </span>
     );
   }
 }
 
-export default CurrentActivity;
+export default FilterBar;

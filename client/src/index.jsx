@@ -7,8 +7,4 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import App from './App.jsx'
 
-
-
-
-
 ReactDOM.render(<App />, document.getElementById('app'));

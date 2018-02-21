@@ -1,5 +1,6 @@
 import React from 'react';
 import CurrentActivity from './components/CurrentActivity.jsx'
+import FilterBar from './components/FilterBar.jsx'
 
 class App extends React.Component {
     constructor() {
@@ -8,8 +9,8 @@ class App extends React.Component {
     render () {
       return (
       <div>
-        tests
-        <CurrentActivity />
+        <CurrentActivity/>
+        <FilterBar/>
       </div>
       )
     }

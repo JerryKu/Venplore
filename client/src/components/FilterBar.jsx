@@ -7,11 +7,15 @@ class FilterBar extends React.Component {
   }
 
   render() {
-    return (
-      <span className='filter-section'>
+    return <span>
         filter bar
-      </span>
-    );
+        <div>Price:</div>
+        <div>Mental Effort:</div>
+        <div>Physical Effort:</div>
+        <div>Nature Level:</div>
+        <div>Indoors Level:</div>
+        <div>Duration:</div>
+      </span>;
   }
 }
 

@@ -8,13 +8,17 @@ class App extends React.Component {
       super();
     }
     render () {
-      return (
-      <div className='activity-section'>
-        <SearchBar/>
-        <FilterBar/>
-        <CurrentActivity/>
-      </div>
-      )
+      return <div className="activity-section">
+          <span className="filter-section">
+            <div>
+              <SearchBar />
+            </div>
+            <div>
+              <FilterBar />
+            </div>
+          </span>
+          <CurrentActivity />
+        </div>;
     }
   }
 

@@ -2,6 +2,7 @@ html, body {
     font-family: 'Dosis', sans-serif;
     background-color: orange;
     height: 100%;
+    padding: 1%;
 }
 
 .header-bar {
@@ -18,16 +19,20 @@ html, body {
     height: 100%;
     width: 70%;
     float: right;
+    
 }
 
 .activity-section {
     border: solid 1px purple;
     height: 100%;
+    padding: 1%;
+    background-color: rgb(255, 187, 60);
 }
 
 .filter-section {
     border: solid 1px orange;
     display: inline-block;
-    width: 29.5%;
+    width: 27.5%;
     height: 100%;
+    padding: 1%;
 }

@@ -7,11 +7,14 @@ class SearchBar extends React.Component {
   }
 
   render() {
-    return (
-      <span>
-        search bar
-      </span>
-    );
+    return <span>
+        <form>
+          <label>
+            <input type="text" />
+            <input type="submit" value="submit" />
+          </label>
+        </form>
+      </span>;  
   }
 }
 

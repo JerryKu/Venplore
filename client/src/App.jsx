@@ -17,7 +17,9 @@ class App extends React.Component {
               <FilterBar />
             </div>
           </span>
-          <CurrentActivity />
+          <span className="current-activity-section">
+            <CurrentActivity />
+          </span>
         </div>;
     }
   }

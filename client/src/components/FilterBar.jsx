@@ -1,4 +1,5 @@
 import React from "react";
+import FilterButtons from './FilterButtons.jsx'
 
 class FilterBar extends React.Component {
   constructor() {
@@ -8,13 +9,24 @@ class FilterBar extends React.Component {
 
   render() {
     return <span>
-        filter bar
-        <div>Price:</div>
-        <div>Mental Effort:</div>
-        <div>Physical Effort:</div>
-        <div>Nature Level:</div>
-        <div>Indoors Level:</div>
-        <div>Duration:</div>
+        <div>
+          Price: <FilterButtons />
+        </div>
+        <div>
+          Mental Effort: <FilterButtons />
+        </div>
+        <div>
+          Physical Effort: <FilterButtons />
+        </div>
+        <div>
+          Nature Level: <FilterButtons />
+        </div>
+        <div>
+          Indoors Level: <FilterButtons />
+        </div>
+        <div>
+          Duration: <FilterButtons />
+        </div>
       </span>;
   }
 }

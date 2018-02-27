@@ -36,3 +36,19 @@ html, body {
     height: 100%;
     padding: 1%;
 }
+
+.main-image-section {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+    text-align: center;
+}
+
+.main-image {
+    max-width: 70%;
+    max-height: 70%;
+}
+
+.description-section {
+    text-align: center;
+}

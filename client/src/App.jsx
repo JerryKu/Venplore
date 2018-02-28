@@ -2,6 +2,7 @@ import React from 'react';
 import CurrentActivity from './components/CurrentActivity.jsx'
 import FilterBar from './components/FilterBar.jsx'
 import SearchBar from './components/SearchBar.jsx'
+import ActivitiesList from './components/ActivitiesList.jsx'
 
 class App extends React.Component {
     constructor() {
@@ -9,17 +10,20 @@ class App extends React.Component {
     }
     render () {
       return <div className="activity-section">
-          <span className="filter-section">
+          <div className="filter-section">
             <div>
               <SearchBar />
             </div>
             <div>
               <FilterBar />
             </div>
-          </span>
-          <span className="current-activity-section">
+          </div>
+          <div className="activity-list-section">
+          <ActivitiesList />
+          </div>
+          <div className="current-activity-section">
             <CurrentActivity />
-          </span>
+          </div>
         </div>;
     }
   }

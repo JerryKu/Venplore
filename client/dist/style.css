@@ -17,9 +17,22 @@ html, body {
 .current-activity-section {
     border: solid 1px blue;
     height: 100%;
-    width: 70%;
-    float: right;
-    
+    display: inline-block;
+    width: 57.5%;
+    vertical-align: top;
+}
+
+.activity{
+  padding: 0% 3%;
+  border: 2px solid;
+}
+
+.activity-list-section{
+  width:  20%;
+  display: inline-block;
+  vertical-align: top;
+  border: solid 1px orange;
+  margin-right: 0.5%;
 }
 
 .activity-section {
@@ -32,9 +45,11 @@ html, body {
 .filter-section {
     border: solid 1px orange;
     display: inline-block;
-    width: 27.5%;
+    width: 19%;
     height: 100%;
     padding: 1%;
+    vertical-align: top;
+    margin-right: 0.5%;
 }
 
 .main-image-section {

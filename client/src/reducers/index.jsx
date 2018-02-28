@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import currentActivity from './activities/CurrentActivity.jsx';
+import setActivity from './activities/index.jsx';
 
 export default combineReducers({
-  currentActivity,
+  setActivity,
 });

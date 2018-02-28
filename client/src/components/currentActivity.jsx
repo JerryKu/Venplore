@@ -1,5 +1,4 @@
 import React from "react";
-import
 
 class CurrentActivity extends React.Component {
   constructor() {

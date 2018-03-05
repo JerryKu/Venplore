@@ -12,6 +12,9 @@ class ActivitiesList extends React.Component {
       <Activity/>
       <Activity/>
       <Activity/>
+      <Activity/>
+      <Activity/>
+      <Activity/>
     </span>;
 
   }

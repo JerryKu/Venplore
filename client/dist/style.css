@@ -1,3 +1,5 @@
+/* tag level css */
+
 *{
   box-sizing: border-box;
 }
@@ -8,53 +10,59 @@ html, body {
     padding: 1%;
 }
 
-.header-bar {
-    bordeR: solid 1px black;
-}
+/* class level css */
 
-.app-container {
-    display: grid;
-    height: 75%;
+    /* Header Bar CSS */
+
+.header-bar {
     border: solid 1px black;
 }
 
-.current-activity-section {
-    border: solid 1px blue;
+    /* App Container CSS */
+
+.app-container {
     height: 100%;
-    display: grid;
-    vertical-align: top;
+    border: solid 1px black;
 }
 
-.activity{
-  padding: 0% 3%;
-  border: 2px solid;
+.activity-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    border: solid 1px purple;
+    height: 100%;
+    max-height: 100%;
+    padding: 1%;
+    background-color: rgb(255, 187, 60);
 }
+
+    /* Filtering CSS */
+
+.filter-section {
+    border: solid 1px orange;
+    padding: 1%;
+    vertical-align: top;
+    margin-right: 0.5%;
+}
+
+    /* Activity List CSS */
 
 .activity-list-section{
-  /* display: inline-block; */
   vertical-align: top;
   border: solid 1px orange;
   margin-right: 0.5%;
   overflow-y: auto;
 }
 
-.activity-section {
-  display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    border: solid 1px purple;
-    height: 100%;
-    max-height: 716px;
-    padding: 1%;
-    background-color: rgb(255, 187, 60);
+.activity{
+  padding: 0% 3%;
+  border: 2px solid green;
 }
 
-.filter-section {
-    border: solid 1px orange;
-    /* display: inline-block; */
-    height: 100%;
-    padding: 1%;
+    /* Current Activity CSS */
+
+.current-activity-section {
+    border: solid 1px blue;
     vertical-align: top;
-    margin-right: 0.5%;
 }
 
 .main-image-section {

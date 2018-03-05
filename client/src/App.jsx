@@ -3,6 +3,7 @@ import CurrentActivity from './components/CurrentActivity.jsx'
 import FilterBar from './components/FilterBar.jsx'
 import SearchBar from './components/SearchBar.jsx'
 import ActivitiesList from './components/ActivitiesList.jsx'
+import HeaderBar from './components/HeaderBar.jsx'
 
 class App extends React.Component {
     constructor() {
@@ -10,6 +11,9 @@ class App extends React.Component {
     }
     render () {
       return <div className="activity-section">
+        <div className="header-bar">
+          <HeaderBar />
+        </div>
           <div className="filter-section">
             <div>
               <SearchBar />

@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 html, body {
     font-family: 'Dosis', sans-serif;
     background-color: orange;
@@ -10,6 +13,7 @@ html, body {
 }
 
 .app-container {
+    display: grid;
     height: 75%;
     border: solid 1px black;
 }
@@ -17,8 +21,7 @@ html, body {
 .current-activity-section {
     border: solid 1px blue;
     height: 100%;
-    display: inline-block;
-    width: 57.5%;
+    display: grid;
     vertical-align: top;
 }
 
@@ -28,24 +31,26 @@ html, body {
 }
 
 .activity-list-section{
-  width:  20%;
-  display: inline-block;
+  /* display: inline-block; */
   vertical-align: top;
   border: solid 1px orange;
   margin-right: 0.5%;
+  overflow-y: auto;
 }
 
 .activity-section {
+  display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
     border: solid 1px purple;
     height: 100%;
+    max-height: 716px;
     padding: 1%;
     background-color: rgb(255, 187, 60);
 }
 
 .filter-section {
     border: solid 1px orange;
-    display: inline-block;
-    width: 19%;
+    /* display: inline-block; */
     height: 100%;
     padding: 1%;
     vertical-align: top;

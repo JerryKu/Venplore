@@ -13,14 +13,14 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
-console.log(store.getState())
+console.log('initial state', store.getState())
 
-store.dispatch(setActivity({
-    image: "http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_640/images/live/p0/51/v6/p051v6vn.jpg",
-    description: 'Adventure Awaits!'
-}))
+// store.dispatch(setActivity({
+//     image: "http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_640/images/live/p0/51/v6/p051v6vn.jpg",
+//     description: 'Adventure Awaits!'
+// }))
 
-console.log(store.getState())
+// console.log(store.getState())
 
 ReactDOM.render(
   <Provider store={store}>

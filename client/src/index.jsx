@@ -22,4 +22,9 @@ store.dispatch(setActivity({
 
 console.log(store.getState())
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("app")
+);

@@ -26,7 +26,7 @@ class CurrentActivity extends React.Component {
         <div className="main-image-section">
           <img className="main-image" src={this.props.image} alt="adventure" />
         </div>
-        <div className="description-section">Adventure Awaits!</div>
+        <div className="description-section">{this.props.description}</div>
       </span>;
   }
 }
@@ -36,7 +36,8 @@ const mapStateToProps = (state, ownProps) => {
   return {
     // You can now say this.props.books
 
-    image: state.setActivity.image,
+    image: state.setActivity[0].image,
+    description: state.setActivity[0].description,
   }
 };
 

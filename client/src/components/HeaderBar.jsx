@@ -11,7 +11,7 @@ class HeaderBar extends React.Component {
 		<div>
       <ul style={{listStyleType:'none', padding:'0 1%'}}>
         <li style={{float:'left', padding:'0 1%'}}>
-        wid - what i do
+          Venplore - Venture, and Explore!
         </li>
         <li style={{display:"inline-block", padding:'0 1%'}}>
           Home

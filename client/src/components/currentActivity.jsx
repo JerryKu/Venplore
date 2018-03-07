@@ -24,7 +24,7 @@ class CurrentActivity extends React.Component {
   render() {
     return <span>
         <div className="main-image-section">
-          <img className="main-image" src={this.props.image} alt="adventure" />
+          <img className="main-image" src={this.props.image} style={{width:'70%',height:'70%'}}/>
         </div>
         <div className="description-section">{this.props.description}</div>
       </span>;

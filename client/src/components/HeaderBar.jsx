@@ -9,8 +9,17 @@ class HeaderBar extends React.Component {
   render() {
     return (
 		<div>
-			<spa> wid - </spa>
-			<span> what i do </span>
+      <ul style={{listStyleType:'none', padding:'0 1%'}}>
+        <li style={{float:'left', padding:'0 1%'}}>
+          Venplore - Venture, and Explore!
+        </li>
+        <li style={{display:"inline-block", padding:'0 1%'}}>
+          Home
+        </li>
+        <li style={{display:"inline-block", padding:'0 1%'}}>
+          About The Creators
+        </li>
+      </ul>
 		</div>
     );
   }

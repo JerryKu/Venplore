@@ -6,17 +6,9 @@ const uri =
 let db = null;
 
 MongoClient.connect(uri, (err, client) => {
-  if (err) {
-    throw err;
-  } else {
-    db = client.db('activities');
-    console.log('Database Connection Open');
-    db.collection('activities').insertOne({
-  name: 'fishing',
-}).then((results) => {
-  console.log(results);
-});
-  }
+  if (err) { throw err; }
+  db = client.db('activities');
+  console.log('Database Connection Open');
 });
 
 

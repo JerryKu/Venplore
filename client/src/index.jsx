@@ -23,8 +23,10 @@ console.log('initial state', store.getState())
 // console.log(store.getState())
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <Router>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </Router>,
   document.getElementById("app")
 );

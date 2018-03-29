@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 class HeaderBar extends React.Component {
   constructor() {
@@ -14,7 +15,10 @@ class HeaderBar extends React.Component {
           Venplore - Venture, and Explore!
         </li>
         <li style={{display:"inline-block", padding:'0 1%'}}>
-          Home
+        <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <Link to='/create'>Create an Event</Link>
         </li>
         <li style={{display:"inline-block", padding:'0 1%'}}>
           About The Creators

@@ -1,11 +1,8 @@
 import React from "react";
 
-
-
 class EventCreator extends React.Component {
   constructor(){
     super();
-
   }
   render(){
     return <span>

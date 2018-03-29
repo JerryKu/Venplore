@@ -15,7 +15,7 @@ class HeaderBar extends React.Component {
           Venplore - Venture, and Explore!
         </li>
         <li style={{display:"inline-block", padding:'0 1%'}}>
-        <Link to='/'>Home</Link>
+          <Link to='/'>Home</Link>
         </li>
         <li>
           <Link to='/create'>Create an Event</Link>

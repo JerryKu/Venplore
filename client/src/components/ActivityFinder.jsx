@@ -10,7 +10,7 @@ class ActivityFinder extends React.Component {
   render(){
     return <span>
       activity finder page
-      <Link to='/create'>Event Creation Page</Link>
+
     </span>;
 
   }

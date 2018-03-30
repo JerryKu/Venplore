@@ -15,13 +15,13 @@ class HeaderBar extends React.Component {
           Venplore - Venture, and Explore!
         </li>
         <li style={{display:"inline-block", padding:'0 1%'}}>
-          <Link to='/'>Home</Link>
+          <Link to='/' className='header-tab'>Home</Link>
         </li>
         <li>
-          <Link to='/create'>Create an Event</Link>
+          <Link to='/create' className='header-tab'>Create an Event</Link>
         </li>
         <li style={{display:"inline-block", padding:'0 1%'}}>
-          <Link to='/about'>About Us</Link>
+          <Link to='/about' className='header-tab'>About Us</Link>
         </li>
       </ul>
 		</div>

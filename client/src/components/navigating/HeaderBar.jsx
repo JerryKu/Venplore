@@ -21,7 +21,7 @@ class HeaderBar extends React.Component {
           <Link to='/create'>Create an Event</Link>
         </li>
         <li style={{display:"inline-block", padding:'0 1%'}}>
-        <Link to='/about'>Create an Event</Link>
+          <Link to='/about'>About Us</Link>
         </li>
       </ul>
 		</div>

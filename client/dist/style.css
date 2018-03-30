@@ -10,6 +10,17 @@ html, body {
     padding: 1%;
 }
 
+
+.application {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    border: solid 1px purple;
+    height: 100%;
+    max-height: 100%;
+    padding: 1%;
+    background-color: rgb(255, 187, 60);
+}
+
 /* class level css */
 
     /* Header Bar CSS */
@@ -17,10 +28,13 @@ html, body {
 .header-bar {
     grid-column: 1 / span 4;
     border: solid 1px black;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
 }
 
 .header-tab {
-    
+
 }
 
     /* App Container CSS */
@@ -30,15 +44,6 @@ html, body {
     border: solid 1px black;
 }
 
-.activity-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    border: solid 1px purple;
-    height: 100%;
-    max-height: 100%;
-    padding: 1%;
-    background-color: rgb(255, 187, 60);
-}
 
     /* Filtering CSS */
 

@@ -10,8 +10,8 @@ class App extends React.Component {
       super();
     }
     render () {
-      return <div className='activity-section'>
-        <div className='header-bar'> <HeaderBar /> </div>
+      return <div className='application'>
+        <HeaderBar />
         <Switch>
           <Route exact path='/' component={ActivityFinder}/>  
           <Route path='/create' component={EventCreator}/>

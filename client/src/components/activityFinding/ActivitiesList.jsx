@@ -4,9 +4,7 @@ import Activity from './Activity.jsx'
 class ActivitiesList extends React.Component {
   constructor(){
     super();
-
   }
-
   render(){
     return <span className="activities-list">
       <Activity/>
@@ -16,7 +14,6 @@ class ActivitiesList extends React.Component {
       <Activity/>
       <Activity/>
     </span>;
-
   }
 }
 

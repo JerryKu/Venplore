@@ -1,17 +1,14 @@
 import React from "react";
 
-
-
-class EventCreator extends React.Component {
+class About extends React.Component {
   constructor(){
     super();
-
   }
   render(){
     return <span>
-      event creation page
+      About page
     </span>;
   }
 }
 
-export default EventCreator;
+export default About;

@@ -9,12 +9,11 @@ class HeaderBar extends React.Component {
 
   render() {
     return (
-      <ul className='header-bar'>
-        <li>Venplore - Venture, and Explore!</li>
-        <li> <Link to='/' className='header-tab'>Home</Link> </li>
-        <li> <Link to='/create' className='header-tab'>Create an activity </Link> </li>
-        <li> <Link to='/about' className='header-tab'>About Us</Link> </li>
-      </ul>
+      <div className='header-bar'>
+        <Link to='/' className='header-tab'>Venplore - Venture, and Explore!</Link>
+        <Link to='/create' className='header-tab'>Create an activity </Link>
+        <Link to='/about' className='header-tab'>About Us</Link> 
+      </div>
     );
   }
 }

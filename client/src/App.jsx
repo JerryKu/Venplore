@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import HeaderBar from './components/HeaderBar.jsx';
-import EventCreator from './components/EventCreator.jsx';
-import ActivityFinder from './components/ActivityFinder.jsx';
+import HeaderBar from './components/navigating/HeaderBar.jsx';
+import EventCreator from './components/eventCreating/EventCreator.jsx';
+import ActivityFinder from './components/activityFinding/ActivityFinder.jsx';
 
 class App extends React.Component {
     constructor() {

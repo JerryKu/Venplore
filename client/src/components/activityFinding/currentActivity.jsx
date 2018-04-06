@@ -32,24 +32,24 @@ class CurrentActivity extends React.Component {
 }
 
 // Maps state from store to props  that tells how to transform the current Redux store state into the props you want to pass to a presentational component you are wrapping.
-const mapStateToProps = (state, ownProps) => {
-  return {
-    // You can now say this.props.books
+// const mapStateToProps = (state, ownProps) => {
+//   return {
+//     // You can now say this.props.books
 
-    image: state.setActivity[0].image,
-    description: state.setActivity[0].description,
-  }
-};
+//     image: state.setActivity[0].image,
+//     description: state.setActivity[0].description,
+//   }
+// };
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-  // You can now say this.props.createBook
-    // createBook: book => dispatch(bookActions.createBook(book))
-  }
-};
+// const mapDispatchToProps = (dispatch) => {
+//   return {
+//   // You can now say this.props.createBook
+//     // createBook: book => dispatch(bookActions.createBook(book))
+//   }
+// };
 
 // Use connect to put them together
 
-const ConnectedCurrentActivity = connect(mapStateToProps, mapDispatchToProps)(CurrentActivity);
+// const ConnectedCurrentActivity = connect(mapStateToProps, mapDispatchToProps)(CurrentActivity);
 
-export default ConnectedCurrentActivity;
+export default CurrentActivity;

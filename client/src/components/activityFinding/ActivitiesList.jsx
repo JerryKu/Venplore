@@ -4,7 +4,7 @@ import Activity from './Activity.jsx'
 
 const mapStateToProps = (state) => {
   return {
-    // activityList: getVisibleTodos(state.todos, state.visibilityFilter)
+    activityList: state.activityList,
   };
 };
 
@@ -15,11 +15,12 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 class ConnectedActivityList extends React.Component {
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
   }
   render(){
     return <span className="activities-list">
+    {this.props.activityList[0].image}
       <Activity/>
       <Activity/>
       <Activity/>

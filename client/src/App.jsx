@@ -13,8 +13,8 @@ class App extends React.Component {
       return <div className='application'>
           <HeaderBar />
           <Switch>
-            <Route exact path='/create' component={ActivityFinder}/>  
-            <Route path='/' component={EventCreator}/>
+            <Route exact path='/' component={ActivityFinder}/>  
+            <Route path='/create' component={EventCreator}/>
             <Route path='/about' component={About}/>
           </Switch>
         </div>;

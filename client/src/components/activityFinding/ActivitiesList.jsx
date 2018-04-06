@@ -14,7 +14,7 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-class ConnectedActivitiesList extends React.Component {
+class ConnectedActivityList extends React.Component {
   constructor(){
     super();
   }
@@ -30,7 +30,7 @@ class ConnectedActivitiesList extends React.Component {
   }
 }
 
-const ActivityList = connect(mapStateToProps, MapDispatchToProps)(ConnectedActivityList);
+const ActivityList = connect(mapStateToProps, mapDispatchToProps)(ConnectedActivityList);
 
 export default ActivityList;
 

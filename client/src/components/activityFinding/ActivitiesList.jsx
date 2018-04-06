@@ -8,6 +8,7 @@ class ConnectedActivityList extends React.Component {
   }
   render(){
     return <span className="activities-list">
+      Other Activities:
       {this.props.activityList.map((activity, index) => 
         (<Activity key={index} image={activity.image} description={activity.description} />)
     )}

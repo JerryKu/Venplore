@@ -1,7 +1,20 @@
 import React from "react";
+import { connect } from "react-redux";
 import Activity from './Activity.jsx'
 
-class ActivitiesList extends React.Component {
+const mapStateToProps = (state) => {
+  return {
+    // activityList: getVisibleTodos(state.todos, state.visibilityFilter)
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    setcurrent: (activity) => dispatch(setCurrent(activity))
+  };
+};
+
+class ConnectedActivitiesList extends React.Component {
   constructor(){
     super();
   }
@@ -17,4 +30,7 @@ class ActivitiesList extends React.Component {
   }
 }
 
-export default ActivitiesList;
+const ActivityList = connect(mapStateToProps, MapDispatchToProps)(ConnectedActivityList);
+
+export default ActivityList;
+

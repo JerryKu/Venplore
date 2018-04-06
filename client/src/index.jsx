@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -15,12 +14,12 @@ const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
 console.log('initial state', store.getState())
 
-// store.dispatch(setActivity({
-//     image: "http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_640/images/live/p0/51/v6/p051v6vn.jpg",
-//     description: 'Adventure Awaits!'
-// }))
+store.dispatch(setActivity({
+    image: "HELLO THERE",
+    description: 'Adventure Awaits!'
+}))
 
-// console.log(store.getState())
+console.log(store.getState())
 
 ReactDOM.render(
   <Router>

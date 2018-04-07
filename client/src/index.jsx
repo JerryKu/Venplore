@@ -14,13 +14,6 @@ const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
 console.log('initial state', store.getState())
 
-// store.dispatch(setActivity({
-//     image: "HELLO THERE",
-//     description: 'Adventure Awaits!'
-// }))
-
-console.log(store.getState())
-
 ReactDOM.render(
   <Router>
     <Provider store={store}>

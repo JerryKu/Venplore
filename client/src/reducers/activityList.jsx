@@ -33,7 +33,6 @@ let activityListDefault = [
 
 const activityList = (state = activityListDefault, action) => {
   switch (action.type) {
-    // case 'SET_ACTIVITIES'
     default:
       return state;
   }

@@ -5,7 +5,11 @@ let currentActivityDefault = {
 
 const currentActivity = (state = currentActivityDefault, action) => {
   switch (action.type) {
-    // case 'SET_CURRENT_ACTIVITY'
+    case 'SET_ACTIVITY':
+      return Object.assign({}, state, {
+        image: action.activity.image,
+        description: action.activity.description,
+      });
     default:
       return state;
   }

@@ -1,6 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
+import setActivity from '../../actions/index.jsx'
 import Activity from './Activity.jsx'
+
+
 
 class ConnectedActivityList extends React.Component {
   constructor(props){
@@ -10,23 +13,28 @@ class ConnectedActivityList extends React.Component {
     return <span className="activities-list">
       Other Activities:
       {this.props.activityList.map((activity, index) => 
-        (<Activity key={index} image={activity.image} description={activity.description} />)
+        (<span key={index} onClick={() => { 
+            this.props.setActivity(activity);
+          }} >
+          <Activity image={activity.image} description={activity.description}/>
+        </span>)
     )}
     </span>;
   }
 }
 
 const mapStateToProps = state => {
-  return {
-    activityList: state.activityList
-  };
+  return { activityList: state.activityList };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    setcurrent: activity => dispatch(setCurrent(activity))
+    setActivity: activity => {
+      dispatch(setActivity(activity));
+    }
   };
 };
+
 const ActivityList = connect(mapStateToProps, mapDispatchToProps)(ConnectedActivityList);
 
 export default ActivityList;

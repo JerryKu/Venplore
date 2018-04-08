@@ -12,8 +12,6 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(venplore, composeEnhancers(applyMiddleware(thunk)));
 
-console.log('initial state', store.getState())
-
 ReactDOM.render(
   <Router>
     <Provider store={store}>

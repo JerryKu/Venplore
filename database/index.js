@@ -11,6 +11,4 @@ MongoClient.connect(uri, (err, client) => {
   console.log('Database Connection Open');
 });
 
-
-
 module.exports = db;

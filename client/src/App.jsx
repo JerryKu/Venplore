@@ -12,11 +12,13 @@ class App extends React.Component {
     render () {
       return <div className='application'>
           <HeaderBar />
-          <Switch>
-            <Route exact path='/create' component={ActivityFinder}/>  
-            <Route path='/' component={EventCreator}/>
-            <Route path='/about' component={About}/>
-          </Switch>
+          <div className='main-content'> 
+            <Switch>
+              <Route exact path='/' component={ActivityFinder}/>  
+              <Route path='/create' component={EventCreator}/>
+              <Route path='/about' component={About}/>
+            </Switch>
+          </div>
         </div>;
     }
   }

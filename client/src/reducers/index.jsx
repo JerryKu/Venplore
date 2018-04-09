@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import setActivity from './activities/index.jsx';
+import currentActivity from './currentActivity.jsx';
+import activityList from './activityList.jsx';
 
-const venplore = combineReducers({
-  setActivity,
+const venploreApp = combineReducers({
+  currentActivity,
+  activityList,
 });
 
-export default venplore;
+export default venploreApp;

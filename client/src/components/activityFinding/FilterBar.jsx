@@ -1,5 +1,5 @@
 import React from "react";
-import FilterButtons from './FilterButtons.jsx'
+import FilterSlider from "./FilterSlider.jsx";
 
 class FilterBar extends React.Component {
   constructor() {
@@ -8,24 +8,27 @@ class FilterBar extends React.Component {
   }
 
   render() {
-    return <span className='filter-categories' >
-        <div >
-          Price: <FilterButtons />
+    return <span className="filter-categories">
+        <div>
+          Overall Ejoyability: <FilterSlider />
         </div>
         <div>
-          Mental Effort: <FilterButtons />
+          Price: <FilterSlider />
         </div>
         <div>
-          Physical Effort: <FilterButtons />
+          Mental Effort: <FilterSlider />
         </div>
         <div>
-          Nature Level: <FilterButtons />
+          Physical Effort: <FilterSlider />
         </div>
         <div>
-          Indoors Level: <FilterButtons />
+          Nature Level: <FilterSlider />
         </div>
         <div>
-          Duration: <FilterButtons />
+          Social level: <FilterSlider />
+        </div>
+        <div>
+          Duration: <FilterSlider />
         </div>
       </span>;
   }

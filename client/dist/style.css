@@ -36,6 +36,7 @@ html {
 
 .header-tab:hover {
     background-color: rgb(221, 155, 31);
+    transition-duration: 0.5s;
 }
 
     /* Main Content Section CSS */
@@ -100,14 +101,17 @@ html {
 }
 
 .filter-categories div {
-    margin: 3% 0% 3% 0%;
+    margin: 12% 0% 3% 0%;
 }
 
-.filter-buttons {
+.filter-slider {
     float: right;
 }
 
 .filter-buttons button {
     /* float: right; */
-    /* margin: 0% 0% 0% 3%; */
+    border-radius: 70%;
+    margin: 0% 0% 0% 5%;
+    background-color: orange;
+    color: white;
 }

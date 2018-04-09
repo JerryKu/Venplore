@@ -8,8 +8,8 @@ class FilterBar extends React.Component {
   }
 
   render() {
-    return <span>
-        <div>
+    return <span className='filter-categories' >
+        <div >
           Price: <FilterButtons />
         </div>
         <div>

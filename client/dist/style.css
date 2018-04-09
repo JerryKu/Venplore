@@ -6,7 +6,6 @@
 
 html {
     font-family: 'Dosis', sans-serif;
-    height: 100%;
 }
 .application {
     display: grid;
@@ -43,8 +42,9 @@ html {
 
 .main-content {
     background-color: rgba(255, 255, 255, 0.938);
-    margin-top: 2.75%;
+    margin-top: 2.85%;
     grid-area: 2 / 1 / span 1 / span 5;
+    height: 95vh;
 }
     /* Activity Section CSS */
 
@@ -67,6 +67,7 @@ html {
   flex-basis: 25%;
   margin: auto;
   overflow-y: auto;
+  max-height: 100%;
   border-right: 2.5px solid orange
 }
 
@@ -98,3 +99,15 @@ html {
     text-align: center;
 }
 
+.filter-categories div {
+    margin: 3% 0% 3% 0%;
+}
+
+.filter-buttons {
+    float: right;
+}
+
+.filter-buttons button {
+    /* float: right; */
+    /* margin: 0% 0% 0% 3%; */
+}

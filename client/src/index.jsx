@@ -6,7 +6,6 @@ import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import venplore from './reducers/index.jsx';
 import App from './App.jsx'
-// import setActivity from './reducers/activities/actions.jsx'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

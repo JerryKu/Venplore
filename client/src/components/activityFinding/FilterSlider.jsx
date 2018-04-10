@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 class FilterSlider extends React.Component {
   constructor() {
@@ -8,7 +8,7 @@ class FilterSlider extends React.Component {
 
   render() {
     return <span className='filter-slider'>
-         <input type="range" min="1" max="100" value="50" class="slider" id="myRange" />
+          <input type='range' min='0' max='5' id='myRange' step='1'/>
       </span>;
   }
 }

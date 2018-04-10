@@ -11,7 +11,6 @@ class ConnectedActivityList extends React.Component {
   }
   render(){
     return <span className="activities-list">
-      Other Activities:
       {this.props.activityList.map((activity, index) => 
         (<span key={index} onClick={() => { 
             this.props.setActivity(activity);

@@ -10,25 +10,32 @@ class FilterBar extends React.Component {
   render() {
     return <span className="filter-categories">
         <div>
-          Overall Ejoyability: <FilterSlider />
+          Overall Ejoyability: 
+          <FilterSlider />
         </div>
         <div>
-          Price: <FilterSlider />
+          Price: 
+          <FilterSlider />
         </div>
         <div>
-          Mental Effort: <FilterSlider />
+          Mental Effort: 
+          <FilterSlider />
         </div>
         <div>
-          Physical Effort: <FilterSlider />
+          Physical Effort: 
+          <FilterSlider />
         </div>
         <div>
-          Nature Level: <FilterSlider />
+          Nature Level: 
+          <FilterSlider />
         </div>
         <div>
-          Social level: <FilterSlider />
+          Social level: 
+          <FilterSlider />
         </div>
         <div>
-          Duration: <FilterSlider />
+          Duration: 
+          <FilterSlider />
         </div>
       </span>;
   }

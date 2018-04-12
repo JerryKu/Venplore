@@ -23,6 +23,11 @@ input{
   border-radius: 2px;
 }
 
+.description-box{
+  max-width: 100%;
+  margin-top: 1%;
+}
+
 .create-button{
   width: 60%;
   height: 10%;

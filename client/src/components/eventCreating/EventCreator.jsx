@@ -20,10 +20,11 @@ class EventCreator extends React.Component {
   render(){
     return <div style={{ height: "100%" }}>
         <form className="event-creation">
-          <label> Activity Name: <input type="text" name="Activity Name" />
+          <label>
+            Activity Name: <input type="text" name="Activity Name" placeholder="Fishing" />
           </label> <br />
           <label>
-            Image Link: <input type="text" name="Image" />
+            Image Link: <input type="text" name="Image" placeholder="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,q_65,w_768/v1/clients/norway/Fishing_2152634f-ba23-4044-8145-6ec3bab642bf.png" />
           </label> <br />
           <label>
             Overall Enjoyability: <input type="range" min="0" max="5" step="1" />
@@ -47,7 +48,11 @@ class EventCreator extends React.Component {
             Duration: <input type="range" min="0" max="5" step="1" />
           </label> <br />
           <label style={{ height: "20%" }}>
-            Description: <input type="text" name="Description" style={{ height: "100%" }} />
+            Description: 
+            <div>
+              <textarea rows='4' cols='100' className='description-box' name="Description" placeholder='All you need is a chair and fishing rod to enjoy hours of relaxation by your favorite body of water.'/>
+            </div>
+
           </label> <br />
           <input className="create-button" type="submit" value="Create Adventure" />
         </form>

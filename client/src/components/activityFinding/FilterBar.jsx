@@ -1,7 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 import actions from '../../actions/index.jsx'
-// import FilterSlider from "./FilterSlider.jsx";
 
 class FilterBar extends React.Component {
   constructor(props) {

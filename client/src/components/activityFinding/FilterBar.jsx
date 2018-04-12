@@ -1,34 +1,38 @@
 import React from "react";
-import FilterButtons from './FilterButtons.jsx'
+import { connect } from "react-redux";
+import actions from '../../actions/index.jsx'
 
 class FilterBar extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
+  constructor(props) {
+    super(props);
   }
 
   render() {
-    return <span>
-        <div>
-          Price: <FilterButtons />
+    return <span className="filter-categories">
+      {this.props.filters.map((filter, index) => {
+        return <div key={index}>
+           {filter[0]}: {filter[1]} 
+           <input type='range' min='0' max='5' step='1' defaultValue={filter[1]} onChange={(e) => {
+            this.props.setFilterValue(filter[0], e.target.value);
+          }}/>
         </div>
-        <div>
-          Mental Effort: <FilterButtons />
-        </div>
-        <div>
-          Physical Effort: <FilterButtons />
-        </div>
-        <div>
-          Nature Level: <FilterButtons />
-        </div>
-        <div>
-          Indoors Level: <FilterButtons />
-        </div>
-        <div>
-          Duration: <FilterButtons />
-        </div>
+      })}
       </span>;
   }
 }
 
-export default FilterBar;
+const mapStateToProps = state => {
+  return { filters: state.filters };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setFilterValue: (index, value) => {
+      dispatch(actions.setFilterValue(index, value));
+    }
+  };
+};
+
+const ConnectedFilterBar = connect(mapStateToProps, mapDispatchToProps)(FilterBar);
+
+export default ConnectedFilterBar;

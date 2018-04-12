@@ -10,13 +10,14 @@ class App extends React.Component {
       super();
     }
     render () {
-      return <div className='application'>
+      return <div className="application">
           <HeaderBar />
-          <div className='main-content'> 
+          <div className="main-content">
             <Switch>
-              <Route exact path='/' component={ActivityFinder}/>  
-              <Route path='/create' component={EventCreator}/>
-              <Route path='/about' component={About}/>
+              <Route path="/" component={EventCreator} />
+
+              <Route exact path="/" component={ActivityFinder} />
+              <Route path="/about" component={About} />
             </Switch>
           </div>
         </div>;

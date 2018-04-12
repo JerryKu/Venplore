@@ -9,7 +9,7 @@ const filterDefault = [
 ];
 
 const filters = (state = filterDefault, action) => {
-  switch (action.type){
+  switch (action.type) {
     case 'SET_FILTER':
       return state.map((filter) => {
         if (filter[0] === action.filter) {
@@ -20,6 +20,6 @@ const filters = (state = filterDefault, action) => {
     default:
       return state;
   }
-}
+};
 
 export default filters;

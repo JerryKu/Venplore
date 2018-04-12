@@ -1,18 +1,33 @@
 .event-creation{
   margin: 1%;
+  margin-left: 20%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   font-weight: bold;
+  height: 90%;
+  width: 60%;
+  padding: 1%;
+  border: 1px solid gray;
+  border-radius: 5px;
 }
 
 label{
-  padding-top: 0.5%;
-  width: 80%;
+  padding-top: 0.25%;
+  width: 90%;
 } 
 
 input{
-  width: 80%;
+  width: 70%;
   float: right;
+}
+
+.create-button{
+  width: 60%;
+  height: 10%;
+  border-radius: 10px;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  font-size: large;
 }

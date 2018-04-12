@@ -5,10 +5,10 @@ const setActivity = (activity) => {
   };
 };
 
-const setFilterValue = (index, value) => {
+const setFilterValue = (filter, value) => {
   return {
     type: 'SET_FILTER',
-    index,
+    filter,
     value,
   };
 };

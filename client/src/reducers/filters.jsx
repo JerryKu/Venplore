@@ -1,18 +1,21 @@
 const filterDefault = [
-  ['overallEnjoyability', 5],
-  ['price', 0],
-  ['mentalEffort', 0],
-  ['physicalEffort', 0],
-  ['natureLevel', 5],
-  ['socialLevel', 0],
-  ['duration', 5],
+  ['Overall Enjoyability', 5],
+  ['Price', 0],
+  ['Mental Effort', 0],
+  ['Physical Effort', 0],
+  ['Nature Level', 5],
+  ['Social Level', 0],
+  ['Duration', 5],
 ];
 
 const filters = (state = filterDefault, action) => {
   switch (action.type){
-    case 'UPDATE':
-      return Object.assign({}, state, {
-        
+    case 'SET_FILTER':
+      return state.map((filter) => {
+        if (filter[0] === action.filter) {
+          return [filter[0], action.value];
+        }
+        return filter;
       });
     default:
       return state;

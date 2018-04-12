@@ -3,13 +3,24 @@ import React from 'react';
 class EventCreator extends React.Component {
   constructor(props){
     super(props)
+    this.state = {
+        name: '',
+        imageLink: '',
+        overallEnjoyability: 0,
+        cost: 0,
+        mentalEffort: 0,
+        physicalEffort: 0,
+        natureLevel: 0,
+        socialLevel: 0,
+        duration: 0,
+        description: '',
+    }
   }
 
   render(){
     return <div style={{ height: "100%" }}>
         <form className="event-creation">
-          <label> Activity Name:
-<input type="text" name="Activity Name" />
+          <label> Activity Name: <input type="text" name="Activity Name" />
           </label> <br />
           <label>
             Image Link: <input type="text" name="Image" />

@@ -8,7 +8,7 @@ let state = {
 };
 MongoClient.connect(uri, (err, client) => {
   if (err) { throw err; }
-  state.db = client.db('activities');
+  state.db = client.db('venplore');
   console.log('Database Connection Open');
 });
 

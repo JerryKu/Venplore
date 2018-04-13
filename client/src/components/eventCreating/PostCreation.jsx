@@ -6,7 +6,7 @@ const PostCreation = () => {
     <div>
       Congradulations, you have created an adventure for the world to explore!
       <Link to='/' >Go Back Home</Link>
-      <Link to='/' >Create Another Adventure!</Link>
+      <Link to='/create' >Create Another Adventure!</Link>
     </div>
   )
 }

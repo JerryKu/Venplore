@@ -15,11 +15,10 @@ class App extends React.Component {
           <HeaderBar />
           <div className="main-content">
             <Switch>
-              <Route path='/created' component={PostCreation} />
-              <Route path="/" component={EventCreator} />
               <Route exact path="/" component={ActivityFinder} />
+              <Route path="/create" component={EventCreator} />
+              <Route path='/created' component={PostCreation} />
               <Route path="/about" component={About} />
-
             </Switch>
           </div>
         </div>;

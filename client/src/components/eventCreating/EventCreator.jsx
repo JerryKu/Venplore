@@ -25,6 +25,7 @@ class EventCreator extends React.Component {
     let newState = {};
     newState[event.target.name] = event.target.value;
     this.setState(newState);
+
   }
 
   handleSubmit(event){
@@ -58,7 +59,7 @@ class EventCreator extends React.Component {
             Image Link: <input type="text" name="imageLink" value={this.state.imageLink}placeholder="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,q_65,w_768/v1/clients/norway/Fishing_2152634f-ba23-4044-8145-6ec3bab642bf.png"  onChange={this.handleChange}/>
           </label> <br />
           <label>
-            Overall Enjoyability: <input type="range" min="0" max="5" step="1" name='overallEnjoyability' value={this.state.overallEnjoyability} onChange={this.handleChange}/>
+            Overall Enjoyability: {this.state.overallEnjoyability}<input type="range" min="0" max="5" step="1" name='overallEnjoyability' value={this.state.overallEnjoyability} onChange={this.handleChange}/>
           </label> <br />
           <label>
             Cost: {this.state.cost} <input type="range" min="0" max="5" step="1" name='cost' value={this.state.cost} onChange={this.handleChange}/>
@@ -81,10 +82,10 @@ class EventCreator extends React.Component {
           <label style={{ height: "20%" }}>
             Description: 
             <div>
-              <textarea rows='4' cols='100' className='description-box' name="description" value={this.state.description} placeholder='All you need is a chair and fishing rod to enjoy hours of relaxation by your favorite body of water.' onChange={this.handleChange}/>
+              <textarea rows='6' cols='150' className='description-box' name="description" value={this.state.description} placeholder='All you need is a chair and fishing rod to enjoy hours of relaxation by your favorite body of water.' onChange={this.handleChange}/>
             </div>
           </label> <br />
-          <Link to='/'><input className="create-button" type="submit" value="Create Adventure" onClick={this.handleSubmit}/></Link>
+          <Link to='/created'><input className="create-button" type="submit" value="Create Adventure" onClick={this.handleSubmit}/></Link>
         </form>
       </div>;
   }

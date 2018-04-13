@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 
 app.post('/event/creation', (request, responce) => {
   addEvent(request.body);
+  // console.log(request.body);
 })
 
 app.get('/event', (request, response) => {

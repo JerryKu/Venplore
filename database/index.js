@@ -9,6 +9,8 @@ MongoClient.connect(uri, (err, client) => {
   if (err) { throw err; }
   db = client.db('activities');
   console.log('Database Connection Open');
+  // console.log(db.collection('activities'));
+  module.exports = db;
 });
 
-module.exports = db;
+

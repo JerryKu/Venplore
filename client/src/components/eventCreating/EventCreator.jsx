@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 class EventCreator extends React.Component {
   constructor(props){
@@ -16,12 +18,34 @@ class EventCreator extends React.Component {
         description: '',
     }
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event){
     let newState = {};
     newState[event.target.name] = event.target.value;
     this.setState(newState);
+  }
+
+  handleSubmit(event){
+    axios.post('/event/creation', {
+      activityName: this.state.activityName,
+      imageLink: this.state.imageLink,
+      overallEnjoyability: this.state.overallEnjoyability,
+      cost: this.state.cost,
+      mentalEffort: this.state.mentalEffort,
+      physicalEffort: this.state.physicalEffort,
+      natureLevel: this.state.natureLevel,
+      socialLevel: this.state.socialLevel,
+      duration: this.state.duration,
+      description: this.state.description,
+    })
+    .then(function (response) {
+    console.log(response);
+   })
+   .catch(function (error) {
+    console.log(error);
+    });
   }
 
   render(){
@@ -57,10 +81,10 @@ class EventCreator extends React.Component {
           <label style={{ height: "20%" }}>
             Description: 
             <div>
-              <textarea rows='4' cols='100' className='description-box' name="description" value={this.state.description} placeholder='All you need is a chair and fishing rod to enjoy hours of relaxation by your favorite body of water.'  onChange={this.handleChange}/>
+              <textarea rows='4' cols='100' className='description-box' name="description" value={this.state.description} placeholder='All you need is a chair and fishing rod to enjoy hours of relaxation by your favorite body of water.' onChange={this.handleChange}/>
             </div>
           </label> <br />
-          <input className="create-button" type="submit" value="Create Adventure" />
+          <Link to='/created'><input className="create-button" type="submit" value="Create Adventure" onClick={this.handleSubmit}/></Link>
         </form>
       </div>;
   }

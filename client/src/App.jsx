@@ -20,8 +20,8 @@ class App extends React.Component {
           name: 'test',
         }
       }).then((activities) =>{
-        console.log(this.props);
         this.props.setActivityList(activities.data);
+        this.props.setActivity(activities.data[0]);
       })
     }
     render () {
@@ -47,6 +47,9 @@ const setList = (dispatch) => {
   return {
     setActivityList: (list) => {
       dispatch(actions.setActivityList(list));
+    },
+    setActivity: (activity) => {
+      dispatch(actions.setActivity(activity));
     }
   };
 };

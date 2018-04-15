@@ -14,7 +14,6 @@ const setFilterValue = (filter, value) => {
 };
 
 const setActivityList = (list) => {
-  console.log('activities', list)
   return {
     type: 'SET_ACTIVITY_LIST',
     list,

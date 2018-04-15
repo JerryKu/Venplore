@@ -1,0 +1,64 @@
+  /* Activity Section CSS */
+
+  .activity-section {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+    /* Filtering CSS */
+
+.filter-section {
+    flex-basis: 25%;
+    padding: 1%;
+    margin-right: 0.5%;
+    border-right: 2.5px solid orange
+}
+    /* Activity List CSS */
+
+.activity-list-section{
+  flex-basis: 25%;
+  margin: auto;
+  overflow-y: auto;
+  max-height: 100%;
+  border-right: 2.5px solid orange
+}
+
+.activity-list-item{
+    padding: 3%;
+}
+
+.activity-list-image{
+    max-width: 100%;
+}
+
+.activity{
+  padding: 0% 3%;
+}
+    /* Current Activity CSS */
+
+.current-activity-section {
+    flex-basis: 50%;
+    vertical-align: top;
+}
+
+.main-image-section {
+    margin: auto;
+    padding: 3%;
+    text-align: center;
+}
+
+.description-section {
+    text-align: center;
+}
+
+.filter-categories div {
+    margin: 12% 0% 3% 0%;
+}
+
+.filter-buttons button {
+    /* float: right; */
+    border-radius: 70%;
+    margin: 0% 0% 0% 5%;
+    background-color: orange;
+    color: white;
+}

@@ -10,7 +10,9 @@ class CurrentActivity extends React.Component {
   render() {
     return <span>
         <div className="main-image-section">
-          {this.props.activity.name}
+        <div>
+          {this.props.activity.name}  
+        </div>
           <img className="main-image" src={this.props.activity.imageLink} style={{maxWidth:'70%', maxHeight:'70%'}}/>
         </div>
         <div className="description-section">{this.props.activity.description}</div>
@@ -27,7 +29,6 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    // createBook: book => dispatch(bookActions.createBook(book))
   }
 };
 

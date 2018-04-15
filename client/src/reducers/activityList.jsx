@@ -1,7 +1,8 @@
 const activityList = (state = [], action) => {
+  console.log(action)
   switch (action.type) {
-    case 'SET_ACTIVITIES':
-      return action.activities;
+    case 'SET_ACTIVITY_LIST':
+      return action.list;
     default:
       return state;
   }

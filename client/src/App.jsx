@@ -21,7 +21,7 @@ class App extends React.Component {
         }
       }).then((activities) =>{
         console.log(this.props);
-        this.props.setActivityList(activities);
+        this.props.setActivityList(activities.data);
       })
     }
     render () {
@@ -39,7 +39,11 @@ class App extends React.Component {
     }
   }
 
-const setList = dispatch => {
+  const mapStateToProps = state => {
+    return { filters: state.filters };
+  }; // need to find way to connect without map state to props
+
+const setList = (dispatch) => {
   return {
     setActivityList: (list) => {
       dispatch(actions.setActivityList(list));
@@ -47,6 +51,6 @@ const setList = dispatch => {
   };
 };
 
-const ConnectedApp = connect(setList)(App);
+const ConnectedApp = connect(mapStateToProps, setList)(App);
   
 export default ConnectedApp;

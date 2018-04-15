@@ -15,7 +15,7 @@ class ConnectedActivityList extends React.Component {
         (<span key={index} onClick={() => { 
             this.props.setActivity(activity);
           }}>
-          <Activity image={activity.image} description={activity.description}/>
+          <Activity image={activity.imageLink} description={activity.name}/>
         </span>)
     )}
     </span>;

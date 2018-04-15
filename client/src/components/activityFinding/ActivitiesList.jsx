@@ -2,10 +2,21 @@ import React from "react";
 import { connect } from "react-redux";
 import actions from '../../actions/index.jsx'
 import Activity from './Activity.jsx'
+import axios from 'axios';
 
 class ConnectedActivityList extends React.Component {
   constructor(props){
     super(props);
+  }
+
+  componentDidMount() {
+    axios.get('/event/finding', {
+      params: {
+        name: 'test',
+      }
+    }).then((activities) =>{
+      console.log(activities);
+    })
   }
   render(){
     return <span className="activities-list">

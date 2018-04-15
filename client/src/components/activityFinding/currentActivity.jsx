@@ -9,21 +9,24 @@ class CurrentActivity extends React.Component {
 
   render() {
     return <span>
-        <div className="main-image-section">
-        <div>
-          {this.props.activity.name}  
-        </div>
-          <img className="main-image" src={this.props.activity.imageLink} style={{maxWidth:'70%', maxHeight:'70%'}}/>
-        </div>
-        <div className="description-section">{this.props.activity.description}</div>
-      </span>;
+              <div>
+                {this.props.eventInfo.name}
+              </div>
+              <div className="main-image-section">
+                <img className="main-image" src={this.props.eventInfo.imageLink} style={{maxWidth:'70%', maxHeight:'70%'}}/>
+              </div>
+             <div className="description-section">
+              {this.props.eventInfo.description}
+             </div>
+          </span>;
   }
 }
 
 
 const mapStateToProps = state => {
   return {
-    activity: state.currentActivity,
+    eventInfo: state.currentActivity.eventInfo,
+    eventRatings: state.currentActivity.eventRatings,
   }
 };
 

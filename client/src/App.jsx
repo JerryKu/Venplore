@@ -1,9 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import { connect } from "react-redux";
+import { withRouter } from 'react-router-dom';  
 import { Switch, Route } from 'react-router-dom';
 import actions from './actions/index.jsx'
-import HeaderBar from './components/navigating/HeaderBar.jsx';
+import NavBar from './components/navigating/NavBar.jsx';
 import EventCreator from './components/eventCreating/EventCreator.jsx';
 import ActivityFinder from './components/activityFinding/ActivityFinder.jsx';
 import PostCreation from './components/eventCreating/PostCreation.jsx';
@@ -27,7 +28,7 @@ class App extends React.Component {
     }
     render () {
       return <div className="application">
-          <HeaderBar />
+          <NavBar />
           <div className="main-content">
             <Switch>
               <Route exact path="/" component={ActivityFinder} />
@@ -40,6 +41,8 @@ class App extends React.Component {
     }
   }
 
-const ConnectedApp = connect()(App);
+const ConnectedApp = withRouter(
+  connect()(App)
+);
   
 export default ConnectedApp;

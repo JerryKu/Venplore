@@ -11,21 +11,28 @@
     flex-basis: 25%;
     padding: 1%;
     margin-right: 0.5%;
-    border-right: 2.5px solid orange
 }
     /* Activity List CSS */
 
 .activity-list-section{
   flex-basis: 25%;
   margin: auto;
-  overflow-y: auto;
-  max-height: 90%;
-  border-right: 2.5px solid orange
+  overflow: auto;
+  max-height: 100%;
+  border-left: 2.5px solid orange;
+  border-right: 2.5px solid orange;
+  
 }
 
 .activity-list-item{
-    padding: 3%;
+    padding: 5%;
+    border-bottom: 1px solid grey;
 }
+
+.activity-list-item-title{
+    font-weight: bold;
+}
+
 
 .activity-list-image{
     max-width: 100%;

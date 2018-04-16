@@ -21,8 +21,8 @@ class App extends React.Component {
           name: 'test',
         }
       }).then((activities) =>{
-        this.props.dispatch(actions.setActivityList(activities.data));
-        this.props.dispatch(actions.setActivity(activities.data[0]));
+        this.props.dispatch(actions.updateActivityList(activities.data, this.props.filters))
+        this.props.dispatch(actions.setActivity(this.props.activityList[0]));
 
       })
     }
@@ -41,8 +41,15 @@ class App extends React.Component {
     }
   }
 
+const mapStateToProps = (state) => {
+  return{
+    filters: state.filters,
+    activityList: state.activityList,
+  }
+}
+
 const ConnectedApp = withRouter(
-  connect()(App)
+  connect(mapStateToProps)(App)
 );
   
 export default ConnectedApp;

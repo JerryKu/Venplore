@@ -7,13 +7,14 @@ const rankActivities = (list, filters) => {
       const filter = filters[i][1];
       const filterRating = filters[i][2];
       const activityRating = activity.eventRatings[filter];
-      console.log(`${filter}`, activityRating);
-      console.log('filter rating', filterRating)
       adventureScore += Math.abs(filterRating - activityRating);
     };
-    adventureScore /= n;
+    adventureScore = 5 - (adventureScore / n);
     let scoredAdventure = Object.assign(activity, {adventureScore: adventureScore});
     scoredList.push(scoredAdventure);
+  });
+  scoredList.sort((a, b) => { 
+    return b.adventureScore - a.adventureScore;
   });
   return scoredList;
 };
@@ -23,9 +24,7 @@ const activityList = (state = [], action) => {
     case 'SET_ACTIVITY_LIST':
       return action.list;
     case 'UPDATE_ACTIVITY_LIST':
-
-      console.log(rankActivities(action.list, action.filters));
-      return state;
+      return rankActivities(action.list, action.filters);
     default:
       return state;
   }

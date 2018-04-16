@@ -17,7 +17,7 @@ class FilterBar extends React.Component {
            <div>
             <input type='range' min='0' max='5' step='1' defaultValue={filter[1]} onChange={(e) => {
                 this.props.setFilterValue(filter[0], e.target.value);
-              }}/>
+              }} onMouseUp={() => {this.props.updateActivityList(this.props.activityList, this.props.filters)}}/>
            </div>
         </div>)
       })}
@@ -26,13 +26,19 @@ class FilterBar extends React.Component {
 }
 
 const mapStateToProps = state => {
-  return { filters: state.filters };
+  return { 
+    filters: state.filters,
+    activityList: state.activityList, 
+  };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     setFilterValue: (index, value) => {
       dispatch(actions.setFilterValue(index, value));
+    },
+    updateActivityList: (list, filters) => {
+      dispatch(actions.updateActivityList(list, filters));
     }
   };
 };

@@ -9,7 +9,7 @@ const rankActivities = (list, filters) => {
       const activityRating = activity.eventRatings[filter];
       adventureScore += Math.abs(filterRating - activityRating);
     };
-    adventureScore = 5 - (adventureScore / n);
+    adventureScore = (5 - (adventureScore / n)).toFixed(2);
     let scoredAdventure = Object.assign(activity, {adventureScore: adventureScore});
     scoredList.push(scoredAdventure);
   });

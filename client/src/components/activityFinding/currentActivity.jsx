@@ -12,8 +12,8 @@ class CurrentActivity extends React.Component {
         <div className="current-event-title">
           {this.props.eventInfo.name}
         </div>
-        <div className="main-image-section">
-          <img className="main-image" src={this.props.eventInfo.imageLink} style={{ maxWidth: "70%", maxHeight: "70%" }} />
+        <div className="main-image">
+          <img src={this.props.eventInfo.imageLink} style={{ maxWidth: "100%", maxHeight: "100%" }} />
         </div>
         <div className="current-event-description">
           {this.props.eventInfo.description}

@@ -12,9 +12,7 @@ class ActivityFinder extends React.Component {
 
   render(){
     return <div className='activity-section'>
-      <div className='filter-section'>
-          <div> <FilterBar /> </div>
-      </div>
+        <FilterBar />
         <ActivitiesList />
         <CurrentActivity />
     </div>

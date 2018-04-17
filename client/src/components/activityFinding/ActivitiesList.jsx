@@ -3,17 +3,19 @@ import { connect } from "react-redux";
 import actions from '../../actions/index.jsx'
 import Activity from './Activity.jsx'
 
+
 class ConnectedActivityList extends React.Component {
   constructor(props){
     super(props);
   }
+
   render(){
     return <span className="activities-list">
       {this.props.activityList.map((activity, index) => 
         (<span key={index} onClick={() => { 
             this.props.setActivity(activity);
           }}>
-          <Activity image={activity.image} description={activity.description}/>
+          <Activity image={activity.eventInfo.imageLink} name={activity.eventInfo.name} score={activity.adventureScore}/>
         </span>)
     )}
     </span>;

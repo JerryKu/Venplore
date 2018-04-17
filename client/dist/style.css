@@ -1,3 +1,7 @@
+@import './styling/eventCreation.css';
+@import './styling/activityFinding.css';
+@import './styling/navigation.css';
+
 /* tag level css */
 
 *{
@@ -6,102 +10,17 @@
 
 html {
     font-family: 'Dosis', sans-serif;
+    max-height: 100vh;
 }
 .application {
-    display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-}
-/* class level css */
-    /* Header Bar CSS */
-
-.header-bar {
-    background-color: orange;
-    grid-area: 1 / 1 / span 1 / span 5;
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    top: 0;
+    position: absolute;
     left: 0;
-    width: 100%;
-}
-.header-tab {
-    padding: 1%;
-    min-height: 3%;
-    max-height: 3%;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.87);
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-.header-tab:hover {
-    background-color: rgb(221, 155, 31);
-    transition-duration: 0.5s;
-}
-
-    /* Main Content Section CSS */
-
-.main-content {
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     background-color: rgba(255, 255, 255, 0.938);
-    margin-top: 2.85%;
-    grid-area: 2 / 1 / span 1 / span 5;
-    height: 95vh;
-}
-    /* Activity Section CSS */
-
-.activity-section {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-}
-    /* Filtering CSS */
-
-.filter-section {
-    flex-basis: 25%;
-    padding: 1%;
-    margin-right: 0.5%;
-    border-right: 2.5px solid orange
-}
-    /* Activity List CSS */
-
-.activity-list-section{
-  flex-basis: 25%;
-  margin: auto;
-  overflow-y: auto;
-  max-height: 100%;
-  border-right: 2.5px solid orange
-}
-
-.activity-list-item{
-    padding: 3%;
-}
-
-.activity-list-image{
-    max-width: 100%;
-}
-
-.activity{
-  padding: 0% 3%;
-}
-    /* Current Activity CSS */
-
-.current-activity-section {
-    flex-basis: 50%;
-    vertical-align: top;
-}
-
-.main-image-section {
-    margin: auto;
-    padding: 3%;
-    text-align: center;
-}
-
-.description-section {
-    text-align: center;
-}
-
-.filter-categories div {
-    margin: 12% 0% 3% 0%;
+    height: 80vh;
+    width: 100vw;
 }
 
 input[type=range]{
@@ -118,11 +37,9 @@ input[type=range]{
     margin-top: 1%;
 }
 
-
 input[type=range]:hover{
     opacity: 1;
 }
-
 
 input[type=range]::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
@@ -134,11 +51,22 @@ input[type=range]::-webkit-slider-thumb {
     border-radius: 50%;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
 
-.filter-buttons button {
-    /* float: right; */
-    border-radius: 70%;
-    margin: 0% 0% 0% 5%;
-    background-color: orange;
-    color: white;
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

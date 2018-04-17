@@ -1,5 +1,4 @@
 // refactir into stateless functional component 
-
 import React from "react";
 import { connect } from "react-redux"
 
@@ -10,25 +9,29 @@ class CurrentActivity extends React.Component {
 
   render() {
     return <span>
-        <div className="main-image-section">
-          <img className="main-image" src={this.props.image} style={{maxWidth:'70%', maxHeight:'70%'}}/>
-        </div>
-        <div className="description-section">{this.props.description}</div>
-      </span>;
+              <div>
+                {this.props.eventInfo.name}
+              </div>
+              <div className="main-image-section">
+                <img className="main-image" src={this.props.eventInfo.imageLink} style={{maxWidth:'70%', maxHeight:'70%'}}/>
+              </div>
+             <div className="description-section">
+              {this.props.eventInfo.description}
+             </div>
+          </span>;
   }
 }
 
 
 const mapStateToProps = state => {
   return {
-    image: state.currentActivity.image,
-    description: state.currentActivity.description,
+    eventInfo: state.currentActivity.eventInfo,
+    eventRatings: state.currentActivity.eventRatings,
   }
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    // createBook: book => dispatch(bookActions.createBook(book))
   }
 };
 

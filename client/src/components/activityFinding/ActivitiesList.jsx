@@ -11,7 +11,7 @@ class ConnectedActivityList extends React.Component {
 
   render(){
     return <div className="activity-list-section">
-    <u><b>Top Adventures</b></u>
+    <u><b>Your Top Adventures</b></u>
         {this.props.activityList.map((activity, index) => (
           <div
             key={index}

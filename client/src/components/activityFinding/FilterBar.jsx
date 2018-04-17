@@ -9,6 +9,7 @@ class FilterBar extends React.Component {
 
   render() {
     return <div className="filter-section">
+        <u><b>Activity Filters:</b></u>
         {this.props.filters.map((filter, index) => {
           return <div key={index}>
               <div>

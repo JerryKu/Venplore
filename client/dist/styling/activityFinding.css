@@ -1,24 +1,23 @@
   /* Activity Section CSS */
 
   .activity-section {
+    grid-area: 2 / 1 / span 1 / span 10;
     display: flex;
     flex-direction: row;
-    height: 100%;
 }
     /* Filtering CSS */
 
 .filter-section {
-    flex-basis: 25%;
+    flex-basis: 20%;
     padding: 1%;
     margin-right: 0.5%;
 }
     /* Activity List CSS */
 
 .activity-list-section{
-  flex-basis: 25%;
-  margin: auto;
-  overflow: auto;
-  max-height: 100%;
+  flex-basis: 20%;
+  max-height: 90vh;
+  overflow-y: scroll;
   border-left: 2.5px solid orange;
   border-right: 2.5px solid orange;
   
@@ -44,7 +43,7 @@
     /* Current Activity CSS */
 
 .current-activity-section {
-    flex-basis: 50%;
+    flex-basis: 60%;
     vertical-align: top;
 }
 
@@ -59,14 +58,7 @@
 }
 
 .filter-categories div {
-    margin: 3% 0% 3% 0%;
+    margin: 2% 0% 2% 0%;
     display: flex;
     flex-direction: column;
-}
-
-.filter-buttons button {
-    border-radius: 70%;
-    margin: 0% 0% 0% 5%;
-    background-color: orange;
-    color: white;
 }

@@ -29,14 +29,12 @@ class App extends React.Component {
     render () {
       return <div className="application">
           <NavBar />
-          <div className="main-content">
-            <Switch>
-              <Route exact path="/" component={ActivityFinder} />
-              <Route path="/create" component={EventCreator} />
-              <Route path='/created' component={PostCreation} />
-              <Route path="/about" component={About} />
-            </Switch>
-          </div>
+          <Switch>
+            <Route exact path="/" component={ActivityFinder} />
+            <Route path="/create" component={EventCreator} />
+            <Route path='/created' component={PostCreation} />
+            <Route path="/about" component={About} />
+          </Switch>
         </div>;
     }
   }

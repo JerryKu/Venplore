@@ -1,4 +1,8 @@
-.event-creation{
+.event-creation-section{
+  grid-area: 2 / 3 / span 1 / span 6;
+}
+
+.event-creation-form{
   margin: 1%;
   margin-left: 20%;
   display: flex;

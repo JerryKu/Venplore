@@ -50,8 +50,8 @@ class EventCreator extends React.Component {
   }
 
   render(){
-    return <div style={{ height: "100%" }}>
-        <form className="event-creation">
+    return <div className='event-creation-section'>
+        <form className="event-creation-form">
           <label>
             Activity Name: <input type="text" name="activityName" placeholder="Fishing" value={this.state.activityName} onChange={this.handleChange}/>
           </label> <br />

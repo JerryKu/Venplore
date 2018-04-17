@@ -16,7 +16,7 @@ class ActivityFinder extends React.Component {
           <div> <FilterBar /> </div>
       </div>
         <div className='activity-list-section'> <ActivitiesList /> </div>
-        <div className='current-activity-section'> <CurrentActivity /> </div>
+        <CurrentActivity />
     </div>
   }
 }

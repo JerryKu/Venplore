@@ -10,15 +10,15 @@ class ConnectedActivityList extends React.Component {
   }
 
   render(){
-    return <span className="activities-list">
+    return <div className="activities-list">
       {this.props.activityList.map((activity, index) => 
-        (<span key={index} onClick={() => { 
+        (<div key={index} onClick={() => { 
             this.props.setActivity(activity);
           }}>
           <Activity image={activity.eventInfo.imageLink} name={activity.eventInfo.name} score={activity.adventureScore}/>
-        </span>)
+        </div>)
     )}
-    </span>;
+    </div>;
   }
 }
 

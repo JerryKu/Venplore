@@ -7,8 +7,9 @@
     "start": "node server/index.js",
     "dev": "webpack -d --watch",
     "prebuild": "rimraf dist",
-    "build": "webpack -p",
-    "server": "nodemon server/index.js"
+    "build": "webpack --config ./config/webpack.config.js --progress --colors",
+    "server": "nodemon server/index.js",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "axios": "^0.18.0",

@@ -1,0 +1,13 @@
+.about-page {
+  display: flex;
+  grid-area: 2 / 1 / span 1 / span 10;
+  height: 96vh;
+}
+
+.info-bar {
+  flex-basis: 20%;
+}
+
+.projects{
+  flex-basis: 80%;
+}

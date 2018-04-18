@@ -5,9 +5,16 @@ class About extends React.Component {
     super();
   }
   render(){
-    return <span>
-      About page
-    </span>;
+    return <div className='about-page'>
+      <div className='info-bar'>
+        <div>
+          Andrew Chen
+        </div>
+      </div>
+      <div className='projects'>
+        projects
+      </div>
+    </div>;
   }
 }
 

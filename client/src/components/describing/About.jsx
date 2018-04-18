@@ -7,7 +7,9 @@ class About extends React.Component {
   render(){
     return <div className='about-page'>
       <div className='info-bar'>
-        info bar
+        <div>
+          Andrew Chen
+        </div>
       </div>
       <div className='projects'>
         projects

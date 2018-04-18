@@ -1,0 +1,11 @@
+.about-page {
+  display: flex;
+}
+
+.info-bar {
+  flex-basis: 20%;
+}
+
+.projects{
+  flex-basis: 80%;
+}

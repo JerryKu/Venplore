@@ -1,6 +1,6 @@
 const connection = require('./index.js');
 
-const addEvent = (eventData) => {
+const addEvent = (eventData, callback) => {
   connection.db.collection('activities').insertOne({
     eventInfo: {
       name: eventData.activityName,
@@ -17,7 +17,7 @@ const addEvent = (eventData) => {
       duration: Number(eventData.duration),
     },
   }).then((results) => {
-    return results;
+    callback(results);
   });
 };
 

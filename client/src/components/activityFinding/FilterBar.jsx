@@ -1,34 +1,51 @@
 import React from "react";
-import FilterButtons from './FilterButtons.jsx'
+import { connect } from "react-redux";
+import actions from '../../actions/index.jsx'
 
 class FilterBar extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
+  constructor(props) {
+    super(props);
   }
 
   render() {
-    return <span>
-        <div>
-          Price: <FilterButtons />
-        </div>
-        <div>
-          Mental Effort: <FilterButtons />
-        </div>
-        <div>
-          Physical Effort: <FilterButtons />
-        </div>
-        <div>
-          Nature Level: <FilterButtons />
-        </div>
-        <div>
-          Indoors Level: <FilterButtons />
-        </div>
-        <div>
-          Duration: <FilterButtons />
-        </div>
-      </span>;
+    return <div className="filter-section">
+        <u><b>Activity Filters:</b></u>
+        {this.props.filters.map((filter, index) => {
+          return <div key={index}>
+              <div>
+                {filter[0]}: {filter[2]}
+              </div>
+              <div>
+                <input type="range" min="0" max="5" step="1" defaultValue={filter[2]} onChange={e => {
+                    this.props.setFilterValue(filter[0], e.target.value);
+                  }} onMouseUp={() => {
+                    this.props.updateActivityList(this.props.activityList, this.props.filters);
+                  }} />
+              </div>
+            </div>;
+        })}
+      </div>;
   }
 }
 
-export default FilterBar;
+const mapStateToProps = state => {
+  return { 
+    filters: state.filters,
+    activityList: state.activityList, 
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setFilterValue: (index, value) => {
+      dispatch(actions.setFilterValue(index, value));
+    },
+    updateActivityList: (list, filters) => {
+      dispatch(actions.updateActivityList(list, filters));
+    }
+  };
+};
+
+const ConnectedFilterBar = connect(mapStateToProps, mapDispatchToProps)(FilterBar);
+
+export default ConnectedFilterBar;

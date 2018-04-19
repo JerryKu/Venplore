@@ -1,20 +1,48 @@
 import React from "react";
+import { connect } from "react-redux";
+import actions from '../../actions/index.jsx'
 import Activity from './Activity.jsx'
 
-class ActivitiesList extends React.Component {
-  constructor(){
-    super();
+
+class ConnectedActivityList extends React.Component {
+  constructor(props){
+    super(props);
   }
+
   render(){
-    return <span className="activities-list">
-      <Activity/>
-      <Activity/>
-      <Activity/>
-      <Activity/>
-      <Activity/>
-      <Activity/>
-    </span>;
+    return <div className="activity-list-section">
+    <u><b>Your Top Adventures</b></u>
+        {this.props.activityList.map((activity, index) => (
+          <div
+            key={index}
+            onClick={() => {
+              this.props.setActivity(activity);
+            }}
+          >
+            <Activity
+              image={activity.eventInfo.imageLink}
+              name={activity.eventInfo.name}
+              score={activity.adventureScore}
+            />
+          </div>
+        ))}
+      </div>;
   }
 }
 
-export default ActivitiesList;
+const mapStateToProps = state => {
+  return { activityList: state.activityList };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    setActivity: activity => {
+      dispatch(actions.setActivity(activity));
+    }
+  };
+};
+
+const ActivityList = connect(mapStateToProps, mapDispatchToProps)(ConnectedActivityList);
+
+export default ActivityList;
+

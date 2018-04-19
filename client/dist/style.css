@@ -1,86 +1,73 @@
+@import './styling/eventCreation.css';
+@import './styling/activityFinding.css';
+@import './styling/navigation.css';
+@import './styling/about.css';
+
 /* tag level css */
 
 *{
   box-sizing: border-box;
 }
 
-html, body {
+html {
     font-family: 'Dosis', sans-serif;
-    background-color: orange;
-    height: 100%;
-    padding: 1%;
+    max-height: 100vh;
 }
 .application {
+    position: absolute;
+    left: 0;
+    top: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    border: solid 1px purple;
-    height: 100%;
-    max-height: 100%;
-    padding: 1%;
-    background-color: rgb(255, 187, 60);
-}
-/* class level css */
-    /* Header Bar CSS */
-
-.header-bar {
-    grid-area: 1 / 1 / span 1 / span 5;
-    display: flex;
-    flex-direction: row;
-    border: solid 1px black;
-    list-style-type: none;
-}
-.header-tab {
-    padding: 1%;
-    text-decoration: none;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    background-color: rgba(255, 255, 255, 0.938);
+    height: 80vh;
+    width: 100vw;
 }
 
-.header-tab:hover {
-    background-color: rgb(221, 155, 31);
-}
-    /* Activity Section CSS */
-
-.activity-section {
-    grid-area: 2 / 1 / span 1 / span 5;
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    border: solid 1px black;
-}
-    /* Filtering CSS */
-
-.filter-section {
-    flex-basis: 25%;
-    padding: 1%;
-    margin-right: 0.5%;
-    border: solid 1px orange;
-}
-    /* Activity List CSS */
-
-.activity-list-section{
-  flex-basis: 25%;
-  border: solid 1px orange;
-  margin-right: 0.5%;
-  overflow-y: auto;
+input[type=range]{
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; 
+    height: 10px; 
+    background: #d3d3d3;
+    outline: none; 
+    opacity: 0.7; 
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    float: right;
+    margin-top: 2%;
 }
 
-.activity{
-  padding: 0% 3%;
-  border: 2px solid green;
-}
-    /* Current Activity CSS */
-
-.current-activity-section {
-    flex-basis: 50%;
-    border: solid 1px blue;
-    vertical-align: top;
+input[type=range]:hover{
+    opacity: 1;
 }
 
-.main-image-section {
-    margin: auto;
-    padding: 3%;
-    text-align: center;
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 22px; /* Set a specific slider handle width */
+    height: 22px; /* Slider handle height */
+    background: orange; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%;
 }
 
-.description-section {
-    text-align: center;
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

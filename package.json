@@ -9,7 +9,8 @@
     "prebuild": "rimraf dist",
     "build": "webpack --config ./webpack.config.js",
     "server": "nodemon server/index.js",
-    "postinstall": "npm run build"
+    "postinstall": "npm run build",
+    "app": "nodemon server/index.js & webpack -d --watch"
   },
   "dependencies": {
     "axios": "^0.18.0",

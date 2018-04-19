@@ -6,8 +6,10 @@
 
 .info-bar {
   flex-basis: 20%;
+  margin: 1%;
 }
 
 .projects{
   flex-basis: 80%;
+  margin: 1%;
 }

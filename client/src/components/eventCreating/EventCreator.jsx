@@ -8,13 +8,13 @@ class EventCreator extends React.Component {
     this.state = {
         activityName: '',
         imageLink: '',
-        overallEnjoyability: 5,
-        cost: 1,
-        mentalEffort: 1,
-        physicalEffort: 1,
-        natureLevel: 5,
-        socialLevel: 3,
-        duration: 5,
+        overallEnjoyability: 0,
+        cost: 0,
+        mentalEffort: 0,
+        physicalEffort: 0,
+        natureLevel: 0,
+        socialLevel: 0,
+        duration: 0,
         description: '',
     }
     this.handleChange = this.handleChange.bind(this);
@@ -53,10 +53,10 @@ class EventCreator extends React.Component {
     return <div className='event-creation-section'>
         <form className="event-creation-form">
           <label>
-            Activity Name: <input type="text" name="activityName" placeholder="Fishing" value={this.state.activityName} onChange={this.handleChange}/>
+            Activity Name: <input type="text" name="activityName" placeholder="Add an exciting adventure!" value={this.state.activityName} onChange={this.handleChange}/>
           </label> <br />
           <label>
-            Image Link: <input type="text" name="imageLink" value={this.state.imageLink}placeholder="https://res.cloudinary.com/simpleview/image/upload/c_fill,f_auto,q_65,w_768/v1/clients/norway/Fishing_2152634f-ba23-4044-8145-6ec3bab642bf.png"  onChange={this.handleChange}/>
+            Image Link: <input type="text" name="imageLink" value={this.state.imageLink}placeholder="Image URL"  onChange={this.handleChange}/>
           </label> <br />
           <label>
             Overall Enjoyability: {this.state.overallEnjoyability}<input type="range" min="0" max="5" step="1" name='overallEnjoyability' value={this.state.overallEnjoyability} onChange={this.handleChange}/>
@@ -80,9 +80,9 @@ class EventCreator extends React.Component {
             Duration: {this.state.duration}<input type="range" min="0" max="5" step="1" name='duration' value={this.state.duration} onChange={this.handleChange}/>
           </label> <br />
           <label style={{ height: "20%" }}>
-            Description: 
+            Description:
             <div>
-              <textarea rows='6' cols='150' className='description-box' name="description" value={this.state.description} placeholder='All you need is a chair and fishing rod to enjoy hours of relaxation by your favorite body of water.' onChange={this.handleChange}/>
+              <textarea rows='6' cols='150' className='description-box' name="description" value={this.state.description} placeholder='Add a short description.' onChange={this.handleChange}/>
             </div>
           </label> <br />
           <Link to='/created'><input className="create-button" type="submit" value="Create Adventure" onClick={this.handleSubmit}/></Link>

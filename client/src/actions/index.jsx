@@ -1,4 +1,4 @@
-const setActivity(activity) {
+const setActivity = (activity) => {
   return {
     type: 'SET_ACTIVITY',
     activity,

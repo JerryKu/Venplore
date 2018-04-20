@@ -32,7 +32,7 @@ const actions = {
   setActivity: setActivity,
   setFilterValue: setFilterValue,
   setActivityList: setActivityList,
-  updateActivityList, updateActivityList
+  updateActivityList: updateActivityList,
 };
 
 export default actions;

@@ -1,10 +1,3 @@
-export default function setActivity(activity) {
-  return {
-    type: 'SET_ACTIVITY',
-    activity,
-  };
-};
-
 const setFilterValue = (filter, value) => {
   return {
     type: 'SET_FILTER',
@@ -26,7 +19,7 @@ const updateActivityList = (list, filters) => {
     list,
     filters,
   };
-};<<
+};
 
 const actions = {
   setActivity: setActivity,

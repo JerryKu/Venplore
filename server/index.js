@@ -10,9 +10,6 @@ const port = process.env.PORT || 8080;
 app.use(express.static(path.join(__dirname, '/../client/dist')));
 app.use(bodyParser.json());
 
-app.get('*', (request, response) => {
-  response.sendFile(path.join(__dirname, '/../client/dist/index.html'));
-});
 
 app.post('/event/creation', (request, response) => {
   addEvent(request.body, (results) => {
@@ -24,6 +21,10 @@ app.get('/event/finding', (request, response) => {
   getEvents('params', (results) => {
     response.send(results);
   });
+});
+
+app.get("*", (request, response) => {
+  response.sendFile(path.join(__dirname, "/../client/dist/index.html"));
 });
 
 const server = app.listen(port, (err) => {

@@ -9,7 +9,16 @@
   margin: 1%;
 }
 
-.projects{
+.projects-section{
   flex-basis: 80%;
+  margin: 1%;
+}
+
+.project-items{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-items div{
   margin: 1%;
 }

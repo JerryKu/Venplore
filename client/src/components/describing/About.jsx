@@ -9,6 +9,7 @@ class About extends React.Component {
         <div className="info-bar">
           <div>
             <h2>Andrew Chen</h2>
+            <img src="https://i.imgur.com/iflBcBK.png" />
             <div>
               Welcome to Venplore! This is the current project that I am
               working to solve the problem of not knowing what to do,
@@ -20,8 +21,17 @@ class About extends React.Component {
             </div>
           </div>
         </div>
-        <div className="projects">
-         <h2>Past Projects</h2>
+        <div className="projects-section">
+          <h2>Past Projects</h2>
+          <div className="project-items">
+            <div>
+              <h3>Venplore</h3>
+              <img src='https://static1.fitbit.com/simple.b-cssdisabled-jpg.hd7d4926725cd53dd676d7fbbe4f27a52.pack?items=%2Fcontent%2Fassets%2Fadventures%2Fimages%2Fgallery%2Fyosemite8.jpg' />
+            </div>
+            <div>Youtube emulator</div>
+            <div>Happenings</div>
+            <div>Siren</div>
+          </div>
         </div>
       </div>;
   }

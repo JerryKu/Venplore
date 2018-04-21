@@ -26,11 +26,19 @@ class About extends React.Component {
           <div className="project-items">
             <div>
               <h3>Venplore</h3>
-              <img src='https://static1.fitbit.com/simple.b-cssdisabled-jpg.hd7d4926725cd53dd676d7fbbe4f27a52.pack?items=%2Fcontent%2Fassets%2Fadventures%2Fimages%2Fgallery%2Fyosemite8.jpg' />
+              <img src="https://static1.fitbit.com/simple.b-cssdisabled-jpg.hd7d4926725cd53dd676d7fbbe4f27a52.pack?items=%2Fcontent%2Fassets%2Fadventures%2Fimages%2Fgallery%2Fyosemite8.jpg" />
+              <div>Venplore description go here</div>
             </div>
-            <div>Youtube emulator</div>
-            <div>Happenings</div>
-            <div>Siren</div>
+            <div>
+              <h3>Youtube emulator</h3>
+              <img src='https://www.youtube.com/yts/img/yt_1200-vfl4C3T0K.png'/>
+            </div>
+            <div>
+              <h3>Happenings</h3>
+            </div>
+            <div>
+              <h3>Siren</h3>
+            </div>
           </div>
         </div>
       </div>;

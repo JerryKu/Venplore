@@ -32,12 +32,17 @@ class About extends React.Component {
             <div>
               <h3>Youtube emulator</h3>
               <img src='https://www.youtube.com/yts/img/yt_1200-vfl4C3T0K.png'/>
+              <div>youtube description go here</div>
             </div>
             <div>
               <h3>Happenings</h3>
+              <img src='https://cdn.searchenginejournal.com/wp-content/uploads/2014/09/shutterstock_164716904-760x400.jpg'/>
+              <div>happenings description goes here</div>
             </div>
             <div>
               <h3>Siren</h3>
+              <img src='https://brandcdn.exacttarget.com/blog/uploads/2017/01/Screen-Shot-2017-01-23-at-11.37.38-AM.png'/>
+              <div>siren description go here</div>
             </div>
           </div>
         </div>

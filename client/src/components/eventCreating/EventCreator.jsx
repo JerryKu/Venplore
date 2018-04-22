@@ -53,10 +53,11 @@ class EventCreator extends React.Component {
     return <div className='event-creation-section'>
         <form className="event-creation-form">
           <label>
-            Activity Name: <input type="text" name="activityName" placeholder="Add an exciting adventure!" value={this.state.activityName} onChange={this.handleChange}/>
+            Activity Name: <input type="text" name="activityName" placeholder="Add clear and descriptive adventure name!" value={this.state.activityName} onChange={this.handleChange}/>
           </label> <br />
           <label>
-            Image Link: <input type="text" name="imageLink" value={this.state.imageLink}placeholder="Image URL"  onChange={this.handleChange}/>
+            Image Link: <input type="text" name="imageLink" value={this.state.imageLink}placeholder="Add a link to an image of the activity"  onChange={this.handleChange}/>
+
           </label> <br />
           <label>
             Overall Enjoyability: {this.state.overallEnjoyability}<input type="range" min="0" max="5" step="1" name='overallEnjoyability' value={this.state.overallEnjoyability} onChange={this.handleChange}/>
@@ -82,7 +83,7 @@ class EventCreator extends React.Component {
           <label style={{ height: "20%" }}>
             Description:
             <div>
-              <textarea rows='6' cols='150' className='description-box' name="description" value={this.state.description} placeholder='Add a short description.' onChange={this.handleChange}/>
+              <textarea rows='6' cols='150' className='description-box' name="description" value={this.state.description} placeholder='Add a description of the activity.' onChange={this.handleChange}/>
             </div>
           </label> <br />
           <Link to='/created'><input className="create-button" type="submit" value="Create Adventure" onClick={this.handleSubmit}/></Link>

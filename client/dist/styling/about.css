@@ -17,7 +17,8 @@
 .project-items{
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
+  /* height: 10%; */
+  margin-top: 0;
 }
 
 .project-items > div{
@@ -28,28 +29,31 @@
 
 
 .project-image{
-  max-height: 30%;
+  /* max-height: 30%; */
 }
 
 .project {
   display: flex;
   flex-direction: column;
-  position: relative;
   border: 1px solid black;
   border-radius: 1%;
+  height: 20%;
 }
 
 .project h3 {
-  margin-bottom: 0;
+  margin-bottom: 1%;
   font-weight: normal;
+  color: rgb(84, 142, 230);
 }
 
 .project h4 {
   margin-top: 0;
+  margin-bottom: 1%;
   font-weight: normal;
+  color: rgb(124, 172, 124);
 }
 
-.code-link {
-  position: absolute;
-  bottom: 1%;
+.project p{
+  margin-top: 1%;
+  font-size: 95%;
 }

@@ -10,7 +10,7 @@
 }
 
 html {
-    font-family: 'Dosis', sans-serif;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     max-height: 100vh;
 }
 .application {
@@ -75,4 +75,8 @@ input[type=range]::-webkit-slider-thumb {
 img {
     max-height: 100%;
     max-width: 100%;
+}
+
+a {
+    text-decoration: none;
 }

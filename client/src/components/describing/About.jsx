@@ -10,45 +10,51 @@ class About extends React.Component {
           <div>
             <h2>Andrew Chen</h2>
             <img src="https://i.imgur.com/iflBcBK.png" />
-            <div>
-              Welcome to Venplore! This is the current project that I am
-              working to solve the problem of not knowing what to do,
-              forever. Venplore is a platform for people to find the perfect
-              activity based on I am a creative problem solver with a
-              passion for creating things that make an impact on people's
-              lives and am willing to do whatever it takes to get the job
-              done. Enjoy your look around!
-            </div>
+            <h3>Welcome to Venplore!</h3>
+            <p>
+              Venplore is a platform that aims to kill bordeom, forever. On Venplore you can find an activity that matches your current mood as closely as possibly and upload your own for others to try out. The only limit is your imagination! 
+            </p> 
+              
+            <p>
+              As a creative problem solver, I am always looking for harder challenges to conquer. Feel free to reach out if you have any suggestions for Venplore or would like to help out!  
+            </p>
+            <h4>
+              andrewchen.c44@gmail.com
+            </h4>
+            
+            <a href='https://github.com/andrewchen44/Venplore' target='_blank'> Link to Code </a>
           </div>
         </div>
         <div className="projects-section">
-          <h2>Past Projects</h2>
+          <h2>What else I've been working on...</h2>
           <div className="project-items">
-            <div>
-              <h3>Venplore</h3>
-              <img src="https://static1.fitbit.com/simple.b-cssdisabled-jpg.hd7d4926725cd53dd676d7fbbe4f27a52.pack?items=%2Fcontent%2Fassets%2Fadventures%2Fimages%2Fgallery%2Fyosemite8.jpg" />
-              <div>Venplore description go here</div>
-              <a href='https://github.com/andrewchen44/Venplore' target='_blank'> github </a>
-            </div>
-            <div>
-              <h3>Youtube emulator</h3>
-              <img src='https://www.youtube.com/yts/img/yt_1200-vfl4C3T0K.png'/>
-              <div>youtube description go here</div>
-              <a href='https://github.com/andrewchen44/Client-Service' target='_blank'> github </a>
-            </div>
-            <div>
-              <h3>Happenings</h3>
-              <img src='https://cdn.searchenginejournal.com/wp-content/uploads/2014/09/shutterstock_164716904-760x400.jpg'/>
-              <div>happenings description goes here</div>
-              <a href='https://github.com/HappeningsHRSF83/Happenings' target='_blank'> github </a>
-            </div>
-            <div>
-              <h3>Siren</h3>
-              <img src='https://brandcdn.exacttarget.com/blog/uploads/2017/01/Screen-Shot-2017-01-23-at-11.37.38-AM.png'/>
-              <div>siren description go here</div>
-              <a href='https://github.com/HappeningsHRSF83/gitPullRebase/tree/dev' target='_blank'> github </a>
 
+            <div className='project'>
+              <img className='project-image'src='https://www.underconsideration.com/brandnew/archives/youtube_2017_logo_old_elements.png'/>
+              <h3>YouTube Emulator</h3>
+              <h4>Back-End Engineer</h4>
+              <p>The Front-End microsorvice for a YouTube emulator that received all requests from the client, routes them to the proper microservice, and returns search results.</p>
+              <a className='code-link' href='https://github.com/andrewchen44/Client-Service' target='_blank'> Link to Code </a>
             </div>
+
+            <div className='project'>
+              <img className='project-image' src='https://brandcdn.exacttarget.com/blog/uploads/2017/01/Screen-Shot-2017-01-23-at-11.37.38-AM.png'/>
+              <h3>Siren</h3>
+              <h4>Full-Stack Engineer</h4>
+              <p>A web application that allowed users to find and book local artists.</p>
+              <a className='code-link' href='https://github.com/HappeningsHRSF83/gitPullRebase/tree/dev' target='_blank'> Link to Code </a>
+            </div>
+
+            <div className='project'> 
+              <img className='project-image' src='https://cdn.searchenginejournal.com/wp-content/uploads/2014/09/shutterstock_164716904-760x400.jpg'/>
+              <h3>Happenings</h3>
+              <h4>Full-Stack Engineer</h4>
+              <p>An online platform that allowed users to upload and search for events.</p>
+              <a className='code-link' href='https://github.com/HappeningsHRSF83/Happenings' target='_blank'> Link to Code </a>
+            </div>
+
+
+
           </div>
         </div>
       </div>;

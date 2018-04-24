@@ -17,6 +17,10 @@
 }
 
 .header-tab:hover {
-    background-color: rgb(221, 155, 31);
+    background-color: rgb(247, 191, 89);
     transition-duration: 0.5s;
+}
+
+.selected {
+    background-color: rgb(247, 191, 89);
 }

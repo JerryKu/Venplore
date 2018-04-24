@@ -25,25 +25,28 @@ class About extends React.Component {
         <div className="projects-section">
           <h2>What else I have done so far</h2>
           <div className="project-items">
-            <div>
+
+            <div className='project'>
               <img className='project-image'src='https://www.youtube.com/yts/img/yt_1200-vfl4C3T0K.png'/>
-              <h3>Youtube emulator</h3>
-              <div>youtube description go here</div>
-              <a href='https://github.com/andrewchen44/Client-Service' target='_blank'> Link to Code </a>
+              <h3>YouTube Emulator</h3>
+              <div>The Front-End microsorvice for a YouTube emulator that received all requests from the client, routed them to the proper microservice, and returned search results.</div>
+              <a className='code-link' href='https://github.com/andrewchen44/Client-Service' target='_blank'> Link to Code </a>
             </div>
-            <div>
+
+            <div className='project'> 
               <img className='project-image' src='https://cdn.searchenginejournal.com/wp-content/uploads/2014/09/shutterstock_164716904-760x400.jpg'/>
               <h3>Happenings</h3>
-              <div>happenings description goes here</div>
-              <a href='https://github.com/HappeningsHRSF83/Happenings' target='_blank'> Link to Code </a>
+              <div>An online platform that allowed users to upload and search for events.</div>
+              <a className='code-link' href='https://github.com/HappeningsHRSF83/Happenings' target='_blank'> Link to Code </a>
             </div>
-            <div>
+
+            <div className='project'>
               <img className='project-image' src='https://brandcdn.exacttarget.com/blog/uploads/2017/01/Screen-Shot-2017-01-23-at-11.37.38-AM.png'/>
               <h3>Siren</h3>
-              <div>siren description go here</div>
-              <a href='https://github.com/HappeningsHRSF83/gitPullRebase/tree/dev' target='_blank'> Link to Code </a>
-
+              <div>A web application that allowed users to find and book local artists.</div>
+              <a className='code-link' href='https://github.com/HappeningsHRSF83/gitPullRebase/tree/dev' target='_blank'> Link to Code </a>
             </div>
+
           </div>
         </div>
       </div>;

@@ -21,5 +21,10 @@
 
 .project-items div{
   margin: 1%;
+  padding: 1%;
   width: 20%;
+}
+
+.project-items div:hover{
+  background-color: rgb(221, 221, 221);
 }

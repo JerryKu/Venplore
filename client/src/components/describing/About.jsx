@@ -10,20 +10,23 @@ class About extends React.Component {
           <div>
             <h2>Andrew Chen</h2>
             <img src="https://i.imgur.com/iflBcBK.png" />
+            <h3>Welcome to Venplore!</h3>
             <p>
-              Welcome to Venplore! This is the current project that I am
-              working to solve the problem of not knowing what to do,
-              forever. Venplore is a platform for people to find the perfect
-              activity based on I am a creative problem solver with a
-              passion for creating things that make an impact on people's
-              lives and am willing to do whatever it takes to get the job
-              done. Enjoy your look around!
+              Venplore is a platform that aims to kill bordeom, forever. On Venplore you can find an activity that matches your current mood as closely as possibly and upload your own for others to try out. The only limit is your imagination! 
+            </p> 
+              
+            <p>
+              As a creative problem solver, I am always looking for harder challenges to conquer. Feel free to reach out if you have any suggestions for Venplore or would like to help out!  
             </p>
+            <h4>
+              andrewchen.c44@gmail.com
+            </h4>
+            
             <a href='https://github.com/andrewchen44/Venplore' target='_blank'> Link to Code </a>
           </div>
         </div>
         <div className="projects-section">
-          <h2>What else I have done so far</h2>
+          <h2>What else I've been working on...</h2>
           <div className="project-items">
 
             <div className='project'>

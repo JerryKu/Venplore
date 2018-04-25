@@ -26,7 +26,7 @@ class About extends React.Component {
           </div>
         </div>
         <div className="projects-section">
-          <h2>What else I've been working on...</h2>
+          <h2 style={{paddingBottom: '2.5%', fontSize: '2em'}}>What else I've been working on</h2>
           <div className="project-items">
 
             <div className='project'>

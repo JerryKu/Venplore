@@ -86,7 +86,7 @@ class EventCreator extends React.Component {
               <textarea rows='6' cols='150' className='description-box' name="description" value={this.state.description} placeholder='Tell me more about this activity' onChange={this.handleChange}/>
             </div>
           </label> <br />
-          <Link style={{width: '35%' }} to='/created'><input className="create-button" type="submit" value="Create Adventure" onClick={this.handleSubmit}/></Link>
+          <Link style={{width: '10vw', height: '5vh'}} to='/created'><input className="create-button" type="submit" value="Create Adventure" onClick={this.handleSubmit}/></Link>
         </form>
       </div>;
   }

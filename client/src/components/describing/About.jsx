@@ -8,7 +8,7 @@ class About extends React.Component {
     return <div className="about-page">
         <div className="info-bar">
           <div>
-            <h2>Andrew Chen</h2>
+            <h2 style={{fontSize: '2em'}}>Andrew Chen</h2>
             <img src="https://i.imgur.com/iflBcBK.png" />
             <h3>Welcome to Venplore!</h3>
             <p>

@@ -7,6 +7,7 @@
     flex-direction: row;
     width: 100%;
     align-items: center;
+    max-height: 4vh;
 }
 
 .header-tab {
@@ -16,11 +17,13 @@
     font-weight: bold;
 }
 
-.header-tab:hover {
-    background-color: rgb(247, 191, 89);
-    transition-duration: 0.5s;
+.header-tab span:hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.87);
+    padding-bottom: 2%;
+    transition-duration: .3s;
 }
 
-.selected {
-    background-color: rgb(247, 191, 89);
+.selected span{
+    border-bottom: 2px solid rgba(255, 255, 255, 0.87);
+    padding-bottom: 2%;
 }

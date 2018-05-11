@@ -8,8 +8,8 @@
 .info-bar {
   flex-basis: 22.5%;
   margin: 1%;
-  padding: 2.5%;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  padding: 0 2.5%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   background-color: #f5f6f7;
 
 }
@@ -39,7 +39,7 @@
 .project {
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   border-radius: 1%;
   height: 20%;
 }

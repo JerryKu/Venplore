@@ -16,8 +16,6 @@
   border-radius: 5px;
   background-color: #f5f6f7;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
-
-
 }
 
 label{
@@ -37,9 +35,10 @@ input{
 
 .create-button{
   width: 100%;
-  border-radius: 10%;
+  height:100%;
+  border-radius: 7.5%;
   background-color: orange;
-  color: white;
-  font-weight: bold;
-  font-size: large;
+  color: #f4f5f6;
+  font-size: 1em;
+  font-weight:bold;
 }

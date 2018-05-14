@@ -1,0 +1,51 @@
+.about-page {
+  display: flex;
+  grid-area: 2 / 1 / span 1 / span 10;
+}
+
+.info-bar {
+  flex-basis: 22.5%;
+  height: 90%; 
+}
+
+.projects-section{
+  flex-basis: 77.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-items{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  height: 20%;
+  width: 30%;
+}
+
+.section-title {
+  font-weight: normal;
+  margin: 1%;
+  font-size: 2em;
+}
+
+.primary-title-blue {
+  font-size: 1.3em;
+  margin-bottom: 1%;
+  color: rgb(84, 142, 230);
+}
+
+.secondary-title-green {
+  font-weight: 1.25em;
+  margin-bottom: 1%;
+  color: rgb(124, 172, 124);
+}
+
+.about-page p{
+  margin-top: 1%;
+  font-size: 0.95em;
+}

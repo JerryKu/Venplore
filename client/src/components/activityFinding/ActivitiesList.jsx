@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import actions from '../../actions/index.jsx'
-import Activity from './Activity.jsx'
+import ActivityListItem from './ActivityListItem.jsx'
 
 
 class ConnectedActivityList extends React.Component {
@@ -11,7 +11,7 @@ class ConnectedActivityList extends React.Component {
 
   render(){
     return <div className="activity-list-section">
-    <u><b>Your Top Adventures</b></u>
+        <div className='primary-title-blue'>Your Top Adventures</div>
         {this.props.activityList.map((activity, index) => (
           <div
             key={index}
@@ -19,7 +19,7 @@ class ConnectedActivityList extends React.Component {
               this.props.setActivity(activity);
             }}
           >
-            <Activity
+            <ActivityListItem
               image={activity.eventInfo.imageLink}
               name={activity.eventInfo.name}
               score={activity.adventureScore}

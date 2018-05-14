@@ -41,10 +41,8 @@ const projects = [
 ];
 
 const Projects = (props) => {
-  return <div className="projects-section">
-      <h2 style={{ paddingBottom: "2.5%", fontSize: "2em" }}>
-        What else I've been working on
-      </h2>
+  return <div className="projects-section content-container">
+      <div className='section-title'>What else I've been working on</div>
       <div className='project-items'>
         {projects.map((project) => {
           return <ProjectItem key={project.title} image={project.image} title={project.title} position={project.position} description={project.description} github={project.github}/>

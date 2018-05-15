@@ -51,7 +51,7 @@ class EventCreator extends React.Component {
 
   render(){
     return <div className='event-creation-section'>
-        <form className="event-creation-form">
+        <form className="event-creation-form box-shadow-container">
           <label>
             Activity Name: <input type="text" name="activityName" placeholder="Add clear and descriptive activity name" value={this.state.activityName} onChange={this.handleChange}/>
           </label> <br />
@@ -59,34 +59,34 @@ class EventCreator extends React.Component {
             Image Link: <input type="text" name="imageLink" value={this.state.imageLink}placeholder="Add a link to an image of the activity"  onChange={this.handleChange}/>
 
           </label> <br />
-          <label>
+          <div>
             Overall Enjoyability: {this.state.overallEnjoyability}<input type="range" min="0" max="5" step="1" name='overallEnjoyability' value={this.state.overallEnjoyability} onChange={this.handleChange}/>
-          </label> <br />
-          <label>
+          </div> <br />
+          <div>
             Cost: {this.state.cost} <input type="range" min="0" max="5" step="1" name='cost' value={this.state.cost} onChange={this.handleChange}/>
-          </label> <br />
-          <label>
+          </div> <br />
+          <div>
             Mental Effort: {this.state.mentalEffort}<input type="range" min="0" max="5" step="1" name='mentalEffort' value={this.state.mentalEffort} onChange={this.handleChange}/>
-          </label> <br />
-          <label>
+          </div> <br />
+          <div>
             Physical Effort: {this.state.physicalEffort} <input type="range" min="0" max="5" step="1" name='physicalEffort' value={this.state.physicalEffort} onChange={this.handleChange}/>
-          </label> <br />
-          <label>
+          </div> <br />
+          <div>
             Nature Level: {this.state.natureLevel} <input type="range" min="0" max="5" step="1" name='natureLevel' value={this.state.natureLevel} onChange={this.handleChange}/>
-          </label> <br />
-          <label>
+          </div> <br />
+          <div>
             Social Level: {this.state.socialLevel}<input type="range" min="0" max="5" step="1" name='socialLevel' value={this.state.socialLevel} onChange={this.handleChange}/>
-          </label> <br />
-          <label>
+          </div> <br />
+          <div>
             Duration: {this.state.duration}<input type="range" min="0" max="5" step="1" name='duration' value={this.state.duration} onChange={this.handleChange}/>
-          </label> <br />
+          </div> <br />
           <label style={{ height: "20%" }}>
             Description:
             <div>
               <textarea rows='6' cols='150' className='description-box' name="description" value={this.state.description} placeholder='Tell me more about this activity' onChange={this.handleChange}/>
             </div>
           </label> <br />
-          <Link style={{width: '10vw', height: '5vh'}} to='/created'><input className="create-button" type="submit" value="Create Adventure" onClick={this.handleSubmit}/></Link>
+          <input className="create-button" type="submit" value="Create Adventure" onClick={this.handleSubmit}/>
         </form>
       </div>;
   }

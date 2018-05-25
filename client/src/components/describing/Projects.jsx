@@ -4,6 +4,15 @@ import ProjectItem from './ProjectItem.jsx'
 const projects = [
   {
     image:
+      "https://www.underconsideration.com/brandnew/archives/youtube_2017_logo_old_elements.png",
+    title: "YouTube Emulator",
+    position: "Back-End Engineer",
+    description:
+      "The Front-End microsorvice for a YouTube emulator that received all requests from the client, routes them to the proper microservice, and returns search results.",
+    github: "https://github.com/andrewchen44/Client-Service"
+  },
+  {
+    image:
       "https://brandcdn.exacttarget.com/blog/uploads/2017/01/Screen-Shot-2017-01-23-at-11.37.38-AM.png",
     title: "Siren",
     position: "Full-Stack Engineer",
@@ -22,15 +31,6 @@ const projects = [
   },
   {
     image:
-      "https://www.underconsideration.com/brandnew/archives/youtube_2017_logo_old_elements.png",
-    title: "YouTube Emulator",
-    position: "Back-End Engineer",
-    description:
-      "The Front-End microsorvice for a YouTube emulator that received all requests from the client, routes them to the proper microservice, and returns search results.",
-    github: "https://github.com/andrewchen44/Client-Service"
-  },
-  {
-    image:
       "https://tessla.org/wp-content/uploads/2017/06/Portfolio20Management20Service20-20Individual20Service.jpg",
     title: "Portfolio Rebalancer",
     position: "Front-End Engineer",
@@ -43,12 +43,11 @@ const projects = [
 const Projects = (props) => {
   return <div className="projects-section content-container">
       <div className='section-title'>What else I've been working on</div>
-      <div className='project-items'>
-        {projects.map((project) => {
-          return <ProjectItem key={project.title} image={project.image} title={project.title} position={project.position} description={project.description} github={project.github}/>
-        })}
-
-      </div>
+        <div className='project-items'>
+          {projects.map((project) => {
+            return <ProjectItem key={project.title} image={project.image} title={project.title} position={project.position} description={project.description} github={project.github}/>
+          })}
+        </div>
     </div>;
 }
 

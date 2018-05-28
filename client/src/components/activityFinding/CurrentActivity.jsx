@@ -10,8 +10,6 @@ class CurrentActivity extends React.Component {
   render() {
     const ratingTitles = ["Overall Enjoyability", "Cost", "Mental Effort", "Physical Effort", "Nature Level", "Social Level", "Duration"]
     const activityRatings = Object.keys(this.props.eventRatings);
-    console.log('props', this.props)
-    console.log('activity ratings', activityRatings)
     return <div className="current-activity-section">
         <div className="event-info content-container">
           <div className="primary-title-blue">

@@ -1,6 +1,6 @@
 import React from "react";
 import CurrentActivity from './CurrentActivity.jsx';
-import FilterBar from './FilterBar.jsx';
+import FilterBarContainer from '../../containers/FilterBarContainer.jsx';
 // import SearchBar from './SearchBar.jsx';
 import ActivitiesListContainer from '../../containers/ActivityListContainer.jsx';
 import CreateActivity from '../eventCreating/EventCreator.jsx'
@@ -10,14 +10,14 @@ class ActivityFinder extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      createActivity: true,
+      createActivity: false,
     };
   }
 
   render(){
     return <div>
         <div className="activity-finding-section">
-          <FilterBar />
+          <FilterBarContainer />
           <ActivitiesListContainer />
           <CurrentActivity />
         </div>

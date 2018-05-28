@@ -28,24 +28,4 @@ class FilterBar extends React.Component {
   }
 }
 
-const mapStateToProps = state => {
-  return { 
-    filters: state.filters,
-    activityList: state.activityList, 
-  };
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    setFilterValue: (index, value) => {
-      dispatch(actions.setFilterValue(index, value));
-    },
-    updateActivityList: (list, filters) => {
-      dispatch(actions.updateActivityList(list, filters));
-    }
-  };
-};
-
-const ConnectedFilterBar = connect(mapStateToProps, mapDispatchToProps)(FilterBar);
-
-export default ConnectedFilterBar;
+export default FilterBar;

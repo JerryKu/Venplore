@@ -35,15 +35,4 @@ class CurrentActivity extends React.Component {
   }
 }
 
-
-const mapStateToProps = state => {
-  return {
-    eventInfo: state.currentActivity.eventInfo,
-    eventRatings: state.currentActivity.eventRatings,
-  }
-};
-
-
-const ConnectedCurrentActivity = connect(mapStateToProps)(CurrentActivity);
-
-export default ConnectedCurrentActivity;
+export default CurrentActivity;

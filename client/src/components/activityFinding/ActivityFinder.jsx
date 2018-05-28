@@ -1,5 +1,5 @@
 import React from "react";
-import CurrentActivity from './CurrentActivity.jsx';
+import CurrentActivityContainer from '../../containers/CurrentActivityContainer.jsx';
 import FilterBarContainer from '../../containers/FilterBarContainer.jsx';
 // import SearchBar from './SearchBar.jsx';
 import ActivitiesListContainer from '../../containers/ActivityListContainer.jsx';
@@ -19,7 +19,7 @@ class ActivityFinder extends React.Component {
         <div className="activity-finding-section">
           <FilterBarContainer />
           <ActivitiesListContainer />
-          <CurrentActivity />
+          <CurrentActivityContainer />
         </div>
         <div>{this.state.createActivity ? <CreateActivity /> : null}</div>
       </div>; 

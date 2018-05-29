@@ -6,7 +6,7 @@ const HeaderBar = (props) => {
     <div className='header-bar'>
       <NavLink to='/' className='header-tab'>Venplore - Venture, and Explore!</NavLink>
       <NavLink activeClassName="selected" exact to='/' className='header-tab'> <span> Home</span></NavLink>
-      <NavLink activeClassName="selected" exact to='/create' className='header-tab'> <span>Create an activity</span> </NavLink>
+      <NavLink activeClassName="selected" exact to='/' className='header-tab'> <span>Create an activity</span> </NavLink>
       <NavLink activeClassName="selected" exact to='/about' className='header-tab'> <span>About</span></NavLink> 
     </div>
   );

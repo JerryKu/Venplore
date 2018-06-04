@@ -1,11 +1,10 @@
 const filterDefault = [
-  ['Overall Enjoyability', 'overallEnjoyability', 5],
   ['Cost', 'cost', 0],
   ['Mental Effort', 'mentalEffort', 0],
   ['Physical Effort', 'physicalEffort', 0],
-  ['Nature Level', 'natureLevel', 5],
+  ['Nature Level', 'natureLevel', 0],
   ['Social Level', 'socialLevel', 0],
-  ['Duration', 'duration', 5],
+  ['Duration', 'duration', 0],
 ];
 
 const filters = (state = filterDefault, action) => {

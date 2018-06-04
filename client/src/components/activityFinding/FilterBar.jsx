@@ -1,10 +1,9 @@
 import React from "react";
-import { connect } from "react-redux";
 import actions from '../../actions/index.jsx'
 
 const FilterBar = (props) =>{
   return <div className="filter-section">
-      <div className="primary-title-blue" >Activity Filters</div>
+      <div className="primary-title-blue" >What are you in the mood for?</div>
       {props.filters.map((filter, index) => {
         return <div key={index}>
             <div>

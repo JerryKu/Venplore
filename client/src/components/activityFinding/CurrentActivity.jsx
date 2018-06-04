@@ -1,5 +1,4 @@
 import React from "react";
-import { connect } from "react-redux"
 
 const CurrentActivity = (props) => {
   const ratingTitles = ["Overall Enjoyability", "Cost", "Mental Effort", "Physical Effort", "Nature Level", "Social Level", "Duration"]

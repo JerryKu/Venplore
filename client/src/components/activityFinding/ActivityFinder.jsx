@@ -4,7 +4,6 @@ import FilterBarContainer from '../../containers/FilterBarContainer.jsx';
 // import SearchBar from './SearchBar.jsx';
 import ActivitiesListContainer from '../../containers/ActivityListContainer.jsx';
 import CreateActivity from '../eventCreating/EventCreator.jsx'
-import { Link } from 'react-router-dom';
 
 class ActivityFinder extends React.Component {
   constructor(props){
@@ -12,17 +11,24 @@ class ActivityFinder extends React.Component {
     this.state = {
       createActivity: false,
     };
+    this.displayCreation = this.displayCreation.bind(this);
+  }
+
+  displayCreation() {
+    this.setState({
+      createActivity: !this.state.createActivity,
+    })
   }
 
   render(){
-    return <div>
+    return (<div>
         <div className="activity-finding-section">
           <FilterBarContainer />
           <ActivitiesListContainer />
           <CurrentActivityContainer />
         </div>
-        <div>{this.state.createActivity ? <CreateActivity /> : null}</div>
-      </div>; 
+        <div>{this.state.createActivity ? <CreateActivity displayCreation={this.displayCreation} /> : null}</div>
+      </div>); 
   }
 }
 

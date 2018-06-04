@@ -1,6 +1,5 @@
 import React from "react";
-import { connect } from "react-redux";
-import actions from '../../actions/index.jsx'
+import actions  from '../../actions/index.jsx'
 import ActivityListItem from './ActivityListItem.jsx'
 
 

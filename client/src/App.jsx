@@ -23,7 +23,6 @@ class App extends React.Component {
       }).then((activities) =>{
         this.props.dispatch(actions.updateActivityList(activities.data, this.props.filters))
         this.props.dispatch(actions.setActivity(this.props.activityList[0]));
-
       })
     }
     

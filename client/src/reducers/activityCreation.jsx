@@ -5,7 +5,7 @@ const defaultState = {
 const createActivity = (state = defaultActivity, action) => {
   switch (action.type) {
     case 'SET_ACTIVITY':
-      return action.activity;
+      return action.state;
     default:
       return state;
   }

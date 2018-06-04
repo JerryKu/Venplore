@@ -1,10 +1,12 @@
+import * as types from '../constants/actionTypes'
+
 const defaultState = {
   state: '!creating',
 }
 
-const createActivity = (state = defaultActivity, action) => {
+const createActivity = (state = defaultState, action) => {
   switch (action.type) {
-    case 'SET_ACTIVITY':
+    case types.SET_CREATION_STATE:
       return action.state;
     default:
       return state;

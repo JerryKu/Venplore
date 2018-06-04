@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { setCreationState } from '../../actions/creationActions';
 
 class EventCreator extends React.Component {
   constructor(props){
@@ -19,6 +19,7 @@ class EventCreator extends React.Component {
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.closeCreator = this.closeCreator.bind(this);
   }
 
   handleChange(event){
@@ -49,8 +50,16 @@ class EventCreator extends React.Component {
     });
   }
 
+  closeCreator(){
+    this.props.dispatch(setCreationState('!creating'));
+  }
+
   render(){
+    console.log('props in event creator', this.props)
     return <div className='event-creation-section'>
+        <div>
+          <button onClick={this.closeCreator}>X</button>
+        </div>
         <form className="event-creation-form box-shadow-container">
           <label>
             Activity Name: <input type="text" name="activityName" placeholder="Add clear and descriptive activity name" value={this.state.activityName} onChange={this.handleChange}/>

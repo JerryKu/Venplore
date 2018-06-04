@@ -5,9 +5,10 @@ const defaultState = {
 }
 
 const createActivity = (state = defaultState, action) => {
+  console.log('action in reducer', action)
   switch (action.type) {
     case types.SET_CREATION_STATE:
-      return action.state;
+      return { state: action.state};
     default:
       return state;
   }

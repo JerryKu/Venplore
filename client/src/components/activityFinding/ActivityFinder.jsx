@@ -3,7 +3,7 @@ import CurrentActivityContainer from '../../containers/CurrentActivityContainer.
 import FilterBarContainer from '../../containers/FilterBarContainer.jsx';
 // import SearchBar from './SearchBar.jsx';
 import ActivitiesListContainer from '../../containers/ActivityListContainer.jsx';
-import CreateActivity from '../eventCreating/EventCreator.jsx'
+import ActivityCreatorContainer from '../../containers/ActivityCreatorContainer.jsx'
 
 const ActivityFinder = ({ createActivity }) => {
   return (<div>
@@ -12,7 +12,7 @@ const ActivityFinder = ({ createActivity }) => {
         <ActivitiesListContainer />
         <CurrentActivityContainer />
       </div>
-      <div>{createActivity === 'creating' ? <CreateActivity /> : null}</div>
+      <div>{createActivity === 'creating' ? <ActivityCreatorContainer /> : null}</div>
     </div>); 
 }
 

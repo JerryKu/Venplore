@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import { withRouter } from 'react-router-dom';  
 import { Switch, Route } from 'react-router-dom';
 import actions from './actions/index.jsx'
-import NavBar from './components/navigating/NavBar.jsx';
+import NavbarContainer from './containers/NavbarContainer.jsx';
 import EventCreator from './components/eventCreating/EventCreator.jsx';
 import ActivityFinderContainer from './containers/ActivityFinderContainer.jsx';
 import PostCreation from './components/eventCreating/PostCreation.jsx';
@@ -28,7 +28,7 @@ class App extends React.Component {
     
     render () {
       return <div className="application">
-          <NavBar />
+          <NavbarContainer />
           <Switch>
             <Route exact path="/" component={ActivityFinderContainer} />
             <Route path="/about" component={About} />

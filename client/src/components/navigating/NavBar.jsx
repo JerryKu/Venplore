@@ -3,12 +3,9 @@ import { BrowserRouter as Router, NavLink } from 'react-router-dom';
 import { setCreationState } from '../../actions/creationActions.js'
 
 const HeaderBar = ({ dispatch} ) => {
-  console.log(dispatch)
   const createActivity = () => {
-    console.log('calling')
     dispatch(setCreationState('creating'));
   }
-
   return (
     <div className='header-bar'>
       <NavLink to='/' className='header-tab'>Venplore - Venture, and Explore!</NavLink>

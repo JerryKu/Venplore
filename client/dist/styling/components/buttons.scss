@@ -1,9 +1,17 @@
 .create-button{
   width: 45%;
-  height: 40px;
+  min-height: 30px;
   border-radius: 11px;
   background-color: orange;
   color: #f4f5f6;
   font-size: 1em;
   font-weight: bold;
+}
+
+.close-button{
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  background-color: inherit;
+  border: none;
 }

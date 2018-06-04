@@ -55,12 +55,9 @@ class EventCreator extends React.Component {
   }
 
   render(){
-    console.log('props in event creator', this.props)
     return <div className='event-creation-section'>
-        <div>
-          <button onClick={this.closeCreator}>X</button>
-        </div>
         <form className="event-creation-form box-shadow-container">
+            <button className='close-button' onClick={this.closeCreator}>X</button>
           <label>
             Activity Name: <input type="text" name="activityName" placeholder="Add clear and descriptive activity name" value={this.state.activityName} onChange={this.handleChange}/>
           </label> <br />
@@ -95,7 +92,6 @@ class EventCreator extends React.Component {
               <textarea rows='6' cols='150' className='description-box' name="description" value={this.state.description} placeholder='Tell me more about this activity' onChange={this.handleChange}/>
             </div>
           </label> <br />
-          <button onClick={this.displayCreation}> Back to Adventures</button>
           <input className="create-button" type="submit" value="Create Adventure" onClick={this.handleSubmit}/>
         </form>
       </div>;

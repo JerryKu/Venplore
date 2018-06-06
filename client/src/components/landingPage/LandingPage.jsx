@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import LandingPageSplash from './LandingPageSplash.jsx';
 import FeaturedActivities from './featuredActivities.jsx';
@@ -18,3 +19,29 @@ const LandingPageContainer = (props) => {
 }
 
 export default LandingPageContainer;
+=======
+import React, { Component } from 'react';
+import Flickity from 'flickity';
+import BottomIcon from '../../assets/BottomIcon.png'
+
+class LandingPage extends Component {
+  componentDidMount(){
+    let elem = document.querySelector('.main-carousel');
+    let flckty = new Flickity(elem, {
+      fullscreen: true,
+    })
+  }
+  render() {
+    return (
+      <div className="landingPage relative">
+        <img className="bottomIcon" src={BottomIcon}/>
+        <div className="welcome absolute">Welcome to Venplore!</div>
+      </div>
+
+    );
+  }
+
+}
+
+export default LandingPage;
+>>>>>>> started landing page, added landing page css, added url-loader for images

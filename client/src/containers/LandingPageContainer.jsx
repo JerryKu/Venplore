@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { connect } from 'react-redux';
 import actions from '../actions/index.jsx';
@@ -24,3 +25,19 @@ const mapDispatchToProps = dispatch => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LandingPageContainer);
+=======
+import React, { Component } from 'react';
+import LandingPage from '../components/landingPage/LandingPage.jsx'
+
+class LandingPageContainer extends Component {
+
+  render() {
+    return (
+      <LandingPage />
+    );
+  }
+
+}
+
+export default LandingPageContainer;
+>>>>>>> started landing page, added landing page css, added url-loader for images

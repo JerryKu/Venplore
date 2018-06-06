@@ -14,12 +14,31 @@
 img{
   display:block;
 }
+h2{
+  margin: 0;
+}
 html {
     font-family: 'Rubik', sans-serif;
     max-height: 100vh;
     background-color: #f5f6f7;;
 }
-
+.contact-us{
+  margin-top: 3em;
+  margin-bottom: 1em; 
+  text-align: center;
+}
+.footerBar{
+  position: fixed;
+  bottom:0;
+  z-index: -999;
+}
+.grid-root{
+  display:grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+.grid-full{
+  grid-column: 1 / -1;
+}
 .application {
     position: absolute;
     left: 0;

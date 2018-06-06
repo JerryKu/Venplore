@@ -11,11 +11,12 @@ class LandingPage extends Component {
   }
   render() {
     return (
-      <div className="landingPage relative">
-        <img className="bottomIcon" src={BottomIcon}/>
-        <div className="welcome absolute">Welcome to Venplore!</div>
+      <div className="welcomeScreen grid-full">
+        <div className="landingPage relative">
+            <img className="featuredImage" src="http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_640/images/live/p0/51/v6/p051v6vn.jpg"/>
+            <img className="bottomIcon absolute" src={BottomIcon}/>
+        </div>
       </div>
-
     );
   }
 

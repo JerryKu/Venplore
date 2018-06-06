@@ -33,8 +33,8 @@ class App extends React.Component {
       return <div className="application">
           <NavbarContainer />
           <Switch>
-            <Route exact path="/" component={ActivityFinderContainer} />
-            <Route path="/home" component={LandingPageContainer} />
+            <Route exact path="/" component={LandingPageContainer}/>
+            <Route path="/finding" component={ActivityFinderContainer} />
             <Route path="/about" component={About} />
             <Route path='/signup' component={SignUp} />
             <Route path='/login' component={Login} />

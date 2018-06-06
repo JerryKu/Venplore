@@ -5,6 +5,7 @@
 @import './styling/components/containers.scss';
 @import './styling/components/buttons.scss';
 @import './styling/landingPage.scss';
+@import './styling/footerBar.scss';
 
 /* tag level css */
 
@@ -14,12 +15,20 @@
 img{
   display:block;
 }
+
 html {
     font-family: 'Rubik', sans-serif;
     max-height: 100vh;
     background-color: #f5f6f7;;
 }
 
+.grid-root{
+  display:grid;
+  grid-template-columns: repeat(10, 1fr);
+}
+.grid-full{
+  grid-column: 1 / -1;
+}
 .application {
     position: absolute;
     left: 0;
@@ -87,7 +96,7 @@ img {
     max-width: 100%;
 }
 
-a {
-    text-decoration: none;
-    color: rgb(84, 142, 230);
-}
+// a {
+//     text-decoration: none;
+//     color: rgb(84, 142, 230);
+// }

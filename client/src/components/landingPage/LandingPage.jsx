@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
-import Flickity from 'flickity';
-import BottomIcon from '../../assets/BottomIcon.png'
+import LandingPageSplash from './LandingPageSplash.jsx';
+import FeaturedActivities from './featuredActivities.jsx';
+import FooterBar from '../navigating/FooterBar.jsx';
+import ActivityCreatorContainer from '../../containers/ActivityCreatorContainer.jsx';
 
-class LandingPage extends Component {
-  componentDidMount(){
-    let elem = document.querySelector('.main-carousel');
-    let flckty = new Flickity(elem, {
-      fullscreen: true,
-    })
+class LandingPageContainer extends Component {
+  constructor(props){
+    super(props);
   }
   render() {
     return (
-      <div className="landingPage relative">
-        <img className="bottomIcon" src={BottomIcon}/>
-        <div className="welcome absolute">Welcome to Venplore!</div>
+      <div className="grid-full">
+        <div className="grid-root landingPageContainer">
+          <LandingPageSplash />
+          <FeaturedActivities/>
+        </div>
+        <FooterBar className='grid-full'/>
+        <div>{this.props.createActivity === 'creating' ? <ActivityCreatorContainer /> : null}</div>
       </div>
-
     );
   }
-
 }
 
-export default LandingPage;
+export default LandingPageContainer;

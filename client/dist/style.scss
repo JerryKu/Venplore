@@ -26,7 +26,6 @@ body{
 img{
   display:block;
 }
-
 html {
     font-family: 'Rubik', sans-serif;
     max-height: 100vh;
@@ -56,4 +55,9 @@ html {
 img {
     max-height: 100%;
     max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(84, 142, 230);
 }

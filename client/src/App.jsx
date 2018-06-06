@@ -33,8 +33,13 @@ class App extends React.Component {
       return <div className="application">
           <NavbarContainer />
           <Switch>
+<<<<<<< HEAD
             <Route exact path="/" component={LandingPageContainer}/>
             <Route path="/finding" component={ActivityFinderContainer} />
+=======
+            <Route exact path="/" component={ActivityFinderContainer} />
+            <Route path="/home" component={LandingPageContainer} />
+>>>>>>> started landing page, added landing page css, added url-loader for images
             <Route path="/about" component={About} />
             <Route path='/signup' component={SignUp} />
             <Route path='/login' component={Login} />

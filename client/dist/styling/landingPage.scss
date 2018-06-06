@@ -1,4 +1,9 @@
 /* Landing Page Splash Section */
+@media(max-width: 1024px){
+  .activity-card-description{
+      font-size: 0.9em;
+  }
+}
 .landingPageContainer{
   max-width: 1440px;
   margin: 0 auto;
@@ -158,4 +163,15 @@
 .landingPage .flickity-page-dots .dot.is-selected{
   background: rgba(255,165,0, 1);
   opacity: unset;
+  top: 0;
+}
+.landingPage{
+  grid-column: 1 / -1;
+  background: grey;
+  height:95vh;
+  position: relative;
+}
+.bottomIcon{
+  margin: 0 auto;
+
 }

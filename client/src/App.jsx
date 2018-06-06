@@ -1,13 +1,14 @@
 import React from 'react';
 import axios from 'axios';
 import { connect } from "react-redux";
-import { withRouter } from 'react-router-dom';  
+import { withRouter } from 'react-router-dom';
 import { Switch, Route } from 'react-router-dom';
 import actions from './actions/index.jsx'
 import NavbarContainer from './containers/NavbarContainer.jsx';
 import EventCreator from './components/eventCreating/EventCreator.jsx';
 import ActivityFinderContainer from './containers/ActivityFinderContainer.jsx';
 import PostCreation from './components/eventCreating/PostCreation.jsx';
+import LandingPageContainer from './containers/LandingPageContainer.jsx';
 import About from './components/describing/About.jsx';
 import Login from './components/authenticating/Login.jsx';
 import SignUp from './components/authenticating/SignUp.jsx';
@@ -27,12 +28,13 @@ class App extends React.Component {
         this.props.dispatch(actions.setActivity(this.props.activityList[0]));
       })
     }
-    
+
     render () {
       return <div className="application">
           <NavbarContainer />
           <Switch>
             <Route exact path="/" component={ActivityFinderContainer} />
+            <Route path="/home" component={LandingPageContainer} />
             <Route path="/about" component={About} />
             <Route path='/signup' component={SignUp} />
             <Route path='/login' component={Login} />
@@ -51,5 +53,5 @@ const mapStateToProps = (state) => {
 const ConnectedApp = withRouter(
   connect(mapStateToProps)(App)
 );
-  
+
 export default ConnectedApp;

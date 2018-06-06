@@ -4,13 +4,16 @@
 @import './styling/about.scss';
 @import './styling/components/containers.scss';
 @import './styling/components/buttons.scss';
+@import './styling/landingPage.scss';
 
 /* tag level css */
 
 *{
   box-sizing: border-box;
 }
-
+img{
+  display:block;
+}
 html {
     font-family: 'Rubik', sans-serif;
     max-height: 100vh;
@@ -22,18 +25,23 @@ html {
     left: 0;
     top: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(10, 1fr);
     width: 100vw;
 }
-
+.relative{
+  position: relative;
+}
+.absolute{
+  position: absolute;
+}
 input[type=range]{
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;
-    width: 100%; 
-    height: 10px; 
+    width: 100%;
+    height: 10px;
     background: #d3d3d3;
-    outline: none; 
-    opacity: 0.7; 
+    outline: none;
+    opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
     float: right;
@@ -61,17 +69,17 @@ input[type=range]::-webkit-slider-thumb {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: #f1f1f1;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: #888;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555; 
+    background: #555;
 }
 
 img {

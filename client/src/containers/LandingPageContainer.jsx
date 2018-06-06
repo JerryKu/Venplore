@@ -1,22 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
+import actions from '../actions/index.jsx';
+import ActivityList from '../components/activityFinding/ActivitiesList.jsx';
 import LandingPage from '../components/landingPage/LandingPage.jsx';
-import FeaturedActivities from '../components/landingPage/featuredActivities.jsx';
-import FooterBar from '../components/navigating/FooterBar.jsx';
 
-class LandingPageContainer extends Component {
+const LandingPageContainer = props => (
+  <LandingPage {...props} />
+);
 
-  render() {
-    return (
-      <div className="grid-full">
-        <div className="grid-root landingPageContainer">
-          <LandingPage />
-          <FeaturedActivities/>
-        </div>
-        <FooterBar className='grid-full'/>
-      </div>
-    );
-  }
+const mapStateToProps = state => {
+  return { createActivity: state.createActivity.state };
+};
 
-}
+const mapDispatchToProps = dispatch => {
+  return {
+    setActivity: activity => {
+      dispatch(actions.setActivity(activity));
+    }
+  };
+};
 
-export default LandingPageContainer;
+export default connect(mapStateToProps, mapDispatchToProps)(LandingPageContainer);

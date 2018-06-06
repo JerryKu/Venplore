@@ -20,7 +20,6 @@ class LandingPageContainer extends Component {
       </div>
     );
   }
-
 }
 
 export default LandingPageContainer;

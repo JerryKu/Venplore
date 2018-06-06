@@ -4,8 +4,8 @@ import BottomIcon from '../../assets/BottomIcon.png'
 
 class LandingPageSplash extends Component {
   componentDidMount(){
-    let elem = document.querySelector('.main-carousel');
-    let flckty = new Flickity(elem, {
+    const elem = document.querySelector('.main-carousel');
+    const flckty = new Flickity(elem, {
       fullscreen: true,
     })
   }

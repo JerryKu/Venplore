@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class featuredActivityCard extends Component {
-
   render() {
     return (
       <div className="activity-card">
@@ -13,7 +12,6 @@ class featuredActivityCard extends Component {
       </div>
     );
   }
-
 }
 
 export default featuredActivityCard;

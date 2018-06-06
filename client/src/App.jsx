@@ -34,7 +34,7 @@ class App extends React.Component {
           <NavbarContainer />
           <Switch>
             <Route exact path="/" component={ActivityFinderContainer} />
-            <Route path="/home" component={LandingPageContainer} />
+            <Route path="/landing" component={LandingPageContainer} />
             <Route path="/about" component={About} />
             <Route path='/signup' component={SignUp} />
             <Route path='/login' component={Login} />

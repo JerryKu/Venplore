@@ -15,6 +15,12 @@
   width: 100%;
   text-align: center;
 }
+.main-carousel .carousel-cell{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
 .featuredActivities{
   display: grid;
   margin: 0 5em;

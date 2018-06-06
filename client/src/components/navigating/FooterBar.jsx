@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BottomIcon from '../../assets/BottomIcon.png';
+import BottomIcon from '../../assets/BottomIcon2.png';
 import { BrowserRouter as Router, NavLink } from 'react-router-dom';
 
 class FooterBar extends Component {

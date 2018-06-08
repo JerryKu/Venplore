@@ -9,7 +9,10 @@ const LandingPageContainer = props => (
 );
 
 const mapStateToProps = state => {
-  return { createActivity: state.createActivity.state };
+  return {
+    createActivity: state.createActivity.state,
+    activityList: state.activityList,
+   };
 };
 
 const mapDispatchToProps = dispatch => {

@@ -4,7 +4,25 @@ import BottomIcon from '../../assets/BottomIcon2.png'
 
 class LandingPageSplash extends Component {
   componentDidMount(){
+    //Super hackey-way of initializing carousel on DOMContentLoaded
+    //and then on rerendering
+    let isFlickity = false;
     document.addEventListener('DOMContentLoaded', ()=>{
+      if(isFlickity = true){
+        const instance = document.querySelector('.main-carousel')
+        const flk = Flickity.data(instance);
+        flk.destroy();
+      }
+        const elem = document.querySelector('.main-carousel');
+        const flckty = new Flickity(elem, {
+          freeScroll: true,
+          wrapAround: true,
+          autoPlay: 3000,
+          pauseAutoPlayOnHover: false,
+        })
+      isFlickity = true;
+    })
+    if(!isFlickity){
       const elem = document.querySelector('.main-carousel');
       const flckty = new Flickity(elem, {
         freeScroll: true,
@@ -12,7 +30,8 @@ class LandingPageSplash extends Component {
         autoPlay: 3000,
         pauseAutoPlayOnHover: false,
       })
-    })
+      isFlickity = true;
+    }
   }
   render() {
     return (

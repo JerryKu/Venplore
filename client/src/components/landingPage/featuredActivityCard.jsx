@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class featuredActivityCard extends Component {
+class FeaturedActivityCard extends Component {
   constructor(props){
     super(props)
   }
@@ -21,4 +21,4 @@ class featuredActivityCard extends Component {
   }
 }
 
-export default featuredActivityCard;
+export default FeaturedActivityCard;

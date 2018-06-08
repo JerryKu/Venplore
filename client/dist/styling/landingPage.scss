@@ -1,3 +1,13 @@
+@media(max-width: 1024px){
+  .activity-card-description{
+      font-size: 0.9em;
+  }
+}
+.landingPageContainer{
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 .landingPage{
   margin-top: 5vh;
   grid-column: 1 / -1;
@@ -15,6 +25,15 @@
   width: 100%;
   text-align: center;
 }
+.main-carousel .carousel-cell{
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.flickity-button{
+  display:none;
+}
 .featuredActivities{
   display: grid;
   margin: 0 5em;
@@ -22,20 +41,21 @@
   grid-template-rows: 7em 24em 24em 24em;
   grid-template-columns: repeat(3, 1fr);
 }
-.activity-card img{
+.activity-card-img{
   width:100%;
-  border-right: 1em;
+  height: 16em;
 }
 .activity-card{
   // background: #B0B0B0;
   box-shadow: 1px 1px #ffe4b2;
   border-radius: 0 0 1em 1em;
   border: 1px solid #ffe4b2;
+  min-height: 25em;
 }
 .activity-card h2{
   margin: 0;
 }
-.card-text{
+.activity-card-text{
   padding: 1em;
 }
 .main-featured{

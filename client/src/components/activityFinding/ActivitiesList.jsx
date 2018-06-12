@@ -24,4 +24,3 @@ const ActivityList = (props) => {
 }
 
 export default ActivityList;
-

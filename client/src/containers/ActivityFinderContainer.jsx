@@ -8,7 +8,10 @@ const ActivityFinderContainer = props => (
 );
 
 const mapStateToProps = state => {
-  return { createActivity: state.createActivity.state };
+  return {
+    state: state,
+    createActivity: state.createActivity.state
+   };
 };
 
 const mapDispatchToProps = dispatch => {

@@ -8,12 +8,13 @@ const HeaderBar = ({ dispatch} ) => {
   }
   return (
     <div className='header-bar'>
-      <NavLink to='/' className='header-tab'>Venplore - Venture, and Explore!</NavLink>
+      <NavLink exact to='/' className='header-tab'>Venplore - Venture, and Explore!</NavLink>
       <NavLink activeClassName="selected" exact to='/' className='header-tab'> <span>Home</span></NavLink>
-      <div onClick={createActivity} className='header-tab'> <span>Create an activity</span> </div>
-      <NavLink activeClassName="selected" exact to='/login' className='header-tab'> <span>Login</span></NavLink>
-      <NavLink activeClassName="selected" exact to='/signup' className='header-tab'> <span>Sign Up</span></NavLink>
       <NavLink activeClassName="selected" exact to='/finding' className='header-tab'> <span>Find An Activity</span></NavLink>
+      <div onClick={createActivity} className='header-tab'> <span>Create an activity</span> </div>
+      {/* <NavLink activeClassName="selected" exact to='/login' className='header-tab'> <span>Login</span></NavLink>
+      <NavLink activeClassName="selected" exact to='/signup' className='header-tab'> <span>Sign Up</span></NavLink>
+      */}
     </div>
   );
 }

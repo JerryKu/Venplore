@@ -12,6 +12,6 @@
 .footerBar{
   width:100%;
   position: fixed;
+  z-index: -1;
   bottom:0;
-  z-index: -999;
 }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FeaturedActivityCard from './FeaturedActivityCard.jsx';
-import SearchBar from './searchBar.jsx'
+import SearchBar from './SearchBar.jsx'
 import { withRouter } from 'react-router-dom';
 
 class FeaturedActivities extends Component {

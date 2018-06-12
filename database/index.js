@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb').MongoClient;
 let pass = process.env.dbPass;
 
-if (process.env.stage !== 'production') {
+if (process.env.stage !== 'production' && process.env.stage !== 'staging') {
   let config = require('../config.js');
   pass = config.dbPass;
 }
@@ -17,4 +17,3 @@ MongoClient.connect(uri, (err, client) => {
 });
 
 module.exports = state;
-

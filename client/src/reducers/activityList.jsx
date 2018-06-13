@@ -13,11 +13,18 @@ const rankActivities = (list, filters) => {
     let scoredAdventure = Object.assign(activity, {adventureScore: adventureScore});
     scoredList.push(scoredAdventure);
   });
-  scoredList.sort((a, b) => { 
+  scoredList.sort((a, b) => {
     return b.adventureScore - a.adventureScore;
   });
   return scoredList;
 };
+
+const searchActivities = (list, searchVal) => {
+  const searchedList = list.filter((activity)=>{
+    return (activity.eventInfo.name.toLowerCase().indexOf(searchVal.toLowerCase()) > -1);
+  })
+  return searchedList;
+}
 
 const activityList = (state = [], action) => {
   switch (action.type) {
@@ -25,6 +32,8 @@ const activityList = (state = [], action) => {
       return action.list;
     case 'UPDATE_ACTIVITY_LIST':
       return rankActivities(action.list, action.filters);
+    case 'SEARCH_ACTIVITY_LIST':
+      return searchActivities(action.list, action.searchVal)
     default:
       return state;
   }

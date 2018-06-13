@@ -8,14 +8,16 @@ class FeaturedActivities extends Component {
       super(props);
     }
     handleClick(){
-      this.props.history.push('/finding')
+      this.props.history.push('/finding');
+      window.scrollTo(0, 0);
     }
     render(){
+      const allActivities = this.props.allActivities;
       return (
         <div className="featuredActivities grid-full">
-          <div className="main-featured"><h3>things to do in</h3> <h1>San Jose</h1></div><div className="relative"><SearchBar {...this.props}/></div>
+          <div className="main-featured"><h3>things to do in</h3> <h1>San Jose</h1></div><div className="relative"><SearchBar allActivities={allActivities} searchActivityList={this.props.searchActivityList}/></div>
           <div className="main-featured"><img src="http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_640/images/live/p0/51/v6/p051v6vn.jpg"/></div>
-          {this.props.activityList.map((activity, index)=>(
+          {this.props.allActivities.map((activity, index)=>(
             <div
               key={index}
               onClick= {()=> {
@@ -32,6 +34,7 @@ class FeaturedActivities extends Component {
         </div>
       );
     }
+
 }
 
 export default withRouter(FeaturedActivities);

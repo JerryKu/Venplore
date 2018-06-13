@@ -8,9 +8,9 @@ const FilterBarContainer = props => (
 );
 
 const mapStateToProps = state => {
-  return { 
+  return {
     filters: state.filters,
-    activityList: state.activityList, 
+    activityList: state.activityList,
   };
 };
 

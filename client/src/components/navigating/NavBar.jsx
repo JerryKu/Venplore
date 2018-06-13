@@ -12,16 +12,9 @@ const HeaderBar = ({ dispatch} ) => {
       <NavLink activeClassName="selected" exact to='/' className='header-tab'> <span>Home</span></NavLink>
       <NavLink activeClassName="selected" exact to='/finding' className='header-tab'> <span>Find An Activity</span></NavLink>
       <div onClick={createActivity} className='header-tab'> <span>Create an activity</span> </div>
-<<<<<<< HEAD
-      {/* <NavLink activeClassName="selected" exact to='/login' className='header-tab'> <span>Login</span></NavLink>
-      <NavLink activeClassName="selected" exact to='/signup' className='header-tab'> <span>Sign Up</span></NavLink>
-      */}
-=======
-      <NavLink activeClassName="selected" exact to='/about' className='header-tab'> <span>About</span></NavLink>
       <NavLink activeClassName="selected" exact to='/login' className='header-tab'> <span>Login</span></NavLink>
       <NavLink activeClassName="selected" exact to='/signup' className='header-tab'> <span>Sign Up</span></NavLink>
-      <NavLink activeClassName="selected" exact to='/home' className='header-tab'> <span>Home</span></NavLink>
->>>>>>> started landing page, added landing page css, added url-loader for images
+     
     </div>
   );
 }

@@ -4,14 +4,12 @@ const setActivity = (activity) => {
     activity,
   };
 };
-
 const setAllActivityList = (list) => {
   return{
     type: 'SET_ALL_ACTIVITIES',
     list,
   };
 };
-
 const setFilterValue = (filter, value) => {
   return {
     type: 'SET_FILTER',
@@ -19,7 +17,6 @@ const setFilterValue = (filter, value) => {
     value,
   };
 };
-
 const setActivityList = (list) => {
   return {
     type: 'SET_ACTIVITY_LIST',
@@ -40,7 +37,6 @@ const updateActivityList = (list, filters) => {
     filters,
   };
 };
-
 const actions = {
   setActivity: setActivity,
   setFilterValue: setFilterValue,

@@ -13,7 +13,9 @@ class SearchBar extends Component {
   onSubmit(evt){
     evt.preventDefault();
     this.props.searchActivityList(this.props.allActivities, this.state.inputValue);
-    this.props.history.push('/finding')
+    if(this.props.history[this.props.history.length-1] !== '/finding'){
+        this.props.history.push('/finding');
+    }
     window.scrollTo(0, 0)
     this.setState({
       inputValue: '',
@@ -33,7 +35,6 @@ class SearchBar extends Component {
       </div>
     );
   }
-
 }
 
 export default withRouter(SearchBar);

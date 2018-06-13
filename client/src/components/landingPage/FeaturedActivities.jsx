@@ -34,7 +34,6 @@ class FeaturedActivities extends Component {
         </div>
       );
     }
-
 }
 
 export default withRouter(FeaturedActivities);

@@ -7,7 +7,7 @@ class FooterBar extends Component {
   render() {
     return (
       <div>
-        <div className="contact-us"> <NavLink to='/' className="footer-tabs">Venplore</NavLink> | <NavLink to='/about' className="footer-tabs">About Us</NavLink></div>
+        <div className="contact-us"> <NavLink to='/' className="footer-tabs">Venplore</NavLink> | <NavLink to='/about' className="footer-tabs">Meet the Team</NavLink></div>
         <img className="footerBar" src={BottomIcon}/>
       </div>
     );

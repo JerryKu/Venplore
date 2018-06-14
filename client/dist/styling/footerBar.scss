@@ -10,8 +10,13 @@
   text-decoration: none;
 }
 .footerBar{
-  width:100%;
-  position: fixed;
+  width: 100%;
+  max-width: 1440px;
+  position: absolute;
   z-index: -1;
-  bottom:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }

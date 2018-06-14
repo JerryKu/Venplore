@@ -2,24 +2,42 @@
 
 .header-bar {
     background-color: orange;
-    grid-area: 1 / 1 / span 1 / span 10;
-    display: flex;
-    flex-direction: row;
     width: 100%;
     align-items: center;
-    max-height: 5vh;
     position: fixed;
     top: 0;
     z-index: 999;
 }
 
 .header-tab {
-    padding: 1%;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.87);
-    font-weight: bold;
+  padding: 1%;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.87);
+  font-weight: bold;
 }
-
+.header-city{
+  float: left;
+  text-align: center;
+  width: 33%;
+  color: white;
+}
+.vp-logo{
+  float: left;
+  width:33.33%;
+  color:white;
+  text-align: center;
+}
+.vp-logo img{
+  display:inline-block;
+  max-height: 35px;
+  margin-top: 1%;
+}
+.nav-links{
+  width:10%;
+  float:left;
+  text-align:center;
+  white-space: nowrap;
+}
 .header-tab span:hover {
     border-bottom: 2px solid rgba(255, 255, 255, 0.87);
     padding-bottom: 1.5%;

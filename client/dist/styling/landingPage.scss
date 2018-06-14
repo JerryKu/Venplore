@@ -1,6 +1,7 @@
 .landingPageContainer{
   max-width: 1440px;
   margin: 0 auto;
+  margin-bottom:10em;
 }
 
 .landingPage{
@@ -34,7 +35,7 @@
   display: grid;
   margin: 3px 5em;
   grid-gap: 2em;
-  grid-template-rows: 7em 24em 24em 24em;
+  grid-template-rows: 7em 20em 20em 20em;
   grid-template-columns: repeat(3, 1fr);
 }
 .activity-card-img{

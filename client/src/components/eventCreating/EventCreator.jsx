@@ -20,8 +20,23 @@ class EventCreator extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.closeCreator = this.closeCreator.bind(this);
+    this.setWrapperRef = this.setWrapperRef.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
-
+  componentDidMount(){
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+  compoenentWillUnmount(){
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+  setWrapperRef(node) {
+    this.wrapperRef = node;
+  }
+  handleClickOutside(event) {
+    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+      this.props.dispatch(setCreationState('!creating'));
+    }
+  }
   handleChange(event){
     let newState = {};
     newState[event.target.name] = event.target.value;
@@ -59,7 +74,7 @@ class EventCreator extends React.Component {
       <div className='event-creation-section'>
       <div className="dark-background">
       </div>
-      <div className="event-creation-form">
+      <div ref={this.setWrapperRef} className="event-creation-form">
         <button className='close-button' onClick={this.closeCreator}>X</button>
         <div className="form-elements">
           <form>

@@ -9,17 +9,13 @@
   font-size: 1em;
   font-weight: bold;
 }
-
 .clear-filter-button{
-  color: white;
-  background: orange;
-  border-radius: 1em;
-  width: 80%;
-  margin: 0 auto;
-  padding: 1em;
-  display: block;
-  font-size: 1em;
-  font-weight: bold;
+  border: none;
+  background: none;
+}
+.clear-filter-button:hover{
+  text-decoration: underline;
+  cursor:pointer;
 }
 .close-button{
   position: absolute;

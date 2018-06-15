@@ -80,10 +80,11 @@ class EventCreator extends React.Component {
           <form>
             <div>
               <label>
-                Activity Name: <input type="text" name="activityName" placeholder="Add clear and descriptive activity name" value={this.state.activityName} onChange={this.handleChange}/>
+                Activity Name: <input className="event-creator-input" type="text" name="activityName" placeholder="Add clear and descriptive activity name" value={this.state.activityName} onChange={this.handleChange}/>
               </label> <br />
+              <br/>
               <label>
-                Image Link: <input type="text" name="imageLink" value={this.state.imageLink}placeholder="Add a link to an image of the activity"  onChange={this.handleChange}/>
+                Image Link: <input className="event-creator-input" type="text" name="imageLink" value={this.state.imageLink}placeholder="Add a link to an image of the activity"  onChange={this.handleChange}/>
               </label> <br />
             </div>
             <div>
@@ -109,6 +110,7 @@ class EventCreator extends React.Component {
                 Duration: {this.state.duration}<input type="range" min="0" max="5" step="1" name='duration' value={this.state.duration} onChange={this.handleChange}/>
               </div> <br />
             </div>
+            <br />
             <label>
               Description:
               <div>

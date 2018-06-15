@@ -1,5 +1,6 @@
 import React from "react";
 import actions from '../../actions/index.jsx'
+import SearchBar from './SearchBar.jsx'
 
 class FilterBar extends React.Component{
   constructor(props){
@@ -17,6 +18,8 @@ class FilterBar extends React.Component{
     return (
       <div className="filter-section">
         <div className="primary-title-blue" >What are you in the mood for?</div>
+        <SearchBar {...this.props}/>
+        {(this.props.searchVal !== "") ? <div>Current Search: {this.props.searchVal}</div> : null}
         {this.props.filters.map((filter, index) => {
           return <div key={index}>
               <div>
@@ -31,7 +34,6 @@ class FilterBar extends React.Component{
               </div>
             </div>;
         })}
-        <div>Current Search: {this.props.searchVal}</div>
         <button className="clear-filter-button" onClick={this.clearFilters}>Clear Filters</button>
       </div>
     )

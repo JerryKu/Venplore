@@ -26,7 +26,10 @@ const mapDispatchToProps = dispatch => {
     },
     setSearchVal: (searchVal) => {
       dispatch(actions.setSearchVal(searchVal));
-    }
+    },
+    searchActivityList: (list, searchVal) => {
+      dispatch(actions.searchActivityList(list, searchVal))
+    },
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(FilterBarContainer);

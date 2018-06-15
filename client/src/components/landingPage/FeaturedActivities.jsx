@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FeaturedActivityCard from './FeaturedActivityCard.jsx';
-import SearchBar from './SearchBar.jsx'
+import SearchBar from '../activityFinding/SearchBar.jsx'
 import { withRouter } from 'react-router-dom';
 
 class FeaturedActivities extends Component {
@@ -12,10 +12,9 @@ class FeaturedActivities extends Component {
       window.scrollTo(0, 0);
     }
     render(){
-      const allActivities = this.props.allActivities;
       return (
         <div className="featuredActivities grid-full">
-          <div className="main-featured"><h3>things to do in</h3> <h1>San Jose</h1></div><div className="relative"><SearchBar allActivities={allActivities} searchActivityList={this.props.searchActivityList} setSearchVal={this.props.setSearchVal}/></div>
+          <div className="main-featured"><h3>things to do in</h3> <h1>San Jose</h1></div><div className="relative"><SearchBar {...this.props}/></div>
           <div className="main-featured"><img src="http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_640/images/live/p0/51/v6/p051v6vn.jpg"/></div>
           {this.props.allActivities.map((activity, index)=>(
             <div

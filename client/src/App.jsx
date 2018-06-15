@@ -49,6 +49,7 @@ const mapStateToProps = (state) => {
     filters: state.filters,
     activityList: state.activityList,
     allActivities: state.allActivities,
+    searchVal: state.searchVal,
   }
 }
 

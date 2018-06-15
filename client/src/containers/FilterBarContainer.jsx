@@ -11,6 +11,8 @@ const mapStateToProps = state => {
   return {
     filters: state.filters,
     activityList: state.activityList,
+    allActivities: state.allActivities,
+    searchVal: state.searchVal
   };
 };
 
@@ -21,6 +23,9 @@ const mapDispatchToProps = dispatch => {
     },
     updateActivityList: (list, filters) => {
       dispatch(actions.updateActivityList(list, filters));
+    },
+    setSearchVal: (searchVal) => {
+      dispatch(actions.setSearchVal(searchVal));
     }
   };
 };

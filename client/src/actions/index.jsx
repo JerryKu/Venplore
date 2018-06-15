@@ -23,6 +23,12 @@ const setActivityList = (list) => {
     list,
   };
 };
+const setSearchVal = (searchVal) => {
+  return {
+    type: 'SET_SEARCH_VAL',
+    searchVal,
+  };
+};
 const searchActivityList = (list, searchVal) => {
   return {
     type: "SEARCH_ACTIVITY_LIST",
@@ -44,6 +50,7 @@ const actions = {
   updateActivityList: updateActivityList,
   searchActivityList: searchActivityList,
   setAllActivityList: setAllActivityList,
+  setSearchVal: setSearchVal,
 };
 
 export default actions;

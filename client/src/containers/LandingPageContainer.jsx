@@ -25,6 +25,9 @@ const mapDispatchToProps = dispatch => {
     },
     searchActivityList: (list, searchVal) => {
       dispatch(actions.searchActivityList(list, searchVal))
+    },
+    setSearchVal: (searchVal) => {
+      dispatch(actions.setSearchVal(searchVal));
     }
   };
 };

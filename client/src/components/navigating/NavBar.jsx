@@ -9,14 +9,16 @@ const HeaderBar = ({ dispatch} ) => {
   }
   return (
     <div className='header-bar'>
-      <div className="header-tab header-city">My City: San Jose</div>
-      <NavLink exact to='/' className='vp-logo'><img src={VenploreLogo}/></NavLink>
-      <NavLink activeClassName="selected" exact to='/' className='header-tab nav-links'> <span>Home</span></NavLink>
-      <NavLink activeClassName="selected" exact to='/finding' className='header-tab nav-links'> <span>Explore</span></NavLink>
-      <div onClick={createActivity} className='header-tab nav-links'> <span>Create</span> </div>
-      {/* <NavLink activeClassName="selected" exact to='/login' className='header-tab'> <span>Login</span></NavLink>
-      <NavLink activeClassName="selected" exact to='/signup' className='header-tab'> <span>Sign Up</span></NavLink>
-      */}
+      <div className='header-links'>
+        <div className="header-tab header-city">My City: San Jose</div>
+        <NavLink exact to='/' className='vp-logo'><img src={VenploreLogo}/></NavLink>
+        <NavLink activeClassName="selected" exact to='/' className='header-tab nav-links'> <span>Home</span></NavLink>
+        <NavLink activeClassName="selected" exact to='/finding' className='header-tab nav-links'> <span>Explore</span></NavLink>
+        <div onClick={createActivity} className='header-tab nav-links'> <span>Create</span> </div>
+        {/* <NavLink activeClassName="selected" exact to='/login' className='header-tab'> <span>Login</span></NavLink>
+        <NavLink activeClassName="selected" exact to='/signup' className='header-tab'> <span>Sign Up</span></NavLink>
+        */}
+      </div>
     </div>
   );
 }

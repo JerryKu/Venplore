@@ -6,4 +6,4 @@ const NavbarContainer = props => (
   <Navbar {...props} />
 );
 
-export default connect()(NavbarContainer);
+export default connect(null, null, null, {pure: false})(NavbarContainer);

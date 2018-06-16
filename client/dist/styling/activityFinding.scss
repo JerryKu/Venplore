@@ -1,9 +1,10 @@
   /* Activity Section CSS */
 
-  .activity-finding-section {
+.activity-finding-section {
     width: 100vw;
     display: flex;
     flex-direction: row;
+    margin-top: 5vh;
 }
     /* Filtering CSS */
 
@@ -60,7 +61,7 @@
 
 .current-event-description {
     max-width: 100%;
-}   
+}
 
 .current-event-title {
     text-align: center;
@@ -86,4 +87,3 @@
 .event-rating {
 
 }
-

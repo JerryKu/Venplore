@@ -1,16 +1,19 @@
+@import './styling/components/positioning.scss';
+@import './styling/components/text.scss';
+@import './styling/components/containers.scss';
+@import './styling/components/buttons.scss';
 @import './styling/eventCreation.scss';
 @import './styling/activityFinding.scss';
 @import './styling/navigation.scss';
 @import './styling/about.scss';
-@import './styling/components/containers.scss';
-@import './styling/components/buttons.scss';
 @import './styling/landingPage.scss';
 @import './styling/footerBar.scss';
+
 
 /* tag level css */
 body{
   margin: 0;
-  background: #e9ebee;
+  background: white;
   position: relative;
   z-index: 0;
 }
@@ -27,24 +30,12 @@ html {
     background-color: #f5f6f7;;
 }
 
-.grid-root{
-  display:grid;
-  grid-template-columns: repeat(10, 1fr);
-}
-.grid-full{
-  grid-column: 1 / -1;
-}
 .application {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     width: 100vw;
 }
-.relative{
-  position: relative;
-}
-.absolute{
-  position: absolute;
-}
+
 input[type=range]{
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;

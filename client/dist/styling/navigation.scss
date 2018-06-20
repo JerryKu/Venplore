@@ -1,28 +1,26 @@
     /* Header Bar CSS */
 
 .header-bar {
-    background-color: orange;
-    width: 100%;
-    align-items: center;
-<<<<<<< HEAD
-    position: fixed;
-=======
-    max-height: 5vh;
-    position: sticky;
->>>>>>> 90c4dd93248cacd9421a0cc4461794b5bf56ae8f
-    top: 0;
-    z-index: 999;
-    height: 3em;
+  background-color: orange;
+  width: 100%;
+  align-items: center;
+  min-height: 5vh;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  grid-column: 1 / -1;
 }
 .header-links{
   max-width: 1440px;
   margin: 0 auto;
+  display: flex;
 }
 .header-tab {
   padding: 1em;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.87);
   font-weight: bold;
+  justify-content: flex-end;
 }
 .header-city{
   padding-left: 5em;

@@ -1,3 +1,5 @@
+import * as types from '../constants/actionTypes';
+
 const rankActivities = (list, filters) => {
   let scoredList = [];
   list.forEach((activity) => {
@@ -28,11 +30,11 @@ const searchActivities = (list, searchVal) => {
 
 const activityList = (state = [], action) => {
   switch (action.type) {
-    case 'SET_ACTIVITY_LIST':
+    case types.SET_ACTIVITY_LIST:
       return action.list;
-    case 'UPDATE_ACTIVITY_LIST':
+    case types.UPDATE_ACTIVITY_LIST:
       return rankActivities(action.list, action.filters);
-    case 'SEARCH_ACTIVITY_LIST':
+    case types.SEARCH_ACTIVITY_LIST:
       return searchActivities(action.list, action.searchVal)
     default:
       return state;

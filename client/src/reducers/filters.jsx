@@ -1,3 +1,5 @@
+import * as types from '../constants/actionTypes';
+
 const filterDefault = [
   ['Cost', 'cost', 0],
   ['Mental Effort', 'mentalEffort', 0],
@@ -9,7 +11,7 @@ const filterDefault = [
 
 const filters = (state = filterDefault, action) => {
   switch (action.type) {
-    case 'SET_FILTER':
+    case types.SET_FILTER:
       return state.map((filter) => {
         if (filter[0] === action.filter) {
           return [filter[0], filter[1], action.value];

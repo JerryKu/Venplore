@@ -1,6 +1,8 @@
+import * as types from '../constants/actionTypes';
+
 const currentSearch = (state = '', action) => {
   switch(action.type){
-    case "SET_SEARCH_VAL":
+    case types.SET_SEARCH_VAL:
       return action.searchVal;
     default:
       return state;

@@ -12,6 +12,7 @@ class SearchBar extends Component {
   }
   onSubmit(evt){
     evt.preventDefault();
+    console.log(this.props.searchActivityList)
     this.props.searchActivityList(this.props.allActivities, this.state.inputValue);
     this.props.setSearchVal(this.state.inputValue);
     if(this.props.history[this.props.history.length-1] !== '/finding'){

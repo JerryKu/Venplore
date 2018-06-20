@@ -4,7 +4,6 @@
     width: 100vw;
     display: flex;
     flex-direction: row;
-    margin-top: 5vh;
 }
     /* Filtering CSS */
 
@@ -24,7 +23,7 @@
 .activity-list-section{
   padding: 1%;
   flex-basis: 20%;
-  max-height: 93vh;
+  max-height: 85vh;
   overflow-y: scroll;
   border-left: 1px solid lightgrey;
   border-right: 1px solid lightgrey;
@@ -51,16 +50,23 @@
 
 .current-activity-section {
     flex-basis: 60%;
-    display: flex;
+}
+
+.activity-title {
+    font-size: 2em;
+    padding: 3%;
+    text-align: center;
+    grid-area: 1 / 1 / span 1 / span 6;
 }
 
 .main-image{
-    height: 40%;
-    margin: 5% 0;
+    margin-left: auto;
+    margin-right: auto;
+    grid-area: 2 / 1 / span 4 / span 6;
 }
 
 .current-event-description {
-    max-width: 100%;
+    grid-area: 6 / 1 / span 4 / span 6;
 }
 
 .current-event-title {
@@ -68,22 +74,12 @@
 }
 
 .current-event-ratings-container {
-    position: absolute;
-    height: 36%;
-    width: 16%;
-    right: 5%;
-    top: 11%;
-}
-
-.event-info{
-    flex-basis: 70%;
-    margin: 2% 5%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    grid-area: 2 / 7 / span 4 / span 3;
 }
 
 .current-event-ratings input {
     margin: 3%;
-}
-
-.event-rating {
-
 }

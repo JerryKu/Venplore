@@ -8,9 +8,11 @@ const FilterBarContainer = props => (
 );
 
 const mapStateToProps = state => {
-  return { 
+  return {
     filters: state.filters,
-    activityList: state.activityList, 
+    activityList: state.activityList,
+    allActivities: state.allActivities,
+    searchVal: state.searchVal
   };
 };
 
@@ -21,7 +23,13 @@ const mapDispatchToProps = dispatch => {
     },
     updateActivityList: (list, filters) => {
       dispatch(actions.updateActivityList(list, filters));
-    }
+    },
+    setSearchVal: (searchVal) => {
+      dispatch(actions.setSearchVal(searchVal));
+    },
+    searchActivityList: (list, searchVal) => {
+      dispatch(actions.searchActivityList(list, searchVal))
+    },
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(FilterBarContainer);

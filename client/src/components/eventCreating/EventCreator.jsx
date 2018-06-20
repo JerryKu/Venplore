@@ -20,8 +20,23 @@ class EventCreator extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.closeCreator = this.closeCreator.bind(this);
+    this.setWrapperRef = this.setWrapperRef.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
-
+  componentDidMount(){
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+  compoenentWillUnmount(){
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+  setWrapperRef(node) {
+    this.wrapperRef = node;
+  }
+  handleClickOutside(event) {
+    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+      this.props.dispatch(setCreationState('!creating'));
+    }
+  }
   handleChange(event){
     let newState = {};
     newState[event.target.name] = event.target.value;
@@ -59,16 +74,17 @@ class EventCreator extends React.Component {
       <div className='event-creation-section'>
       <div className="dark-background">
       </div>
-      <div className="event-creation-form">
+      <div ref={this.setWrapperRef} className="event-creation-form">
         <button className='close-button' onClick={this.closeCreator}>X</button>
         <div className="form-elements">
           <form>
             <div>
               <label>
-                Activity Name: <input type="text" name="activityName" placeholder="Add clear and descriptive activity name" value={this.state.activityName} onChange={this.handleChange}/>
+                Activity Name: <input className="event-creator-input" type="text" name="activityName" placeholder="Add clear and descriptive activity name" value={this.state.activityName} onChange={this.handleChange}/>
               </label> <br />
+              <br/>
               <label>
-                Image Link: <input type="text" name="imageLink" value={this.state.imageLink}placeholder="Add a link to an image of the activity"  onChange={this.handleChange}/>
+                Image Link: <input className="event-creator-input" type="text" name="imageLink" value={this.state.imageLink}placeholder="Add a link to an image of the activity"  onChange={this.handleChange}/>
               </label> <br />
             </div>
             <div>
@@ -94,6 +110,7 @@ class EventCreator extends React.Component {
                 Duration: {this.state.duration}<input type="range" min="0" max="5" step="1" name='duration' value={this.state.duration} onChange={this.handleChange}/>
               </div> <br />
             </div>
+            <br />
             <label>
               Description:
               <div>

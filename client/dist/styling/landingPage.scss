@@ -1,15 +1,10 @@
-@media(max-width: 1024px){
-  .activity-card-description{
-      font-size: 0.9em;
-  }
-}
 .landingPageContainer{
   max-width: 1440px;
   margin: 0 auto;
+  margin-bottom:10em;
 }
 
 .landingPage{
-  margin-top: 5vh;
   grid-column: 1 / -1;
   height:95vh;
 }
@@ -35,38 +30,45 @@
   display:none;
 }
 .featuredActivities{
+  border-top: 1px solid rgba(255,163,0,0.4);
   display: grid;
-  margin: 0 5em;
+  margin: 3px 5em;
   grid-gap: 2em;
-  grid-template-rows: 7em 24em 24em 24em;
+  grid-template-rows: 7em 20em 20em 20em;
   grid-template-columns: repeat(3, 1fr);
 }
 .activity-card-img{
+  position: relative;
+  box-shadow: 1px 1px rgba(0,0,0,0.2);
   width:100%;
   height: 16em;
-}
-.activity-card{
-  border-radius: 0 0 1em 1em;
-  border: 1px solid #00000038;
-  min-height: 25em;
 }
 .activity-card h2{
   margin: 0;
 }
 .activity-card-text{
-  padding: 1em;
+  box-shadow: 1px 1px rgba(0,0,0,0.2);
+  width: 15em;
+  background: orange;
+  border-radius: 0 0 1em 1em;
+  color: white;
+  padding: 0.5em 1em;
 }
 .main-featured{
   grid-column: 1 / 3;
   color: orange;
 }
-.search-bar input{
+.featuredActivities .search-bar input{
   position: absolute;
   left:0;
   bottom:0;
 }
-.search-bar input::placeholder{
-  color: orange;
+.search-form input{
+  width: 22em;
+  height: 2.25em;
+  border-radius: .5em;
+  border: 1px solid lightgrey;
+  padding: 0.5em;
 }
 .main-featured h1{
   margin:0;
@@ -78,9 +80,24 @@
 .main-featured img{
   width:100%;
 }
-.bottomIcon{
+.landing-page-splash-overlay{
   height:95vh;
   width:100%;
+  max-height:183px;
   margin: 0 auto;
-  top: 0;
+  bottom: -2px;
+}
+//Flickity Carousel Styling
+.landingPage .flickity-page-dots{
+  z-index: 2;
+  bottom: 1em;
+}
+.landingPage .flickity-page-dots .dot{
+  background: rgba(255,165,0, 0.3);
+  border: 1px solid rgba(255,165,0,1);
+  opacity: unset;
+}
+.landingPage .flickity-page-dots .dot.is-selected{
+  background: rgba(255,165,0, 1);
+  opacity: unset;
 }

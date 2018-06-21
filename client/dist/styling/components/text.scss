@@ -1,11 +1,21 @@
-.primary-title-blue {
+.primary-title {
   font-size: 1.3em;
-  margin-bottom: 1%;
+  margin: 1% 0;
+}
+
+.secondary-title {
+  font-size: 1.2em;
+  margin: 1% 0;
+}
+
+.blue {
   color: rgb(84, 142, 230);
 }
 
-.secondary-title-green {
-  font-size: 1.2em;
-  margin-bottom: 1%;
+.green {
   color: rgb(124, 172, 124);
+}
+
+.orange {
+  color: orange;
 }

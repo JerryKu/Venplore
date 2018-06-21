@@ -37,7 +37,7 @@
   margin: 3px 10%;
   grid-gap: 2em;
   grid-template-rows: 7em 0 20em 20em;
-  grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 }
 .featured-header{
   grid-column: span 1;
@@ -65,11 +65,18 @@
 }
 .activity-card-text{
   box-shadow: 1px 1px rgba(0,0,0,0.2);
-  width: 15em;
+  max-width: 60%;
+  min-width: 30%;
+  display:inline-block;
   background: orange;
   border-radius: 0 0 1em 1em;
   color: white;
   padding: 0.5em 1em;
+}
+@media(min-width:540px){
+  .featuredActivities{
+    grid-template-rows: 7em 20em 20em 20em;
+  }
 }
 @media(min-width: 768px){
   .featuredActivities{
@@ -81,6 +88,9 @@
   .featured-header{
     grid-column: span 2;
     color: orange;
+  }
+  div.featuredActivities div:nth-child(3){
+    grid-column: span 2;
   }
 }
 @media(min-width:1220px){

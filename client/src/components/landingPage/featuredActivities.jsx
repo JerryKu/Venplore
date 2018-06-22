@@ -14,7 +14,7 @@ class FeaturedActivities extends Component {
     componentDidMount(){
       let mainActivity = document.getElementsByClassName('activity-card')[0];
       let activity = document.getElementsByClassName('activity-card')[1];
-      if(document.body.clientWidth > 1023){
+      if(document.body.clientWidth > 1023 && mainActivity !== undefined && activity !== undefined){
         window.addEventListener('scroll', (e)=>{
           let scrollDiff1 = 500 - window.scrollY;
           let scrollDiff2 = 550 - window.scrollY;
@@ -26,7 +26,7 @@ class FeaturedActivities extends Component {
     componentDidUpdate(){
       let mainActivity = document.getElementsByClassName('activity-card')[0];
       let activity = document.getElementsByClassName('activity-card')[1];
-      if(document.body.clientWidth > 1023){
+      if(document.body.clientWidth > 1023 && mainActivity !== undefined && activity !== undefined){
         window.addEventListener('scroll', (e)=>{
           let scrollDiff1 = 500 - window.scrollY;
           let scrollDiff2 = 550 - window.scrollY;
@@ -38,23 +38,27 @@ class FeaturedActivities extends Component {
     render(){
       return (
         <div className="featuredActivities grid-full">
-          <div className="featured-header"><h3>things to do in</h3> <h1>San Jose</h1></div>
-          <div className="relative featured-search-bar"><SearchBar {...this.props}/></div>
-          {this.props.allActivities.map((activity, index)=>(
-            <div
-              className="activity-card-container relative"
-              key={index}
-              onClick= {()=> {
-                this.props.setActivity(activity);
-                this.handleClick();
-              }}
-            >
-              <FeaturedActivityCard
-              image={activity.eventInfo.imageLink}
-              name={activity.eventInfo.name}
-              description={activity.eventInfo.description}/>
-            </div>
-          ))}
+          <div className="featured-header-section">
+            <div className="featured-header"><h3>things to do in</h3> <h1>San Jose</h1></div>
+            <div className="relative featured-search-bar"><SearchBar {...this.props}/></div>
+          </div>
+          <div className="activity-card-section">
+            {this.props.allActivities.map((activity, index)=>(
+              <div
+                className="activity-card-container relative"
+                key={index}
+                onClick= {()=> {
+                  this.props.setActivity(activity);
+                  this.handleClick();
+                }}
+              >
+                <FeaturedActivityCard
+                image={activity.eventInfo.imageLink}
+                name={activity.eventInfo.name}
+                description={activity.eventInfo.description}/>
+              </div>
+            ))}
+          </div>
         </div>
       );
     }

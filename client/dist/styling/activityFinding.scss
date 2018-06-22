@@ -11,32 +11,39 @@
     /* Filtering CSS */
 
 .filter-section {
-    flex-basis: 20%;
+    flex-basis: 25%;
     padding: 1% 0;
     box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+    height: 72%;
 }
 
 .filter-container {
     border-top: 1px solid lightgrey;
-    border-bottom: 1px solid lightgrey;
 }
 
 .filter-section div {
-    padding: 2%;
+    padding: 1.5%;
     display: flex;
     flex-direction: column;
 }
     /* Activity List CSS */
 
 .activity-list-section{
+  overflow-y: auto;
   padding: 1%;
-  flex-basis: 20%;
+  flex-basis: 75%;
   max-height: 85vh;
+}
+
+.activity-list{
+    margin-left: 3%;
+    border-left: dashed 2px orange;
 }
 
 .activity-list-item{
     border-bottom: 1px solid lightgrey;
-    padding: 3% 0;
+    margin: 1%;
+    padding: 1%;
 }
 
 .activity-list-item-title{
@@ -44,7 +51,14 @@
 }
 
 .activity-list-image{
-    max-width: 100%;
+    max-width: 25%;
+}
+
+.activity-list-title {
+    background: orange;
+    width: 24%;
+    padding: 0.5%;
+    font-weight: bold;
 }
 
 .activity{

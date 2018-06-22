@@ -11,7 +11,7 @@ const ActivityFinder = ({ createActivity }) => {
       <div className="activity-finding-section">
         <FilterBarContainer />
         <ActivitiesListContainer />
-        <CurrentActivityContainer />
+        {/* <CurrentActivityContainer /> */}
       </div>
       <FooterBar />
       <div>{createActivity === 'creating' ? <ActivityCreatorContainer /> : null}</div>

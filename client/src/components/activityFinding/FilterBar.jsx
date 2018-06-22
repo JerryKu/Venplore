@@ -34,7 +34,10 @@ class FilterBar extends React.Component{
               </div>
             </div>;
         })}
-        <button className="clear-filter-button text-orange" onClick={this.clearFilters}>Clear Filters</button>
+        <div className='filter-container'>
+          <button className="clear-filter-button text-orange" onClick={this.clearFilters}>Clear Filters</button>
+        </div>
+
       </div>
     )
   }

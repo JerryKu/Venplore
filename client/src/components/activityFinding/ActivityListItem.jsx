@@ -1,10 +1,15 @@
 import React from "react";
 
-const ActivityListItem = ({image, name, score}) => {
-  return <div className="activity-list-item">
-      <div className="secondary-title-green">{name}</div>
-      <div>Adventure Score: {score}</div>
+const ActivityListItem = ({image, name, score, description}) => {
+  return (
+    <div className='activity-list-content'>
       <img className='activity-list-image' src={image} />
-    </div>
+      <div className='content-container'>
+        <div className="large-title text-orange">{name}</div>
+        <div>Adventure Score: {score}</div>
+        <div>{description}</div>
+      </div>
+
+    </div>)
 }
 export default ActivityListItem;

@@ -4,10 +4,11 @@ import ActivityListItem from './ActivityListItem.jsx'
 
 const ActivityList = (props) => {
   return <div className="activity-list-section">
-      <div className='primary-title text-white activity-list-title'>Your Top Adventures</div>
+      <div className='large-title text-white activity-list-title'>Your Top Adventures</div>
       <div className='activity-list'>
         {props.activityList.map((activity, index) => (
           <div
+            className='activity-list-item'
             key={index}
             onClick={() => {
               props.setActivity(activity);

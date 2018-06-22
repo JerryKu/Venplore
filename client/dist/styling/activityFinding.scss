@@ -46,24 +46,24 @@
     padding: 1%;
 }
 
-.activity-list-item-title{
-    font-weight: bold;
+.activity-list-content{
+    display: flex;
+    max-height: 200px;
+    overflow-y: hidden;
 }
 
 .activity-list-image{
-    max-width: 25%;
+    max-width: 200px;
+    max-height: 200px;
 }
 
 .activity-list-title {
     background: orange;
-    width: 24%;
+    width: 32%;
     padding: 0.5%;
     font-weight: bold;
 }
 
-.activity{
-  padding: 0% 1%;
-}
     /* Current Activity CSS */
 
 .current-activity-section {

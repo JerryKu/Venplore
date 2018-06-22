@@ -8,7 +8,11 @@
   position: sticky;
   top: 0;
   z-index: 999;
-  grid-column: 1 / -1;
+}
+@media(max-width:1023px){
+  .header-bar{
+    display:none;
+  }
 }
 .header-links{
   max-width: 1440px;

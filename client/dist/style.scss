@@ -30,11 +30,6 @@ html {
     background-color: #f5f6f7;;
 }
 
-.application {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-}
-
 input[type=range]{
     -webkit-appearance: none;  /* Override default CSS styles */
     appearance: none;

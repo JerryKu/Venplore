@@ -14,10 +14,11 @@ class FeaturedActivities extends Component {
     render(){
       return (
         <div className="featuredActivities grid-full">
-          <div className="main-featured"><h3>things to do in</h3> <h1>San Jose</h1></div><div className="relative"><SearchBar {...this.props}/></div>
-          <div className="main-featured"><img src="http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_640/images/live/p0/51/v6/p051v6vn.jpg"/></div>
+          <div className="featured-header"><h3>things to do in</h3> <h1>San Jose</h1></div>
+          <div className="relative featured-search-bar"><SearchBar {...this.props}/></div>
           {this.props.allActivities.map((activity, index)=>(
             <div
+              className="activity-card-container"
               key={index}
               onClick= {()=> {
                 this.props.setActivity(activity);

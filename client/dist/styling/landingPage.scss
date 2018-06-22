@@ -1,4 +1,4 @@
-//Landing Page Splash Section
+/* Landing Page Splash Section */
 .landingPageContainer{
   max-width: 1440px;
   margin: 0 auto;
@@ -13,13 +13,24 @@
   height:95vh;
   width:100%;
 }
+@keyframes welcome{
+  0%{top: 30%;}
+  25%{top: 40%; opacity: 1}
+  50%{top: 40%; opacity: 1}
+  65%{top:35%; opacity: 0.5}
+  80%{top: 50%; opacity: 0}
+  100%{top:50%;opacity: 0}
+}
 .welcomeMessage{
+  opacity: 0;
   position: absolute;
   color:white;
-  top:40%;
-  font-size: 3em;
+  top:20%;
+  font-size: 4em;
   width: 100%;
   text-align: center;
+  animation: welcome 5s;
+  animation-delay: 1s;
 }
 .main-carousel .carousel-cell{
   width: 100%;
@@ -30,7 +41,7 @@
 .flickity-button{
   display:none;
 }
-//Featured Activities Section
+/* Featured Activities Section*/
 .featuredActivities{
   border-top: 1px solid rgba(255,163,0,0.4);
   display: grid;
@@ -114,7 +125,7 @@
   margin: 0 auto;
   bottom: -2px;
 }
-//Flickity Carousel Styling
+/* Flickity Carousel Styling */
 .landingPage .flickity-page-dots{
   z-index: 2;
   bottom: 1em;

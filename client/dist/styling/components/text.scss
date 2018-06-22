@@ -1,3 +1,8 @@
+.large-title {
+  font-size: 1.75em;
+  margin: 1% 0;
+}
+
 .primary-title {
   font-size: 1.3em;
   margin: 1% 0;
@@ -16,6 +21,10 @@
   color: rgb(124, 172, 124);
 }
 
-.orange {
+.text-orange {
   color: orange;
+}
+
+.bold {
+  text-decoration: bold;
 }

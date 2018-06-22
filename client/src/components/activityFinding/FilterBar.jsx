@@ -17,12 +17,12 @@ class FilterBar extends React.Component{
   render(){
     return (
       <div className="filter-section">
-        <div className="primary-title-blue" >What are you in the mood for?</div>
         <SearchBar {...this.props}/>
+        <div className="primary-title text-orange" >Filters:</div>
         {(this.props.searchVal !== "") ? <div>Current Search: {this.props.searchVal}</div> : null}
         {this.props.filters.map((filter, index) => {
-          return <div key={index}>
-              <div>
+          return <div className='filter-container' key={index}>
+              <div className='text-orange'>
                 {filter[0]}: {filter[2]}
               </div>
               <div>
@@ -34,7 +34,7 @@ class FilterBar extends React.Component{
               </div>
             </div>;
         })}
-        <button className="clear-filter-button" onClick={this.clearFilters}>Clear Filters</button>
+        <button className="clear-filter-button text-orange" onClick={this.clearFilters}>Clear Filters</button>
       </div>
     )
   }

@@ -7,11 +7,12 @@ class FeaturedActivityCard extends Component {
   }
   render() {
     return (
-      <div className="activity-card relative">
+      <div className="activity-card absolute">
         <img className="activity-card-img" src={this.props.image}/>
         <div className="activity-card-hover relative">
           <div className="activity-card-description">
-            <p className="activity-card-text">{this.props.description.substring(0, 150)}</p>
+            <p className="activity-card-text">{
+              this.props.description.length > 150 ? this.props.description.substring(0, 150) + "..." : this.props.description.substring(0, 150)}</p>
           </div>
           <div className="activity-card-title">
             <h2>{this.props.name}</h2>

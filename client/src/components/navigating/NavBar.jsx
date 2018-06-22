@@ -22,7 +22,6 @@ class HeaderBar extends React.Component{
   render(){
     return (
           <div className="header-bar grid-full">
-          {document.body.clientWidth > 1023 ?
             <div className='header-links'>
               <div className="header-tab header-city">My City: San Jose</div>
               <NavLink exact to='/' className='vp-logo'><img src={VenploreLogo}/></NavLink>
@@ -33,7 +32,6 @@ class HeaderBar extends React.Component{
               <NavLink activeClassName="selected" exact to='/signup' className='header-tab'> <span>Sign Up</span></NavLink>
               */}
             </div>
-          :
             <div className="mobile-header-bar">
               <Menu right isOpen={this.state.menuOpen} width= { '200px' }>
                 <NavLink activeClassName="selected" exact to='/' className='header-tab nav-links'> <span>Home</span></NavLink>
@@ -41,8 +39,7 @@ class HeaderBar extends React.Component{
                 <div onClick={this.createActivity} className='header-tab nav-links'> <span>Create</span> </div>
               </Menu>
             </div>
-          }
-        </div>
+          </div>
     );
   }
 }

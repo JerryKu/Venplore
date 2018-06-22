@@ -6,6 +6,9 @@
   font-weight: bold;
   justify-content: flex-end;
 }
+.header-links{
+  display:none;
+}
 @media(min-width: 1024px){
   .header-tab{
     padding: 1em;
@@ -19,11 +22,14 @@
     top: 0;
     z-index: 999;
   }
-}
-.header-links{
-  max-width: 1440px;
-  margin: 0 auto;
-  display: flex;
+  .header-links{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .mobile-header-bar{
+    display:none;
+  }
 }
 .header-city{
   padding-left: 5em;

@@ -50,29 +50,7 @@
   color: orange;
 }
 
-.activity-card-container{
-  grid-column: span 1;
-}
-.activity-card-img{
-  position: relative;
-  box-shadow: 1px 1px rgba(0,0,0,0.2);
-  width:100%;
-  height: 16em;
-  object-fit: cover;
-}
-.activity-card h2{
-  margin: 0;
-}
-.activity-card-text{
-  box-shadow: 1px 1px rgba(0,0,0,0.2);
-  max-width: 60%;
-  min-width: 30%;
-  display:inline-block;
-  background: orange;
-  border-radius: 0 0 1em 1em;
-  color: white;
-  padding: 0.5em 1em;
-}
+
 @media(min-width:540px){
   .featuredActivities{
     grid-template-rows: 7em 20em 20em 20em;

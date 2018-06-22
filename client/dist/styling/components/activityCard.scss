@@ -1,0 +1,48 @@
+.activity-card-container{
+  grid-column: span 1;
+  cursor: pointer;
+}
+.activity-card-img{
+  position: relative;
+  box-shadow: 1px 1px rgba(0,0,0,0.2);
+  max-width: 110%;
+  width:100%;
+  height: 16em;
+  transition: all 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  object-fit: fill;
+}
+.activity-card h2{
+  margin: 0;
+}
+.activity-card-title{
+  box-shadow: 1px 1px rgba(0,0,0,0.2);
+  max-width: 60%;
+  min-width: 30%;
+  display:inline-block;
+  background: orange;
+  border-radius: 0 0 1em 1em;
+  color: white;
+  padding: 0.5em 1em;
+}
+/* Activity Card Animations */
+.activity-card-description{
+  max-height: 0;
+  overflow: hidden;
+  border-radius: 0 0 1em 0;
+  transition: max-height 0.25s cubic-bezier(0, -0.55, 0.265, 1.55);
+  background: white;
+  padding: 0 1em;
+}
+.activity-card-hover{
+  width:100%;
+  margin-top:2px;
+  z-index: 2;
+}
+.activity-card:hover .activity-card-description{
+  max-height: 7em;
+}
+
+.activity-card:hover .activity-card-img{
+  transform-origin: left top;
+  transform: scale(1.01, 1.01);
+}

@@ -8,7 +8,7 @@
 @import './styling/about.scss';
 @import './styling/landingPage.scss';
 @import './styling/footerBar.scss';
-
+@import './styling/components/activityCard.scss';
 
 /* tag level css */
 body{
@@ -16,6 +16,7 @@ body{
   background: white;
   position: relative;
   z-index: 0;
+  height: 100%;
 }
 *{
   box-sizing: border-box;

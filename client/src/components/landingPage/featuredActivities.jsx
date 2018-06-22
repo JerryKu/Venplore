@@ -11,6 +11,30 @@ class FeaturedActivities extends Component {
       this.props.history.push('/finding');
       window.scrollTo(0, 0);
     }
+    componentDidMount(){
+      let mainActivity = document.getElementsByClassName('activity-card')[0];
+      let activity = document.getElementsByClassName('activity-card')[1];
+      if(document.body.clientWidth > 1023){
+        window.addEventListener('scroll', (e)=>{
+          let scrollDiff1 = 500 - window.scrollY;
+          let scrollDiff2 = 550 - window.scrollY;
+          mainActivity.style.top = scrollDiff1 <= 0 ? 0 : scrollDiff1 + 'px';
+          activity.style.top = scrollDiff2 <= 0 ? 0 : scrollDiff2 + 'px';
+        })
+      }
+    }
+    componentDidUpdate(){
+      let mainActivity = document.getElementsByClassName('activity-card')[0];
+      let activity = document.getElementsByClassName('activity-card')[1];
+      if(document.body.clientWidth > 1023){
+        window.addEventListener('scroll', (e)=>{
+          let scrollDiff1 = 500 - window.scrollY;
+          let scrollDiff2 = 550 - window.scrollY;
+          mainActivity.style.top = scrollDiff1 <= 0 ? 0 : scrollDiff1 + 'px';
+          activity.style.top = scrollDiff2 <= 0 ? 0 : scrollDiff2 + 'px';
+        })
+      }
+    }
     render(){
       return (
         <div className="featuredActivities grid-full">
@@ -18,7 +42,7 @@ class FeaturedActivities extends Component {
           <div className="relative featured-search-bar"><SearchBar {...this.props}/></div>
           {this.props.allActivities.map((activity, index)=>(
             <div
-              className="activity-card-container"
+              className="activity-card-container relative"
               key={index}
               onClick= {()=> {
                 this.props.setActivity(activity);

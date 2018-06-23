@@ -46,10 +46,20 @@
     padding: 1%;
 }
 
+.activity-list-item-info{
+    flex-basis: 50%;
+    padding: 0 1%;
+}
+
 .activity-list-content{
     display: flex;
     max-height: 200px;
     overflow-y: hidden;
+}
+
+.activity-list-item-rating {
+    padding: 0 0 0 1%;
+    flex-basis: 25%;
 }
 
 .activity-list-image{

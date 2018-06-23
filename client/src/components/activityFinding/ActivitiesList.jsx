@@ -3,8 +3,9 @@ import actions  from '../../actions/index.jsx'
 import ActivityListItem from './ActivityListItem.jsx'
 
 const ActivityList = (props) => {
+  console.log(props)
   return <div className="activity-list-section">
-      <div className='large-title text-white activity-list-title'>Your Top Adventures</div>
+      <div className='text-large text-white activity-list-title'>Your Top Adventures</div>
       <div className='activity-list'>
         {props.activityList.map((activity, index) => (
           <div
@@ -19,6 +20,7 @@ const ActivityList = (props) => {
               name={activity.eventInfo.name}
               score={activity.adventureScore}
               description={activity.eventInfo.description}
+              eventRatings={activity.eventRatings}
             />
           </div>
         ))}

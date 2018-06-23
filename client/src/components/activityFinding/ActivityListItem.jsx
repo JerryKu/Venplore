@@ -7,7 +7,7 @@ const ActivityListItem = ({image, name, score, description, eventRatings}) => {
 
   let ratings = Object.keys(eventRatings);
   ratings = ratings.map((rating, index) => {
-    return (<div key={index}>{ratingTitles[index]}:
+    return (<div className='content-container-small' key={index}>{ratingTitles[index]}:
     <span className='float-right'>{eventRatings[rating]}</span>
     </div>)
   })

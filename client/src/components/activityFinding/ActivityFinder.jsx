@@ -9,7 +9,9 @@ import FooterBar from '../navigating/FooterBar.jsx';
 const ActivityFinder = ({ createActivity, displayCurrent }) => {
   let content = null;
   if(displayCurrent) {
-    content = <CurrentActivityContainer /> 
+    content = <div className="activity-finding-section">
+        <CurrentActivityContainer /> 
+      </div>
   } else {
     content = <div className="activity-finding-section">
     <FilterBarContainer />

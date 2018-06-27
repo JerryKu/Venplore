@@ -64,9 +64,6 @@
 .activity-list-item-rating {
     padding: 1%;
     flex-basis: 25%;
-    border: solid 1px orange;
-    border-radius: 20px;
-    background: #f6a30c29;
 }
 
 .activity-list-image{
@@ -84,35 +81,47 @@
     /* Current Activity CSS */
 
 .current-activity-section {
-    flex-basis: 60%;
+    width: 100%;
 }
 
+.current-activity-info{
+  grid-area: 1 / 1 / span 12 / span 8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.back-button {
+  position: absolute;
+  top: 7%;
+  height: 36px;
+}
 .activity-title {
-    font-size: 2em;
-    padding: 3%;
-    text-align: center;
-    grid-area: 1 / 1 / span 1 / span 6;
+  font-size: 2em;
+  padding: 1%;
+  text-align: center;
+  grid-area: 1 / 1 / span 1 / span 6;
 }
 
 .main-image{
-    margin-left: auto;
-    margin-right: auto;
-    grid-area: 2 / 1 / span 4 / span 6;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
 }
 
 .current-event-description {
-    grid-area: 6 / 1 / span 4 / span 6;
+  max-width: 75%;
 }
 
 .current-event-title {
-    text-align: center;
+  text-align: center;
 }
 
-.current-event-ratings-container {
-    display: flex;
-    flex-direction: column;
-    margin-left: 5%;
-    grid-area: 2 / 7 / span 4 / span 3;
+.current-activity-ratings {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  grid-area: 2 / 9 / span 3 / span 2;
 }
 
 .current-event-ratings input {
@@ -123,13 +132,13 @@
 * Rangeslider
 */
 .rangeslider {
-    margin: 2% 0;
-    position: relative;
-    background: $lightOrange;
-    -ms-touch-action: none;
-    touch-action: none;
-    opacity: 0.7;
-    max-width: 325px;
+  margin: 2% 0;
+  position: relative;
+  background: $lightOrange;
+  -ms-touch-action: none;
+  touch-action: none;
+  opacity: 0.7;
+  max-width: 325px;
   }
   .rangeslider,
   .rangeslider .rangeslider__fill {

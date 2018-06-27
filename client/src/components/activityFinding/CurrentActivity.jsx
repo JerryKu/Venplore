@@ -1,33 +1,18 @@
 import React from "react";
+import CurrentActivityInfo from './CurrentActivityInfo.jsx';
+import CurrentActivityRatings from './CurrentActivityRatings.jsx';
 
 const CurrentActivity = (props) => {
-  const ratingTitles = ["Overall Enjoyability", "Cost", "Mental Effort", "Physical Effort", "Nature Level", "Social Level", "Duration"]
-  const activityRatings = Object.keys(props.eventRatings);
   const handleHide = () => {
     props.hideCurrent();
   };
-    return (<div className="current-activity-section grid-root grid-row-root">
-    <button onClick={handleHide}>Choose Another Adventure</button>
-      <div className="content-container primary-title-blue activity-title">
-        {props.eventInfo.name}
-      </div>
-      <div className="main-image content-container">
-        <img src={props.eventInfo.imageLink} />
-      </div>
-      <div className="current-event-description content-container">
-        {props.eventInfo.description}
-      </div>
-      <div className="content-container current-event-ratings-container">
-        <div className="secondary-title-green">Current Ratings</div>
-        {activityRatings.map((rating, index) => {
-          return <div className="content-container" key={rating}>
-              {ratingTitles[index]}: {props.eventRatings[activityRatings[index]]}
-            </div>;
-        })}
-      </div>
+    return (
+    <div className="current-activity-section grid-root grid-row-root">
+      <button className='orange-button back-button' onClick={handleHide}> Choose Another Adventure
+      </button>
+      <CurrentActivityInfo eventInfo={props.eventInfo}/>
+      <CurrentActivityRatings eventRatings={props.eventRatings} />
     </div>);
 }
 
 export default CurrentActivity;
-
-// TODO: Break sections into individual components

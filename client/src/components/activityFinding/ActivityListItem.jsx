@@ -20,7 +20,7 @@ const ActivityListItem = ({image, name, score, description, eventRatings}) => {
         </div>
         <div>{shortenedDescription}</div>
       </div>
-      <div className='activity-list-item-rating'>
+      <div className='activity-list-item-rating container-background-orange'>
         <div className='secondary-title text-orange'>
           Adventure Score: <span className='float-right'>{score}</span>
         </div>

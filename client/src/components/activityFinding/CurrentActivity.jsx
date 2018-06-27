@@ -3,7 +3,11 @@ import React from "react";
 const CurrentActivity = (props) => {
   const ratingTitles = ["Overall Enjoyability", "Cost", "Mental Effort", "Physical Effort", "Nature Level", "Social Level", "Duration"]
   const activityRatings = Object.keys(props.eventRatings);
+  const handleHide = () => {
+    props.hideCurrent();
+  };
     return (<div className="current-activity-section grid-root grid-row-root">
+    <button onClick={handleHide}>Choose Another Adventure</button>
       <div className="content-container primary-title-blue activity-title">
         {props.eventInfo.name}
       </div>

@@ -6,13 +6,19 @@ import ActivitiesListContainer from '../../containers/ActivityListContainer.jsx'
 import ActivityCreatorContainer from '../../containers/ActivityCreatorContainer.jsx';
 import FooterBar from '../navigating/FooterBar.jsx';
 
-const ActivityFinder = ({ createActivity }) => {
+const ActivityFinder = ({ createActivity, displayCurrent }) => {
+  let content = null;
+  if(displayCurrent) {
+    content = <CurrentActivityContainer /> 
+  } else {
+    content = <div className="activity-finding-section">
+    <FilterBarContainer />
+    <ActivitiesListContainer />
+  </div>
+  }
+  
   return (<div className="grid-full">
-      <div className="activity-finding-section">
-        <FilterBarContainer />
-        <ActivitiesListContainer />
-        {/* <CurrentActivityContainer /> */}
-      </div>
+      {content}
       <FooterBar />
       <div>{createActivity === 'creating' ? <ActivityCreatorContainer /> : null}</div>
     </div>);

@@ -3,7 +3,6 @@ import actions  from '../../actions/index.jsx'
 import ActivityListItem from './ActivityListItem.jsx'
 
 const ActivityList = (props) => {
-  console.log(props)
   return <div className="activity-list-section">
       <div className='text-large text-white activity-list-title'>Your Top Adventures</div>
       <div className='activity-list'>

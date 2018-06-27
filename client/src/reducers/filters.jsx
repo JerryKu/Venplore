@@ -4,9 +4,9 @@ const filterDefault = [
   ['Cost', 'cost', 0],
   ['Mental Effort', 'mentalEffort', 0],
   ['Physical Effort', 'physicalEffort', 0],
-  ['Nature Level', 'natureLevel', 0],
-  ['Social Level', 'socialLevel', 0],
-  ['Duration', 'duration', 0],
+  ['Nature', 'natureLevel', 0],
+  ['Social', 'socialLevel', 0],
+  ['Time Commitment', 'duration', 0],
 ];
 
 const filters = (state = filterDefault, action) => {

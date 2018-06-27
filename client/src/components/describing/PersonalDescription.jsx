@@ -5,7 +5,7 @@ const PersonalDescription = (props) => {
       <div>
         <div className='section-title'>Andrew Chen</div>
         <img src="https://i.imgur.com/iflBcBK.png" />
-        <div className='primary-title-blue' >Welcome to Venplore!</div>
+        <div className='primary-title blue' >Welcome to Venplore!</div>
         <p>
           Venplore is a platform that aims to kill bordeom, forever. On
           Venplore you can find an activity that matches your current mood as
@@ -18,7 +18,7 @@ const PersonalDescription = (props) => {
           suggestions for Venplore or would like to help out!
         </p>
         <div className="secondary-title-green" >andrewchen.c44@gmail.com</div>
-        <a href="https://github.com/andrewchen44/Venplore" target="_blank">
+        <a className="code-link" href="https://github.com/andrewchen44/Venplore" target="_blank">
           Link to Code
         </a>
       </div>

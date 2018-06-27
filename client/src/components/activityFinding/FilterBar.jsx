@@ -1,11 +1,14 @@
 import React from "react";
 import actions from '../../actions/index.jsx'
 import SearchBar from './SearchBar.jsx'
+import Slider from 'react-rangeslider'
 
 class FilterBar extends React.Component{
   constructor(props){
     super(props);
     this.clearFilters = this.clearFilters.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleChangeComplete = this.handleChangeComplete.bind(this);
   }
   clearFilters(){
     this.props.filters.forEach((filter)=>{
@@ -14,27 +17,50 @@ class FilterBar extends React.Component{
     this.props.updateActivityList(this.props.allActivities, this.props.filters);
     this.props.setSearchVal("");
   }
+
+  handleChange(filter, e){
+    this.props.setFilterValue(filter, e);
+  }
+
+  handleChangeComplete() {
+    this.props.updateActivityList(this.props.activityList, this.props.filters);
+  }
+
   render(){
+    const min = 1;
+    const max = 5;
+    const prompts = ['How much would you like to spend?', 'How hard do you want to think?', 'How intense of a workout do you want?', 'How much nature do you want to see?', 'How much do you want to interact with other people?', 'How much time do you have?']
     return (
       <div className="filter-section">
-        <div className="primary-title-blue" >What are you in the mood for?</div>
         <SearchBar {...this.props}/>
-        {(this.props.searchVal !== "") ? <div>Current Search: {this.props.searchVal}</div> : null}
+        <div className="primary-title text-orange" >Filters:</div>
+        {(this.props.searchVal !== "") ? <div className='content-container'>Current Search: {this.props.searchVal}</div> : null}
         {this.props.filters.map((filter, index) => {
-          return <div key={index}>
-              <div>
-                {filter[0]}: {filter[2]}
+          const value = filter[2];
+          return <div className='filter-container' key={index}>
+              <div className='text-orange filter-title'>
+                {filter[0]}:
+                <span className='float-right'>{filter[2]}</span>
               </div>
-              <div>
-                <input type="range" min="0" max="5" step="1" value={filter[2]} onChange={e => {
-                    this.props.setFilterValue(filter[0], e.target.value);
-                  }} onMouseUp={() => {
-                    this.props.updateActivityList(this.props.activityList, this.props.filters);
-                  }} />
+              <div className='slider-container'>
+                <div className='text-small text-orange text-center'>
+                  {prompts[index]}
+                </div>
+                <Slider
+                  min={min}
+                  max={max}
+                  value={value}
+                  orientation="horizontal"
+                  onChange={this.handleChange.bind(this, filter[0])}
+                  onChangeComplete={this.handleChangeComplete}
+                />
               </div>
             </div>;
         })}
-        <button className="clear-filter-button" onClick={this.clearFilters}>Clear Filters</button>
+        <div className='text-center filter-container'>
+          <button className="clear-filter-button text-orange" onClick={this.clearFilters}>Clear Filters</button>
+        </div>
+
       </div>
     )
   }

@@ -42,23 +42,28 @@ class FeaturedActivities extends Component {
             <div className="featured-header"><h3>things to do in</h3> <h1>San Jose</h1></div>
             <div className="relative featured-search-bar"><SearchBar {...this.props}/></div>
           </div>
+
+          {this.props.allActivities.length > 0 ?
           <div className="activity-card-section">
-            {this.props.allActivities.map((activity, index)=>(
-              <div
-                className="activity-card-container relative"
-                key={index}
-                onClick= {()=> {
-                  this.props.setActivity(activity);
-                  this.handleClick();
-                }}
-              >
-                <FeaturedActivityCard
-                image={activity.eventInfo.imageLink}
-                name={activity.eventInfo.name}
-                description={activity.eventInfo.description}/>
-              </div>
-            ))}
+              {this.props.allActivities.map((activity, index)=>(
+                <div
+                  className="activity-card-container relative"
+                  key={index}
+                  onClick= {()=> {
+                    this.props.setActivity(activity);
+                    this.handleClick();
+                  }}
+                >
+                  <FeaturedActivityCard
+                  image={activity.eventInfo.imageLink}
+                  name={activity.eventInfo.name}
+                  description={activity.eventInfo.description}/>
+                </div>
+              ))}
           </div>
+          :
+          <div className="loader"></div>
+          }
         </div>
       );
     }

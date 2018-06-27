@@ -16,14 +16,20 @@
 }
 .activity-card-title{
   margin-top: -1%;
+  font-size: 0.9em;
   box-shadow: 1px 1px rgba(0,0,0,0.2);
-  max-width: 60%;
+  max-width: 80%;
   min-width: 30%;
   display:inline-block;
   background: orange;
   border-radius: 0 0 1em 1em;
   color: white;
   padding: 0.5em 1em;
+}
+@media(min-width:768px){
+  .activity-card-title{
+    max-height: 60%;
+  }
 }
 .activity-card-text{
   margin-top:0.5%;
@@ -34,7 +40,7 @@
   max-height: 0;
   overflow: hidden;
   border-radius: 0 0 1em 0;
-  transition: max-height 0.25s ease-in;
+  transition: max-height 0.25s;
   background: white;
   padding: 0 1em;
 }

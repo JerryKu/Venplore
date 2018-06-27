@@ -42,6 +42,21 @@
   display:none;
 }
 /* Featured Activities Section*/
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid orange; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 46.5%;
+    top: 78%;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 .featuredActivities{
   border-top: 1px solid rgba(255,163,0,0.4);
   margin: 3px 10%;

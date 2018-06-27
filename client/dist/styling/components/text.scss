@@ -1,11 +1,50 @@
-.primary-title-blue {
+.text-large {
+  font-size: 1.75em;
+  margin: 1% 0;
+}
+
+.primary-title {
   font-size: 1.3em;
-  margin-bottom: 1%;
+  margin: 1% 0;
+}
+
+.secondary-title {
+  font-size: 1.2em;
+  margin: 1% 0;
+}
+
+.text-medium {
+  font-size: 1.2em;
+}
+
+.text-small {
+  font-size: 0.9em;
+}
+
+.blue {
   color: rgb(84, 142, 230);
 }
 
-.secondary-title-green {
-  font-size: 1.2em;
-  margin-bottom: 1%;
+.green {
   color: rgb(124, 172, 124);
+}
+
+.text-orange {
+  color: orange;
+}
+
+.text-white {
+  color: white;
+}
+
+.bold {
+  text-decoration: bold;
+}
+
+.float-right {
+  float: right;
+}
+
+.text-center{
+  text-align: center;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import actions from '../actions/index.jsx';
+import * as actions from '../actions/selectActivityActions';
 import CurrentActivity from '../components/activityFinding/CurrentActivity.jsx';
 
 const CurrentActivityContainer = props => (
@@ -14,4 +14,12 @@ const mapStateToProps = state => {
   }
 };
 
-export default connect(mapStateToProps)(CurrentActivityContainer);
+const mapDispatchToProps = dispatch => {
+  return {
+    hideCurrent: () => {
+      dispatch(actions.hideCurrent())
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CurrentActivityContainer);

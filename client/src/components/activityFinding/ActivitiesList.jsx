@@ -2,7 +2,6 @@ import React from "react";
 import actions  from '../../actions/index.jsx'
 import ActivityListItem from './ActivityListItem.jsx'
 
-
 const ActivityList = (props) => {
   return <div className="activity-list-section">
       <div className='primary-title-blue'>Your Top Adventures</div>

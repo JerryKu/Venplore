@@ -2,8 +2,11 @@
 
 .activity-finding-section {
     width: 100vw;
+    max-width: 1440px;
+    height: 86vh;
     display: flex;
     flex-direction: row;
+    margin: 0 auto;
 }
     /* Filtering CSS */
 

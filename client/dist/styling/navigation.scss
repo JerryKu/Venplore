@@ -1,25 +1,55 @@
     /* Header Bar CSS */
-
-.header-bar {
+.header-tab {
+  padding: 1em 0;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.87);
+  font-weight: bold;
+  justify-content: flex-end;
+}
+.header-links{
+  display:none;
+}
+@media(min-width: 1024px){
+  .header-tab{
+    padding: 1em;
+  }
+  .header-bar {
     background-color: orange;
-    grid-area: 1 / 1 / span 1 / span 10;
-    display: flex;
-    flex-direction: row;
     width: 100%;
     align-items: center;
-    max-height: 5vh;
+    min-height: 5vh;
     position: sticky;
     top: 0;
     z-index: 999;
+  }
+  .header-links{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .mobile-header-bar{
+    display:none;
+  }
 }
-
-.header-tab {
-    padding: 1%;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.87);
-    font-weight: bold;
+.header-city{
+  padding-left: 5em;
+  float: left;
+  text-align: left;
+  width: 33%;
+  color: white;
 }
-
+.vp-logo{
+  float: left;
+  width:33.33%;
+  color:white;
+  text-align: center;
+  margin-right: 9em;
+}
+.vp-logo img{
+  display:inline-block;
+  max-height: 35px;
+  margin-top: 1%;
+}
 .header-tab span:hover {
     border-bottom: 2px solid rgba(255, 255, 255, 0.87);
     padding-bottom: 1.5%;

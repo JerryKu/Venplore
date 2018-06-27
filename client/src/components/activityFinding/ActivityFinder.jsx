@@ -7,7 +7,7 @@ import ActivityCreatorContainer from '../../containers/ActivityCreatorContainer.
 import FooterBar from '../navigating/FooterBar.jsx';
 
 const ActivityFinder = ({ createActivity }) => {
-  return (<div>
+  return (<div className="grid-full">
       <div className="activity-finding-section">
         <FilterBarContainer />
         <ActivitiesListContainer />

@@ -11,7 +11,7 @@ const LandingPageContainer = props => (
 const mapStateToProps = state => {
   return {
     createActivity: state.createActivity.state,
-    activityList: state.activityList,
+    allActivities: state.allActivities,
    };
 };
 
@@ -19,6 +19,15 @@ const mapDispatchToProps = dispatch => {
   return {
     setActivity: activity => {
       dispatch(actions.setActivity(activity));
+    },
+    updateActivityList: (list, filters) =>  {
+      dispatch(actions.updateActivityList(list, filters));
+    },
+    searchActivityList: (list, searchVal) => {
+      dispatch(actions.searchActivityList(list, searchVal))
+    },
+    setSearchVal: (searchVal) => {
+      dispatch(actions.setSearchVal(searchVal));
     }
   };
 };

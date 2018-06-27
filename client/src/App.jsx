@@ -24,6 +24,7 @@ class App extends React.Component {
           name: 'test',
         }
       }).then((activities) =>{
+        this.props.dispatch(actions.setAllActivityList(activities.data))
         this.props.dispatch(actions.updateActivityList(activities.data, this.props.filters))
         this.props.dispatch(actions.setActivity(this.props.activityList[0]));
       })
@@ -47,6 +48,8 @@ const mapStateToProps = (state) => {
   return{
     filters: state.filters,
     activityList: state.activityList,
+    allActivities: state.allActivities,
+    searchVal: state.searchVal,
   }
 }
 

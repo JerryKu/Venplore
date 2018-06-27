@@ -8,7 +8,8 @@
 @import './styling/about.scss';
 @import './styling/landingPage.scss';
 @import './styling/footerBar.scss';
-
+@import './styling/components/activityCard.scss';
+@import './styling/components/burgerMenu.scss';
 
 /* tag level css */
 body{
@@ -16,6 +17,7 @@ body{
   background: white;
   position: relative;
   z-index: 0;
+  height: 100%;
 }
 *{
   box-sizing: border-box;
@@ -28,12 +30,6 @@ html {
     font-family: 'Rubik', sans-serif;
     max-height: 100vh;
     background-color: #f5f6f7;;
-}
-
-.application {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    width: 100vw;
 }
 
 input[type=range]{
@@ -88,8 +84,3 @@ img {
     max-height: 100%;
     max-width: 100%;
 }
-
-// a {
-//     text-decoration: none;
-//     color: rgb(84, 142, 230);
-// }

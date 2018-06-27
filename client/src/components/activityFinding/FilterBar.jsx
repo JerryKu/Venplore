@@ -33,8 +33,8 @@ class FilterBar extends React.Component{
     return (
       <div className="filter-section">
         <SearchBar {...this.props}/>
-        <div className="primary-title text-orange content-container" >Filters:</div>
-        {(this.props.searchVal !== "") ? <div>Current Search: {this.props.searchVal}</div> : null}
+        <div className="primary-title text-orange" >Filters:</div>
+        {(this.props.searchVal !== "") ? <div className='content-container'>Current Search: {this.props.searchVal}</div> : null}
         {this.props.filters.map((filter, index) => {
           const value = filter[2];
           return <div className='filter-container' key={index}>

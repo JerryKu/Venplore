@@ -30,7 +30,7 @@ class SearchBar extends Component {
   }
   render() {
     return (
-      <div className="search-bar">
+      <div className="search-bar content-container">
         <form className="search-form" onSubmit={this.onSubmit}>
         <input type="text" placeholder="Search for activities..." value={this.state.inputValue} onChange={this.updateInputValue}/>
         </form>

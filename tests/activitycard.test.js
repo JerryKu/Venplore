@@ -22,4 +22,4 @@ it('displays a placeholder image if there is none', () =>{
     description='Sun tanning or simply tanning is the process whereby skin color is darkened or tanned. It is most often a result of exposure to ultraviolet (UV) radiation from sunlight or from artificial sources'
     />).toJSON();
     expect(tree).toMatchSnapshot();
-})
+});

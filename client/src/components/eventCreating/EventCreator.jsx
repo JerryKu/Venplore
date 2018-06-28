@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Slider from "react-rangeslider";
 import { setCreationState } from '../../actions/creationActions';
 
 class EventCreator extends React.Component {
@@ -37,9 +38,9 @@ class EventCreator extends React.Component {
       this.props.dispatch(setCreationState('!creating'));
     }
   }
-  handleChange(event){
+  handleChange(filter, value){
     let newState = {};
-    newState[event.target.name] = event.target.value;
+    newState[filter] = value;
     this.setState(newState);
 
   }
@@ -70,59 +71,67 @@ class EventCreator extends React.Component {
   }
 
   render(){
-    return (
-      <div className='event-creation-section'>
-      <div className="dark-background">
-      </div>
-      <div ref={this.setWrapperRef} className="event-creation-form">
-        <button className='close-button' onClick={this.closeCreator}>X</button>
-        <div className="form-elements">
-          <form>
-            <div>
-              <label>
-                Activity Name: <input className="event-creator-input" type="text" name="activityName" placeholder="Add clear and descriptive activity name" value={this.state.activityName} onChange={this.handleChange}/>
-              </label> <br />
-              <br/>
-              <label>
-                Image Link: <input className="event-creator-input" type="text" name="imageLink" value={this.state.imageLink}placeholder="Add a link to an image of the activity"  onChange={this.handleChange}/>
-              </label> <br />
-            </div>
-            <div>
-              <div className="event-creator-form-spec">
-                Overall Enjoyability: {this.state.overallEnjoyability}<input type="range" min="0" max="5" step="1" name='overallEnjoyability' value={this.state.overallEnjoyability} onChange={this.handleChange}/>
-              </div> <br />
-              <div className="event-creator-form-spec">
-                Cost: {this.state.cost} <input type="range" min="0" max="5" step="1" name='cost' value={this.state.cost} onChange={this.handleChange}/>
-              </div> <br />
-              <div className="event-creator-form-spec">
-                Mental Effort: {this.state.mentalEffort}<input type="range" min="0" max="5" step="1" name='mentalEffort' value={this.state.mentalEffort} onChange={this.handleChange}/>
-              </div> <br />
-              <div className="event-creator-form-spec">
-                Physical Effort: {this.state.physicalEffort} <input type="range" min="0" max="5" step="1" name='physicalEffort' value={this.state.physicalEffort} onChange={this.handleChange}/>
-              </div> <br />
-              <div className="event-creator-form-spec">
-                Nature Level: {this.state.natureLevel} <input type="range" min="0" max="5" step="1" name='natureLevel' value={this.state.natureLevel} onChange={this.handleChange}/>
-              </div> <br />
-              <div className="event-creator-form-spec">
-                Social Level: {this.state.socialLevel}<input type="range" min="0" max="5" step="1" name='socialLevel' value={this.state.socialLevel} onChange={this.handleChange}/>
-              </div> <br />
-              <div className="event-creator-form-spec">
-                Duration: {this.state.duration}<input type="range" min="0" max="5" step="1" name='duration' value={this.state.duration} onChange={this.handleChange}/>
-              </div> <br />
-            </div>
-            <br />
-            <label>
-              Description:
+    const min = 0;
+    const max = 5;
+    return <div className="event-creation-section">
+        <div className="dark-background" />
+        <div ref={this.setWrapperRef} className="event-creation-form">
+          <button className="close-button" onClick={this.closeCreator}>
+            X
+          </button>
+          <div className="form-elements">
+            <form>
               <div>
-                <textarea rows='6' cols='150' className='description-box' name="description" value={this.state.description} placeholder='Tell me more about this activity' onChange={this.handleChange}/>
+                <label>
+                  Activity Name: <input className="event-creator-input" type="text" name="activityName" placeholder="Add clear and descriptive activity name" value={this.state.activityName} onChange={this.handleChange} />
+                </label> <br />
+                <br />
+                <label>
+                  Image Link: <input className="event-creator-input" type="text" name="imageLink" value={this.state.imageLink} placeholder="Add a link to an image of the activity" onChange={this.handleChange} />
+                </label> <br />
               </div>
-            </label> <br />
-            <input className="create-button" type="submit" value="Create Adventure" onClick={this.handleSubmit}/>
-          </form>
+              <div>
+                <div className="event-creator-form-spec">
+                  Overall Enjoyability: {this.state.overallEnjoyability}
+                  <Slider min={min} max={max} value={ this.state.overallEnjoyability } orientation="horizontal" name="overallEnjoyability" onChange={this.handleChange.bind(this, 'overallEnjoyability')} />
+                </div> <br />
+                <div className="event-creator-form-spec">
+                  Cost: {this.state.cost} 
+                  <Slider min={min} max={max} value={ this.state.cost } orientation="horizontal" name="cost" onChange={this.handleChange.bind(this, 'cost')} />
+                </div> <br />
+                <div className="event-creator-form-spec">
+                  Mental Effort: {this.state.mentalEffort}
+                  <Slider min={min} max={max} value={ this.state.mentalEffort } orientation="horizontal" name="mentalEffort" onChange={this.handleChange.bind(this, 'mentalEffort')} />
+                </div> <br />
+                <div className="event-creator-form-spec">
+                  Physical Effort: {this.state.physicalEffort}
+                  <Slider min={min} max={max} value={ this.state.physicalEffort } orientation="horizontal" name="physicalEffort" onChange={this.handleChange.bind(this, 'phsyicalEffort')} />
+                </div> <br />
+                <div className="event-creator-form-spec">
+                  Nature Level: {this.state.natureLevel} 
+                  <Slider min={min} max={max} value={ this.state.natureLevel } orientation="horizontal" name="naturlLevel" onChange={this.handleChange.bind(this, 'natureLevel')} />
+                </div> <br />
+                <div className="event-creator-form-spec">
+                  Social Level: {this.state.socialLevel}
+                  <Slider min={min} max={max} value={ this.state.socialLevel } orientation="horizontal" name="socialLevel" onChange={this.handleChange.bind(this, 'socialLevel')} />
+                </div> <br />
+                <div className="event-creator-form-spec">
+                  Duration: {this.state.duration}
+                  <Slider min={min} max={max} value={ this.state.duration } orientation="horizontal" name="duration" onChange={this.handleChange.bind(this, 'duration')} />
+                </div> <br />
+              </div>
+              <br />
+              <label>
+                Description:
+                <div>
+                  <textarea rows="6" cols="150" className="description-box" name="description" value={this.state.description} placeholder="Tell me more about this activity" onChange={this.handleChange} />
+                </div>
+              </label> <br />
+              <input className="create-button" type="submit" value="Create Adventure" onClick={this.handleSubmit} />
+            </form>
+          </div>
         </div>
-      </div>
-    </div>
-    )
+      </div>;
   }
 }
 

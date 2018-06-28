@@ -128,6 +128,14 @@
     margin: 3%;
 }
 
+@media(max-width:420px){
+  .activity-finding-section {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+}
+
+
 /**
 * Rangeslider
 */

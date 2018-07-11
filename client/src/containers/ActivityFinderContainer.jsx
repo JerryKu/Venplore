@@ -7,19 +7,15 @@ const ActivityFinderContainer = props => (
   <ActivityFinder {...props} />
 );
 
-const mapStateToProps = state => {
-  return {
-    displayCurrent: state.currentActivity.display,
-    createActivity: state.createActivity.state,
-   };
-};
+const mapStateToProps = state => ({
+  displayCurrent: state.currentActivity.display,
+  createActivity: state.createActivity.state,
+});
 
-const mapDispatchToProps = dispatch => {
-  return {
-    setCreationState: state => {
-      dispatch(actions.setCreationState(state));
-    }
-  };
-};
+const mapDispatchToProps = dispatch => ({
+  setCreationState: (state) => {
+    dispatch(actions.setCreationState(state));
+  },
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(ActivityFinderContainer);

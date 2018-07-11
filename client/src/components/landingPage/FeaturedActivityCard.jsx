@@ -7,13 +7,8 @@ class FeaturedActivityCard extends Component {
   }
   render() {
     return (
-<<<<<<< HEAD
-      <div className="activity-card absolute">
-        <img className="activity-card-img" src={this.props.image !== '' ? this.props.image : 'http://www.independentmediators.co.uk/wp-content/uploads/2016/02/placeholder-image-768x576.jpg'}/>
-=======
       <div className="activity-card relative">
         <img className="activity-card-img" src={this.props.image}/>
->>>>>>> minor UI changes
         <div className="activity-card-hover relative">
           {/*<div className="activity-card-description">
             <p className="activity-card-text">{

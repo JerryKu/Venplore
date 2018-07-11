@@ -8,36 +8,22 @@
   max-width: 110%;
   width:100%;
   height: 24em;
-  transition: all 0.25s;
   object-fit: fill;
 }
 .activity-card h2{
   margin: 0;
 }
 .activity-card-title{
-<<<<<<< HEAD
-  margin-top: -1%;
-  font-size: 0.9em;
-  box-shadow: 1px 1px rgba(0,0,0,0.2);
-  max-width: 80%;
-  min-width: 30%;
-  display:inline-block;
-  background: orange;
-  border-radius: 0 0 1em 1em;
-=======
   position: absolute;
->>>>>>> minor UI changes
+  text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
   color: white;
-  bottom: 1em;
+  bottom: 2.5em;
   left: 1em;
 }
 @media(min-width:768px){
   .activity-card-title{
     max-height: 60%;
   }
-}
-.activity-card-text{
-  margin-top:0.5%;
 }
 /* Activity Card Animations */
 .activity-card-description{
@@ -54,10 +40,12 @@
   z-index: 2;
 }
 .activity-card:hover{
+  transform-origin: left top;
+  transition: all 0.25s;
   transform: scale(1.01);
 }
 
-.activity-card:hover .activity-card-img{
-  transform-origin: left top;
-  transform: scale(1.01, 1.01);
-}
+// .activity-card:hover .activity-card-img{
+//   transform-origin: left top;
+//   transform: scale(1.01, 1.01);
+// }

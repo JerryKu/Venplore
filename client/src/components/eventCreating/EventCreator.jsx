@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
-import Slider from "react-rangeslider";
+import RadioButtons from './RadioButtons.jsx';
 import { setCreationState } from '../../actions/creationActions';
+
 
 class EventCreator extends React.Component {
   constructor(props){
@@ -38,11 +39,10 @@ class EventCreator extends React.Component {
       this.props.dispatch(setCreationState('!creating'));
     }
   }
-  handleChange(filter, value){
+  handleChange(filter, event){
     let newState = {};
-    newState[filter] = value;
+    newState[filter] = event.target.value;
     this.setState(newState);
-
   }
 
   handleSubmit(event){
@@ -71,8 +71,7 @@ class EventCreator extends React.Component {
   }
 
   render(){
-    const min = 0;
-    const max = 5;
+    const options = [0,1,2,3,4,5];
     return <div className="event-creation-section">
         <div className="dark-background" />
         <div ref={this.setWrapperRef} className="event-creation-form">
@@ -90,37 +89,20 @@ class EventCreator extends React.Component {
                   Image Link: <input className="event-creator-input" type="text" name="imageLink" value={this.state.imageLink} placeholder="Add a link to an image of the activity" onChange={this.handleChange} />
                 </label> <br />
               </div>
+
               <div>
                 <div className="event-creator-form-spec">
-                  Overall Enjoyability: {this.state.overallEnjoyability}
-                  <Slider min={min} max={max} value={ this.state.overallEnjoyability } orientation="horizontal" name="overallEnjoyability" onChange={this.handleChange.bind(this, 'overallEnjoyability')} />
-                </div> <br />
-                <div className="event-creator-form-spec">
-                  Cost: {this.state.cost} 
-                  <Slider min={min} max={max} value={ this.state.cost } orientation="horizontal" name="cost" onChange={this.handleChange.bind(this, 'cost')} />
-                </div> <br />
-                <div className="event-creator-form-spec">
-                  Mental Effort: {this.state.mentalEffort}
-                  <Slider min={min} max={max} value={ this.state.mentalEffort } orientation="horizontal" name="mentalEffort" onChange={this.handleChange.bind(this, 'mentalEffort')} />
-                </div> <br />
-                <div className="event-creator-form-spec">
-                  Physical Effort: {this.state.physicalEffort}
-                  <Slider min={min} max={max} value={ this.state.physicalEffort } orientation="horizontal" name="physicalEffort" onChange={this.handleChange.bind(this, 'phsyicalEffort')} />
-                </div> <br />
-                <div className="event-creator-form-spec">
-                  Nature Level: {this.state.natureLevel} 
-                  <Slider min={min} max={max} value={ this.state.natureLevel } orientation="horizontal" name="naturlLevel" onChange={this.handleChange.bind(this, 'natureLevel')} />
-                </div> <br />
-                <div className="event-creator-form-spec">
-                  Social Level: {this.state.socialLevel}
-                  <Slider min={min} max={max} value={ this.state.socialLevel } orientation="horizontal" name="socialLevel" onChange={this.handleChange.bind(this, 'socialLevel')} />
-                </div> <br />
-                <div className="event-creator-form-spec">
-                  Duration: {this.state.duration}
-                  <Slider min={min} max={max} value={ this.state.duration } orientation="horizontal" name="duration" onChange={this.handleChange.bind(this, 'duration')} />
-                </div> <br />
+                  {this.props.filters.map((filter) => {
+                    return (
+                      <div className='input-row' key={filter[0]}>
+                        <RadioButtons title={filter[0]} filter={filter[1]} options={options} handleChange={this.handleChange}/>
+                      </div>
+                    )
+                  })}
+                </div> 
               </div>
               <br />
+
               <label>
                 Description:
                 <div>

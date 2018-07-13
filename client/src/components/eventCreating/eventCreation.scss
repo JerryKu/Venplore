@@ -57,8 +57,13 @@
   margin: 1%;
 }
 
-.radio-buttons {
+.radio-input-row {
+  display: flex;
   margin: 1%;
+}
+
+.radio-input-title {
+  flex-basis: 50%;
 }
 
 .radio-button input {

@@ -27,7 +27,7 @@ class FilterBar extends React.Component{
   }
 
   render(){
-    const min = 1;
+    const min = 0;
     const max = 5;
     const prompts = ['How much would you like to spend?', 'How hard do you want to think?', 'How intense of a workout do you want?', 'How much nature do you want to see?', 'How much do you want to interact with other people?', 'How much time do you have?']
     return (
@@ -57,7 +57,7 @@ class FilterBar extends React.Component{
               </div>
             </div>;
         })}
-        <div className='text-center filter-container'>
+        <div className='text-center'>
           <button className="clear-filter-button text-orange" onClick={this.clearFilters}>Clear Filters</button>
         </div>
 

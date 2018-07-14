@@ -13,12 +13,12 @@
 .filter-section {
     flex-basis: 25%;
     padding: 1% 0;
-    box-shadow: 3px 3px #d3d3d340;
     height: 625px;
 }
 
 .filter-container {
     border-top: 1px solid $lightestGray;
+    box-shadow: 3px -1px 0px -1px #d3d3d340;
 }
 
 .filter-title {
@@ -27,7 +27,7 @@
 
 .slider-container {
   background-color: $lightOrange;
-  padding: 2% 5%;
+  padding: 1% 5%;
   width: 100%;
 }
     /* Activity List CSS */
@@ -127,6 +127,14 @@
 .current-event-ratings input {
     margin: 3%;
 }
+
+@media(max-width:420px){
+  .activity-finding-section {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+}
+
 
 /**
 * Rangeslider

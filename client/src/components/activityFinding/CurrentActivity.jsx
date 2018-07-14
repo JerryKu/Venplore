@@ -7,7 +7,7 @@ const CurrentActivity = (props) => {
     props.hideCurrent();
   };
     return (
-    <div className="current-activity-section grid-root grid-row-root">
+    <div className="current-activity-section grid-root">
       <button className='orange-button back-button' onClick={handleHide}> Choose Another Adventure
       </button>
       <CurrentActivityInfo eventInfo={props.eventInfo}/>

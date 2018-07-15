@@ -9,9 +9,10 @@ const rankActivities = (list, filters) => {
       const filter = filters[i][1];
       const filterRating = filters[i][2];
       const activityRating = activity.eventRatings[filter];
-      adventureScore += Math.abs(filterRating - activityRating);
+      adventureScore += (Math.pow((Math.abs(filterRating - activityRating)), 2)/2) * 20;
+      // Adventure score is calculated by taking the difference between desired rating and actual rating. The difference is then squared and divided by two. This is so that greater differences will have a greater impact on the score because if a person is looking for a 0 in cost and the activity has a 5, this should be considered in the score. The score is then multiplied by 20 to scale it to 100.
     };
-    adventureScore = (5 - (adventureScore / n)).toFixed(2);
+    adventureScore = (100 - (adventureScore / n)).toFixed(0);
     let scoredAdventure = Object.assign(activity, {adventureScore: adventureScore});
     scoredList.push(scoredAdventure);
   });

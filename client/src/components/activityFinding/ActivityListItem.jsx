@@ -22,7 +22,7 @@ const ActivityListItem = ({image, name, score, description, eventRatings}) => {
       </div>
       <div className='activity-list-item-rating container-background-orange'>
         <div className='secondary-title text-orange'>
-          Adventure Score: <span className='float-right'>{score}</span>
+          Adventure Fit: <span className='float-right'>{score}%</span>
         </div>
         {ratings}
       </div>

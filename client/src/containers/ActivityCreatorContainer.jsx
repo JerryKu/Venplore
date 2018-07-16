@@ -7,4 +7,10 @@ const EventCreatorContainer = props => (
   <EventCreator {...props} />
 );
 
-export default connect()(EventCreatorContainer);
+const mapStateToProps = state => {
+  return {
+   filters: state.filters
+  }
+};
+
+export default connect(mapStateToProps)(EventCreatorContainer);

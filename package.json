@@ -29,6 +29,7 @@
     "passport-local": "~1.0.0",
     "passport-facebook": "~2.1.1",
     "react": "^15.6.2",
+    "react-burger-menu": "^2.5.2",
     "react-dom": "^15.6.2",
     "react-modal": "^3.1.4",
     "react-rangeslider": "^2.2.0",
